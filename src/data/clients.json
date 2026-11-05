@@ -1,0 +1,696 @@
+{
+  "stepx-epoxy": {
+    "id": "stepx-epoxy",
+    "slug": "stepx-epoxy",
+    "niche": "epoxy",
+    "nicheTitle": "Epoxy Flooring & Concrete Coatings",
+    "businessName": "STEPX EPOXY",
+    "ownerName": "STEPX Team",
+    "address": "32 Fulmer Rd, Brampton, ON L7A 4L9",
+    "primaryCity": "Brampton",
+    "province": "ON",
+    "postalCode": "L7A 4L9",
+    "phone": "(647) 403-5801",
+    "phoneHref": "tel:+16474035801",
+    "rating": 5.0,
+    "reviewCount": 24,
+    "tagline": "Showroom-Grade Metallic, Flake & Polyaspartic Floors Across Brampton & the GTA",
+    "heroSubtitle": "Transform your garage, basement, or commercial facility with industrial-grade diamond-ground polyaspartic coatings. Built for brutal Ontario winters and road-salt punishment.",
+    "serviceAreas": [
+      "Brampton",
+      "Mississauga",
+      "Vaughan",
+      "Caledon",
+      "Etobicoke",
+      "Oakville",
+      "Milton"
+    ],
+    "guarantees": [
+      "Industrial HEPA Diamond Grinding (CSP 2-3)",
+      "Hot-Tire & Ontario Road-Salt Proof",
+      "1-Day Turnaround & 15-Year Warranty"
+    ],
+    "trustBadges": [
+      "WSIB Insured & Registered",
+      "$5M Commercial Liability",
+      "15-Year Peeling Warranty",
+      "100% Ontario Owned"
+    ],
+    "pricingTiers": [
+      {
+        "id": "solid",
+        "name": "Solid Commercial Epoxy",
+        "tagline": "Durable, clean, chemical-resistant",
+        "minRate": 5.5,
+        "maxRate": 8.0,
+        "popular": false,
+        "features": ["100% solids epoxy base", "Satin or gloss industrial finish", "Resistant to oil & light chemicals", "Ideal for warehouses & storage"]
+      },
+      {
+        "id": "flake",
+        "name": "Full-Flake Polyaspartic System",
+        "tagline": "Most Popular · Showroom Garage Finish",
+        "minRate": 8.0,
+        "maxRate": 12.0,
+        "popular": true,
+        "features": ["Diamond grind mechanical prep", "Full broadcast flake to rejection", "UV-stable polyaspartic topcoat", "100% hot-tire & road salt proof", "15-year adhesion warranty"]
+      },
+      {
+        "id": "metallic",
+        "name": "3D Marble Metallic System",
+        "tagline": "Luxury decorative architectural finish",
+        "minRate": 12.0,
+        "maxRate": 16.0,
+        "popular": false,
+        "features": ["Custom two-tone artisan swirl", "Mirror-glass depth effect", "Zero-VOC moisture barrier", "Perfect for basements & showrooms"]
+      }
+    ],
+    "calculatorPresets": [
+      { "label": "1-Car Garage (~250 sq ft)", "sqft": 250 },
+      { "label": "2-Car Garage (~450 sq ft)", "sqft": 450 },
+      { "label": "3-Car Garage (~700 sq ft)", "sqft": 700 },
+      { "label": "Full Basement (~1,000 sq ft)", "sqft": 1000 }
+    ],
+    "services": [
+      {
+        "slug": "garage-epoxy-flooring",
+        "name": "Garage Epoxy & Polyaspartic Coatings",
+        "shortDesc": "Heavy-duty flake floors engineered to withstand road salt, automotive fluids, and heavy tire torque.",
+        "icon": "ShieldCheck",
+        "deliverables": ["Full mechanical diamond grinding", "Polyurea pit & crack repair", "Full flake vinyl broadcast", "Non-yellowing polyaspartic clearcoat"]
+      },
+      {
+        "slug": "commercial-epoxy-coating",
+        "name": "Commercial & Industrial Epoxy Systems",
+        "shortDesc": "CFIA compliant, high-traffic seamless flooring for automotive shops, warehouses, and retail spaces.",
+        "icon": "Factory",
+        "deliverables": ["High-build 100% solids epoxy", "Slip-resistant aluminum oxide additive", "USDA/CFIA sanitary compliance", "Fast cure overnight scheduling"]
+      },
+      {
+        "slug": "metallic-marble-epoxy",
+        "name": "3D Metallic & Marble Epoxy Flooring",
+        "shortDesc": "Luxury designer seamless floors with organic pearlescent marbling for modern basements and offices.",
+        "icon": "Sparkles",
+        "deliverables": ["Dual-pigment mica powder dispersion", "Glass-like mirror depth", "100% moisture vapor barrier base", "Seamless architectural aesthetics"]
+      },
+      {
+        "slug": "basement-concrete-polishing",
+        "name": "Basement Floor Sealing & Polished Concrete",
+        "shortDesc": "Moisture-blocking waterproof coatings preventing musty dampness, efflorescence, and concrete dusting.",
+        "icon": "Layers",
+        "deliverables": ["Deep penetrating vapor barrier", "Efflorescence neutralization", "Dust-proof satin seal", "Mold & mildew impervious"]
+      }
+    ],
+    "processSteps": [
+      {
+        "number": "01",
+        "title": "Industrial Diamond Grinding",
+        "subtitle": "Mechanical Profile Prep",
+        "description": "We grind your concrete slab to CSP 2-3 standard using 3-phase Lavina planetary diamond grinders with integrated HEPA dust vacuums. No acid washing, no shortcuts."
+      },
+      {
+        "number": "02",
+        "title": "Polyurea Crack Restoration",
+        "subtitle": "Structural Stitching",
+        "description": "Every spalled pit, hairline fissure, and control joint is chased and bonded with structural polyurea mender that cures harder than concrete itself."
+      },
+      {
+        "number": "03",
+        "title": "Basecoat & Flake Broadcast",
+        "subtitle": "Full Saturation",
+        "description": "We roll down a pure moisture-tolerant epoxy basecoat and broadcast hand-selected custom color vinyl chips to absolute rejection for 100% coverage."
+      },
+      {
+        "number": "04",
+        "title": "UV Polyaspartic Armor Coat",
+        "subtitle": "4x Stronger Than Epoxy",
+        "description": "Scraped flush and locked with pure aliphatic polyaspartic. UV-stable, chemical proof, zero yellowing, and ready for vehicle parking in 24 hours."
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Verified Brampton Homeowner",
+        "city": "Brampton",
+        "rating": 5.0,
+        "date": "2 weeks ago",
+        "text": "Got my garage down in metallic and couldn’t be happier with the results—the floor shines and I get compliments each time."
+      },
+      {
+        "author": "Verified GTA Client",
+        "city": "Mississauga",
+        "rating": 5.0,
+        "date": "1 month ago",
+        "text": "The epoxy flooring with flakes turned out absolutely amazing. Smooth, efficient, and very well priced."
+      },
+      {
+        "author": "Verified Customer",
+        "city": "Caledon",
+        "rating": 5.0,
+        "date": "2 months ago",
+        "text": "Professional, reliable and excellent epoxy work done perfectly. Resists stains and hot-tire pickup."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How does polyaspartic epoxy hold up against Ontario winter road salt?",
+        "answer": "Unlike hardware-store epoxy paint kits that peel after one winter, our system utilizes a mechanical diamond grind bond and an industrial aliphatic polyaspartic topcoat. Road salt, calcium chloride brine, and slush cannot penetrate the chemical cross-links."
+      },
+      {
+        "question": "Can I park my vehicle on it without hot-tire pickup?",
+        "answer": "Yes. Our polyaspartic topcoats withstand heat ratings up to 150°C. Standard tires coming off the 401 or 410 during peak summer will never lift or delaminate our coatings."
+      },
+      {
+        "question": "How long does installation take?",
+        "answer": "Most standard 2-car and 3-car residential garages are completed in just 1 to 2 days. You can walk on the floor within 6 to 8 hours and park your vehicles after 24 to 48 hours."
+      },
+      {
+        "question": "Do you repair existing pitted, salt-damaged, or cracked concrete?",
+        "answer": "Yes! Preparation is 80% of a lasting floor. We diamond-grind away all surface contaminants, then fill and stitch every crack and salt-pitted crater with ultra-fast curing polyurea mender before coating."
+      },
+      {
+        "question": "What warranty comes with STEPX EPOXY floors?",
+        "answer": "We back our full-flake residential polyaspartic garage installations with a comprehensive 15-year adhesion and anti-peeling warranty."
+      }
+    ]
+  },
+  "purest-epoxy": {
+    "id": "purest-epoxy",
+    "slug": "purest-epoxy",
+    "niche": "epoxy",
+    "nicheTitle": "Epoxy & High-Performance Floor Coatings",
+    "businessName": "Purest Epoxy",
+    "ownerName": "Kyle",
+    "address": "11 Harrisford St #65, Hamilton, ON L8K 6L7",
+    "primaryCity": "Hamilton",
+    "province": "ON",
+    "postalCode": "L8K 6L7",
+    "phone": "(905) 745-6085",
+    "phoneHref": "tel:+19057456085",
+    "rating": 4.9,
+    "reviewCount": 46,
+    "tagline": "Precision Marble Metallic, Full-Flake & CFIA Commercial Epoxy Systems",
+    "heroSubtitle": "Hamilton and Niagara's premier architectural epoxy artisans. Specializing in luxury metallic marble basement floors and bulletproof commercial garage coatings.",
+    "serviceAreas": [
+      "Hamilton",
+      "Stoney Creek",
+      "Burlington",
+      "Oakville",
+      "Ancaster",
+      "Dundas",
+      "Mississauga"
+    ],
+    "guarantees": [
+      "Owner-Operated Quality Control (Kyle's Direct Oversight)",
+      "Zero-VOC Low-Odor Indoor Formulations",
+      "Commercial Grade Slip-Resistant Topcoats"
+    ],
+    "trustBadges": [
+      "WSIB Insured & Bonded",
+      "CFIA Sanitary Certified Materials",
+      "15-Year Delamination Guarantee",
+      "Top-Rated Hamilton Contractor"
+    ],
+    "pricingTiers": [
+      {
+        "id": "solid",
+        "name": "Solid Commercial Epoxy",
+        "tagline": "Durable, clean, chemical-resistant",
+        "minRate": 5.5,
+        "maxRate": 8.0,
+        "popular": false,
+        "features": ["100% solids epoxy base", "Satin or gloss industrial finish", "Resistant to oil & light chemicals", "Ideal for warehouses & storage"]
+      },
+      {
+        "id": "flake",
+        "name": "Full-Flake Polyaspartic System",
+        "tagline": "Most Popular · Showroom Garage Finish",
+        "minRate": 8.0,
+        "maxRate": 12.0,
+        "popular": true,
+        "features": ["Diamond grind mechanical prep", "Full broadcast flake to rejection", "UV-stable polyaspartic topcoat", "100% hot-tire & road salt proof", "15-year adhesion warranty"]
+      },
+      {
+        "id": "metallic",
+        "name": "3D Marble Metallic System",
+        "tagline": "Luxury decorative architectural finish",
+        "minRate": 12.0,
+        "maxRate": 16.0,
+        "popular": false,
+        "features": ["Custom two-tone artisan swirl", "Mirror-glass depth effect", "Zero-VOC moisture barrier", "Perfect for basements & showrooms"]
+      }
+    ],
+    "calculatorPresets": [
+      { "label": "1-Car Garage (~250 sq ft)", "sqft": 250 },
+      { "label": "2-Car Garage (~450 sq ft)", "sqft": 450 },
+      { "label": "3-Car Garage (~700 sq ft)", "sqft": 700 },
+      { "label": "Full Basement (~1,000 sq ft)", "sqft": 1000 }
+    ],
+    "services": [
+      {
+        "slug": "garage-epoxy-flooring",
+        "name": "Garage Epoxy & Polyaspartic Coatings",
+        "shortDesc": "Heavy-duty flake floors engineered to withstand road salt, automotive fluids, and heavy tire torque.",
+        "icon": "ShieldCheck",
+        "deliverables": ["Full mechanical diamond grinding", "Polyurea pit & crack repair", "Full flake vinyl broadcast", "Non-yellowing polyaspartic clearcoat"]
+      },
+      {
+        "slug": "commercial-epoxy-coating",
+        "name": "Commercial & Industrial Epoxy Systems",
+        "shortDesc": "CFIA compliant, high-traffic seamless flooring for automotive shops, warehouses, and retail spaces.",
+        "icon": "Factory",
+        "deliverables": ["High-build 100% solids epoxy", "Slip-resistant aluminum oxide additive", "USDA/CFIA sanitary compliance", "Fast cure overnight scheduling"]
+      },
+      {
+        "slug": "metallic-marble-epoxy",
+        "name": "3D Metallic & Marble Epoxy Flooring",
+        "shortDesc": "Luxury designer seamless floors with organic pearlescent marbling for modern basements and offices.",
+        "icon": "Sparkles",
+        "deliverables": ["Dual-pigment mica powder dispersion", "Glass-like mirror depth", "100% moisture vapor barrier base", "Seamless architectural aesthetics"]
+      },
+      {
+        "slug": "basement-concrete-polishing",
+        "name": "Basement Floor Sealing & Polished Concrete",
+        "shortDesc": "Moisture-blocking waterproof coatings preventing musty dampness, efflorescence, and concrete dusting.",
+        "icon": "Layers",
+        "deliverables": ["Deep penetrating vapor barrier", "Efflorescence neutralization", "Dust-proof satin seal", "Mold & mildew impervious"]
+      }
+    ],
+    "processSteps": [
+      {
+        "number": "01",
+        "title": "Lavina Diamond Grinding",
+        "subtitle": "Prep Without Acids",
+        "description": "Every floor undergoes aggressive diamond abrasive tooling to open concrete pores and create an anchor profile for permanent bonding."
+      },
+      {
+        "number": "02",
+        "title": "Moisture Mitigation Base",
+        "subtitle": "Vapor Barrier Defense",
+        "description": "We test concrete relative humidity (RH) and apply deep-penetrating 100% solids moisture vapor barrier epoxy."
+      },
+      {
+        "number": "03",
+        "title": "Artisan Layering & Flake",
+        "subtitle": "Precision Application",
+        "description": "Kyle personally blends and applies the colored vinyl chips or dual metallic pigments to create a one-of-a-kind showroom surface."
+      },
+      {
+        "number": "04",
+        "title": "Polyaspartic Armor Topcoat",
+        "subtitle": "Non-Yellowing Shield",
+        "description": "Finished with industrial polyaspartic clear topcoat that stays crystal clear under intense UV and resents all battery acids, fluids, and salt."
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Peter F.",
+        "city": "Hamilton",
+        "rating": 5.0,
+        "date": "1 month ago",
+        "text": "I hired Purest Epoxy to install epoxy flooring in my garage and I am extremely satisfied. Exceeded my expectations—thanks again Kyle!"
+      },
+      {
+        "author": "Verified Commercial Client",
+        "city": "Burlington",
+        "rating": 5.0,
+        "date": "2 months ago",
+        "text": "The new epoxy floor looks fantastic and has held up well to the daily traffic, equipment, and constant cleaning in our commercial kitchen."
+      },
+      {
+        "author": "Verified Homeowner",
+        "city": "Stoney Creek",
+        "rating": 5.0,
+        "date": "3 months ago",
+        "text": "Highly recommend Kyle and his team at Purest Epoxy. Attentive to the fine details most overlook."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Who will be doing the actual work on my floor?",
+        "answer": "Kyle oversees every single project personally. We do not subcontract to day laborers; our trained craftsmen handle prep, repairs, and chemical applications."
+      },
+      {
+        "question": "Can you install metallic epoxy in finished basements?",
+        "answer": "Absolutely. Our metallic epoxy system is zero-VOC and odorless, making it completely safe for occupied residential basements and living spaces."
+      },
+      {
+        "question": "How do you clean an epoxy floor once installed?",
+        "answer": "Epoxy floors are virtually maintenance-free. A simple dust mop or damp mopping with warm water and mild dish soap or Simple Green is all that's required."
+      },
+      {
+        "question": "What happens if there are oil stains in my existing garage concrete?",
+        "answer": "Our commercial degreasers and diamond grinding cut past the oil-saturated layer of concrete to guarantee uncompromised primer adhesion."
+      },
+      {
+        "question": "Do you provide free on-site consultations in the Hamilton & Burlington area?",
+        "answer": "Yes, we visit your property with physical color samples, measure the exact slab square footage, and perform concrete moisture testing completely free."
+      }
+    ]
+  },
+  "diamond-roof-brampton": {
+    "id": "diamond-roof-brampton",
+    "slug": "diamond-roof-brampton",
+    "niche": "roofing",
+    "nicheTitle": "Roofing & Exterior Repairs",
+    "businessName": "Diamond Roof Repair & Exteriors",
+    "ownerName": "Diamond Roofing Team",
+    "address": "349 Inspire Blvd, Brampton, ON L6R 4E4",
+    "primaryCity": "Brampton",
+    "province": "ON",
+    "postalCode": "L6R 4E4",
+    "phone": "(437) 215-8624",
+    "phoneHref": "tel:+14372158624",
+    "rating": 4.9,
+    "reviewCount": 87,
+    "tagline": "24-Hour Emergency Roof Leak Repair, Shingle Replacement & Eavestroughs in Brampton",
+    "heroSubtitle": "Rapid-response Brampton and Peel Region roofing specialists. Emergency tarping within 2 hours, storm-damage insurance claims, and wind-rated 50-year shingle systems.",
+    "serviceAreas": [
+      "Brampton",
+      "Caledon",
+      "Mississauga",
+      "Vaughan",
+      "Georgetown",
+      "Etobicoke",
+      "Malton"
+    ],
+    "guarantees": [
+      "2-Hour Emergency Leak Response & Tarping",
+      "GAF & IKO Certified Master Installers",
+      "Full Driveway & Lawn Magnetic Nail Sweep"
+    ],
+    "trustBadges": [
+      "WSIB Insured & Fully Bonded",
+      "$5M General Liability",
+      "15-Year Leak-Free Guarantee",
+      "87+ 5-Star Brampton Reviews"
+    ],
+    "pricingTiers": [
+      {
+        "id": "repair",
+        "name": "3-Tab / Roof Leak Repair & Tune-Up",
+        "tagline": "Targeted fixes, vent flashing & missing shingles",
+        "minRate": 4.5,
+        "maxRate": 6.5,
+        "popular": false,
+        "features": ["Emergency tarping & leak source isolation", "Vent stack & chimney collar resealing", "High-wind shingle replacement", "Attic moisture inspection"]
+      },
+      {
+        "id": "architectural",
+        "name": "Architectural Asphalt Shingles",
+        "tagline": "Most Popular · 50-Yr Lifetime Wind Rated",
+        "minRate": 5.5,
+        "maxRate": 9.0,
+        "popular": true,
+        "features": ["Full tear-off down to plywood deck", "Ice & water shield on all eaves & valleys", "130 MPH wind-resistant architectural shingles", "Full magnetic nail sweep guarantee", "15-year workmanship warranty"]
+      },
+      {
+        "id": "metal-flat",
+        "name": "Standing Seam Metal / Flat Torch-Down",
+        "tagline": "Commercial & modern low-slope engineering",
+        "minRate": 14.0,
+        "maxRate": 22.0,
+        "popular": false,
+        "features": ["2-ply SBS modified bitumen torch-down", "Hidden fastener 26-gauge steel panels", "Superior snow-shedding for Ontario winters", "50+ year service lifetime"]
+      }
+    ],
+    "calculatorPresets": [
+      { "label": "Small Bungalow (~1,200 sq ft)", "sqft": 1200 },
+      { "label": "2-Storey Detached (~1,800 sq ft)", "sqft": 1800 },
+      { "label": "Large Executive Home (~2,500 sq ft)", "sqft": 2500 }
+    ],
+    "services": [
+      {
+        "slug": "emergency-roof-repair",
+        "name": "24-Hour Emergency Roof Leak Repair",
+        "shortDesc": "Immediate dispatch across Brampton and Peel for storm damage, flashing leaks, and active drips.",
+        "icon": "Flame",
+        "deliverables": ["2-hour emergency response tarping", "Infrared leak detection in attic", "Vent pipe gasket replacement", "Same-day waterproof patch"]
+      },
+      {
+        "slug": "architectural-shingle-replacement",
+        "name": "Architectural Shingle Roof Replacement",
+        "shortDesc": "Complete tear-off and replacement with heavy-duty IKO Dynasty or GAF Timberline HDZ architectural shingles.",
+        "icon": "ShieldAlert",
+        "deliverables": ["Total strip down to sheathing", "Double ice & water barrier installation", "130 MPH Class-F wind rated shingles", "Ridge vent attic circulation"]
+      },
+      {
+        "slug": "flat-roof-torch-down",
+        "name": "Flat Roof Torch-Down & Commercial Systems",
+        "shortDesc": "Multi-layer SBS modified bitumen waterproofing for residential extensions, garages, and commercial decks.",
+        "icon": "Layers",
+        "deliverables": ["SBS 2-ply torch-grade membrane", "Custom metal edge perimeter flashing", "Zero-ponding positive drainage", "20-year commercial membrane"]
+      },
+      {
+        "slug": "eavestrough-soffit-fascia",
+        "name": "Seamless Eavestrough, Soffit & Fascia Repair",
+        "shortDesc": "Continuous 5-inch aluminum eavestroughing with leaf guards to stop foundation moisture and ice damming.",
+        "icon": "Wrench",
+        "deliverables": ["On-site seamless aluminum roll-forming", "Heavy-gauge hidden aluminum hangers", "Vented soffit attic airflow intake", "Oversized 3x4 downspouts"]
+      }
+    ],
+    "processSteps": [
+      {
+        "number": "01",
+        "title": "Complete Tear-Off & Deck Inspection",
+        "subtitle": "Strip to Wood",
+        "description": "We remove all old shingles, nails, and failing felt down to the OSB/plywood. Any rotting or water-damaged sheathing is replaced immediately."
+      },
+      {
+        "number": "02",
+        "title": "Ice & Water Shield + Heavy Drip Edge",
+        "subtitle": "Critical Leak Defense",
+        "description": "We apply self-adhering modified bitumen Ice & Water Shield 6 feet up eaves, down all valleys, and around chimneys to stop Ontario ice dam leaks."
+      },
+      {
+        "number": "03",
+        "title": "High-Wind Shingle Installation",
+        "subtitle": "Architectural Durability",
+        "description": "Installed with synthetic breathability underlayment, 6-nail high-wind fastening pattern, and color-matched starter strips rated for 130 MPH gusts."
+      },
+      {
+        "number": "04",
+        "title": "Ventilation & Driveway Magnetic Sweep",
+        "subtitle": "Pristine Cleanup",
+        "description": "Continuous ridge ventilation installed for lower summer AC bills. We perform 3 passes with industrial roller magnets to collect every stray nail."
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Verified Brampton Homeowner",
+        "city": "Brampton",
+        "rating": 5.0,
+        "date": "1 week ago",
+        "text": "Our roof was repaired within 24 hours and was done professionally! Communicated the problem, the fix, and a fair price."
+      },
+      {
+        "author": "Verified GTA Client",
+        "city": "Mississauga",
+        "rating": 5.0,
+        "date": "3 weeks ago",
+        "text": "Was on time and fixed a roof leak around a vent stack right away for a fair price. Excellent workmanship."
+      },
+      {
+        "author": "Verified Customer",
+        "city": "Caledon",
+        "rating": 5.0,
+        "date": "1 month ago",
+        "text": "Hired Diamond Roof Repairs to fix an issue with my gutter and roof flashing—fast response and rock-solid work."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How quickly can your emergency roofing crew arrive in Brampton?",
+        "answer": "Our emergency dispatch team operates 24/7 across Brampton, Caledon, and Mississauga, typically arriving within 2 hours to install secure emergency tarps and prevent interior water damage."
+      },
+      {
+        "question": "What causes the majority of roof leaks in Ontario homes?",
+        "answer": "Over 70% of leaks occur around vent pipes, skylights, chimneys, or in valleys due to dried rubber gaskets, failed caulking, or winter ice damming where frozen water pushes under shingles."
+      },
+      {
+        "question": "Do you lay new shingles over old ones (roof-over)?",
+        "answer": "No. We always perform a full tear-off. Shingling over old shingles hides rot, voids manufacturer warranties, adds dangerous weight, and prevents proper ice and water shield installation."
+      },
+      {
+        "question": "How do you protect my driveway, landscaping, and pets?",
+        "answer": "We set up heavy tarp chutes, protect flowerbeds with plywood shields, and run high-powered industrial magnetic sweepers across your driveway, lawn, and sidewalks 3 times before departing."
+      },
+      {
+        "question": "Are your roof replacements backed by warranty?",
+        "answer": "Yes. You receive a 50-year manufacturer material warranty on our architectural shingles and a dedicated 15-year Diamond Roof workmanship guarantee."
+      }
+    ]
+  },
+  "swan-roofing-brampton": {
+    "id": "swan-roofing-brampton",
+    "slug": "swan-roofing-brampton",
+    "niche": "roofing",
+    "nicheTitle": "Roofing & Exterior Restoration",
+    "businessName": "Swan Roofing Services",
+    "ownerName": "James",
+    "address": "18 Melanie Dr, Brampton, ON L6T 4K9",
+    "primaryCity": "Brampton",
+    "province": "ON",
+    "postalCode": "L6T 4K9",
+    "phone": "(905) 458-4065",
+    "phoneHref": "tel:+19054584065",
+    "rating": 4.9,
+    "reviewCount": 54,
+    "tagline": "Family-Owned Brampton Roofers Since 1988 — Shingles, Soffit, Fascia & Eavestroughs",
+    "heroSubtitle": "Over 35 years serving Peel Region homeowners with honest pricing, meticulous craftsmanship, and complete exterior protection from roof deck to foundation.",
+    "serviceAreas": [
+      "Brampton",
+      "Mississauga",
+      "Caledon",
+      "Vaughan",
+      "Etobicoke",
+      "Oakville",
+      "Georgetown"
+    ],
+    "guarantees": [
+      "35+ Years Serving Brampton & Peel",
+      "Direct Owner Supervision by James",
+      "Zero Nail Left Behind Guarantee"
+    ],
+    "trustBadges": [
+      "WSIB Compliant & Insured",
+      "Better Business Bureau A+ Rated",
+      "Family Owned & Operated Since 1988",
+      "50-Year Non-Prorated Warranty"
+    ],
+    "pricingTiers": [
+      {
+        "id": "repair",
+        "name": "3-Tab / Roof Leak Repair & Tune-Up",
+        "tagline": "Targeted fixes, vent flashing & missing shingles",
+        "minRate": 4.5,
+        "maxRate": 6.5,
+        "popular": false,
+        "features": ["Emergency tarping & leak source isolation", "Vent stack & chimney collar resealing", "High-wind shingle replacement", "Attic moisture inspection"]
+      },
+      {
+        "id": "architectural",
+        "name": "Architectural Asphalt Shingles",
+        "tagline": "Most Popular · 50-Yr Lifetime Wind Rated",
+        "minRate": 5.5,
+        "maxRate": 9.0,
+        "popular": true,
+        "features": ["Full tear-off down to plywood deck", "Ice & water shield on all eaves & valleys", "130 MPH wind-resistant architectural shingles", "Full magnetic nail sweep guarantee", "15-year workmanship warranty"]
+      },
+      {
+        "id": "metal-flat",
+        "name": "Standing Seam Metal / Flat Torch-Down",
+        "tagline": "Commercial & modern low-slope engineering",
+        "minRate": 14.0,
+        "maxRate": 22.0,
+        "popular": false,
+        "features": ["2-ply SBS modified bitumen torch-down", "Hidden fastener 26-gauge steel panels", "Superior snow-shedding for Ontario winters", "50+ year service lifetime"]
+      }
+    ],
+    "calculatorPresets": [
+      { "label": "Small Bungalow (~1,200 sq ft)", "sqft": 1200 },
+      { "label": "2-Storey Detached (~1,800 sq ft)", "sqft": 1800 },
+      { "label": "Large Executive Home (~2,500 sq ft)", "sqft": 2500 }
+    ],
+    "services": [
+      {
+        "slug": "emergency-roof-repair",
+        "name": "24-Hour Emergency Roof Leak Repair",
+        "shortDesc": "Immediate dispatch across Brampton and Peel for storm damage, flashing leaks, and active drips.",
+        "icon": "Flame",
+        "deliverables": ["2-hour emergency response tarping", "Infrared leak detection in attic", "Vent pipe gasket replacement", "Same-day waterproof patch"]
+      },
+      {
+        "slug": "architectural-shingle-replacement",
+        "name": "Architectural Shingle Roof Replacement",
+        "shortDesc": "Complete tear-off and replacement with heavy-duty IKO Dynasty or GAF Timberline HDZ architectural shingles.",
+        "icon": "ShieldAlert",
+        "deliverables": ["Total strip down to sheathing", "Double ice & water barrier installation", "130 MPH Class-F wind rated shingles", "Ridge vent attic circulation"]
+      },
+      {
+        "slug": "flat-roof-torch-down",
+        "name": "Flat Roof Torch-Down & Commercial Systems",
+        "shortDesc": "Multi-layer SBS modified bitumen waterproofing for residential extensions, garages, and commercial decks.",
+        "icon": "Layers",
+        "deliverables": ["SBS 2-ply torch-grade membrane", "Custom metal edge perimeter flashing", "Zero-ponding positive drainage", "20-year commercial membrane"]
+      },
+      {
+        "slug": "eavestrough-soffit-fascia",
+        "name": "Seamless Eavestrough, Soffit & Fascia Repair",
+        "shortDesc": "Continuous 5-inch aluminum eavestroughing with leaf guards to stop foundation moisture and ice damming.",
+        "icon": "Wrench",
+        "deliverables": ["On-site seamless aluminum roll-forming", "Heavy-gauge hidden aluminum hangers", "Vented soffit attic airflow intake", "Oversized 3x4 downspouts"]
+      }
+    ],
+    "processSteps": [
+      {
+        "number": "01",
+        "title": "On-Site Assessment by James",
+        "subtitle": "35-Year Experienced Eye",
+        "description": "James personally walks the roof, inspects attic ventilation, and presents an honest, transparent estimate with no sales pressure."
+      },
+      {
+        "number": "02",
+        "title": "Careful Deck Stripping & Prep",
+        "subtitle": "Complete Property Protection",
+        "description": "We shield your siding, windows, and gardens before stripping shingles down to healthy solid wood decking."
+      },
+      {
+        "number": "03",
+        "title": "Dual Ice Shield & Architectural Shingles",
+        "subtitle": "Peel Region Climate Proof",
+        "description": "Double-banded ice protection along eaves prevents winter freeze backup, paired with heavy-gauge shingles hand-nailed to spec."
+      },
+      {
+        "number": "04",
+        "title": "Eavestrough Alignment & Cleanup",
+        "subtitle": "Spotless Delivery",
+        "description": "We check eavestrough pitches for optimal runoff and sweep the entire perimeter so you never worry about flat car tires."
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Verified Brampton Homeowner",
+        "city": "Brampton",
+        "rating": 5.0,
+        "date": "2 weeks ago",
+        "text": "When they were doing my roof, my neighbour came outside and when he saw how beautiful my roof looked, he wanted his done too. Extremely satisfied with James and his crew."
+      },
+      {
+        "author": "Verified Client",
+        "city": "Mississauga",
+        "rating": 5.0,
+        "date": "1 month ago",
+        "text": "Swan Roofing, James and team were fantastic. We had all eavestroughs replaced, new downspouts, and repairs to soffits."
+      },
+      {
+        "author": "Verified Customer",
+        "city": "Georgetown",
+        "rating": 5.0,
+        "date": "2 months ago",
+        "text": "Removed the old shingles, installed the new roof, and thoroughly cleaned the area afterward. Family-run business you can count on."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How long has Swan Roofing served Brampton?",
+        "answer": "We have been proudly family-owned and operated in Brampton since 1988, completing over 4,500 successful roof replacements throughout Peel Region."
+      },
+      {
+        "question": "Do you also repair or replace eavestroughs, soffits, and fascia?",
+        "answer": "Yes. A healthy roof requires a complete exterior drainage and ventilation system. We custom-extrude 5-inch seamless aluminum gutters on-site."
+      },
+      {
+        "question": "How can I tell if my roof needs a repair versus a full replacement?",
+        "answer": "If missing or curled shingles are localized to one section and the roof is under 15 years old, a repair is often possible. If granules are washing out into gutters or shingles are brittle across the roof, replacement is more cost-effective."
+      },
+      {
+        "question": "Do you offer written warranties?",
+        "answer": "Yes. Every full roof replacement comes with a written 15-year workmanship guarantee from Swan Roofing, alongside 50-year manufacturer warranties."
+      },
+      {
+        "question": "How do I schedule an on-site estimate with James?",
+        "answer": "Call us directly at (905) 458-4065 or submit your square-footage estimate using our 60-second online calculator."
+      }
+    ]
+  }
+}
