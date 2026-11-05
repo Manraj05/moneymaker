@@ -15,7 +15,25 @@ export default function BeforeAfterSlider({
 }: BeforeAfterSliderProps) {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
+  const [containerWidth, setContainerWidth] = useState<number | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // ResizeObserver to keep the inner "before" layer pixel-matched across mobile orientation changes
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const updateWidth = () => {
+      if (containerRef.current) {
+        setContainerWidth(containerRef.current.clientWidth);
+      }
+    };
+
+    updateWidth();
+
+    const resizeObserver = new ResizeObserver(() => updateWidth());
+    resizeObserver.observe(containerRef.current);
+
+    return () => resizeObserver.disconnect();
+  }, []);
 
   // Automatic intro sweep animation (35% -> 65% -> 50% on initial load)
   useEffect(() => {
@@ -67,6 +85,7 @@ export default function BeforeAfterSlider({
   return (
     <div
       ref={containerRef}
+      style={{ touchAction: "pan-y" }}
       className={`relative overflow-hidden select-none cursor-ew-resize rounded-2xl sm:rounded-3xl border border-white/20 bg-slate-950 shadow-2xl ${
         isHeroEmbedded
           ? "aspect-[3/4] max-h-[560px] w-full"
@@ -96,10 +115,10 @@ export default function BeforeAfterSlider({
         />
 
         {/* Crisp Frosted-Glass Corner Badge (Top Right) */}
-        <div className="absolute top-4 right-4 z-20 flex items-center gap-2 rounded-full border border-white/20 bg-black/60 px-3.5 py-1.5 backdrop-blur-xl shadow-lg">
-          <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
-          <span className="font-mono text-[11px] font-bold tracking-wider text-white uppercase">
-            AFTER: 3D METALLIC EPOXY
+        <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 flex items-center gap-1.5 sm:gap-2 rounded-full border border-white/20 bg-black/65 px-2.5 sm:px-3.5 py-1 sm:py-1.5 backdrop-blur-xl shadow-lg">
+          <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-white animate-pulse" />
+          <span className="font-mono text-[9px] sm:text-[11px] font-bold tracking-wider text-white uppercase">
+            AFTER: 3D METALLIC
           </span>
         </div>
       </div>
@@ -115,10 +134,7 @@ export default function BeforeAfterSlider({
         <div
           className="relative h-full pointer-events-none"
           style={{
-            // Container width dynamically tracks the parent width via containerRef
-            width: containerRef.current
-              ? `${containerRef.current.clientWidth}px`
-              : "100%",
+            width: containerWidth ? `${containerWidth}px` : "100%",
           }}
         >
           {/* Base photo (ceiling, slatwalls, white door, cabinet, tires align 100% pixel-for-pixel) */}
@@ -258,10 +274,10 @@ export default function BeforeAfterSlider({
           </div>
 
           {/* Crisp Frosted-Glass Corner Badge (Top Left) */}
-          <div className="absolute top-4 left-4 z-20 flex items-center gap-2 rounded-full border border-white/20 bg-black/75 px-3.5 py-1.5 backdrop-blur-xl shadow-lg">
-            <span className="h-2 w-2 rounded-full bg-slate-400" />
-            <span className="font-mono text-[11px] font-bold tracking-wider text-slate-200 uppercase">
-              BEFORE: CRACKED BARE CONCRETE
+          <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-20 flex items-center gap-1.5 sm:gap-2 rounded-full border border-white/20 bg-black/80 px-2.5 sm:px-3.5 py-1 sm:py-1.5 backdrop-blur-xl shadow-lg">
+            <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-slate-400" />
+            <span className="font-mono text-[9px] sm:text-[11px] font-bold tracking-wider text-slate-200 uppercase">
+              BEFORE: BARE CONCRETE
             </span>
           </div>
         </div>
@@ -274,13 +290,13 @@ export default function BeforeAfterSlider({
         className="absolute top-0 bottom-0 z-30 w-[2px] bg-white shadow-[0_0_18px_rgba(255,255,255,0.95)]"
         style={{ left: `${sliderPosition}%` }}
       >
-        <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full border-2 border-white bg-black/85 text-white shadow-2xl backdrop-blur-xl transition-transform hover:scale-110 active:scale-95">
+        <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 flex h-9 w-9 sm:h-12 sm:w-12 items-center justify-center rounded-full border-2 border-white bg-black/85 text-white shadow-2xl backdrop-blur-xl transition-transform hover:scale-110 active:scale-95">
           <MoveHorizontal className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
         </div>
       </div>
 
-      {/* Bottom helper pill on hover */}
-      <div className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 z-20 rounded-full border border-white/10 bg-black/60 px-3 py-1 font-mono text-[10px] text-slate-300 backdrop-blur-md opacity-80 sm:opacity-90">
+      {/* Bottom helper pill */}
+      <div className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 z-20 rounded-full border border-white/10 bg-black/60 px-2.5 py-0.5 sm:px-3 sm:py-1 font-mono text-[9px] sm:text-[10px] text-slate-300 backdrop-blur-md opacity-80 sm:opacity-90">
         Drag left/right to compare
       </div>
     </div>

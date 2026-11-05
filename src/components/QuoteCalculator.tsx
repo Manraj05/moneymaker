@@ -281,7 +281,7 @@ export default function QuoteCalculator({
                         placeholder="Your Full Name *"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full rounded-xl border border-white/15 bg-slate-950/80 px-4 py-3 text-xs sm:text-sm text-white placeholder-slate-500 focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
+                        className="w-full rounded-xl border border-white/15 bg-slate-950/80 px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
                       />
                     </div>
 
@@ -292,7 +292,7 @@ export default function QuoteCalculator({
                         placeholder="Phone Number (Cell) *"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        className="w-full rounded-xl border border-white/15 bg-slate-950/80 px-4 py-3 text-xs sm:text-sm text-white placeholder-slate-500 font-mono focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
+                        className="w-full rounded-xl border border-white/15 bg-slate-950/80 px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 font-mono focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
                       />
                     </div>
 
@@ -300,7 +300,7 @@ export default function QuoteCalculator({
                       <select
                         value={city}
                         onChange={(e) => setCity(e.target.value)}
-                        className="w-full rounded-xl border border-white/15 bg-slate-950/80 px-3.5 py-3 text-xs sm:text-sm text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
+                        className="w-full rounded-xl border border-white/15 bg-slate-950/80 px-3.5 py-3 text-base sm:text-sm text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
                       >
                         {client.serviceAreas.map((area) => (
                           <option key={area} value={area} className="bg-slate-900 text-white">

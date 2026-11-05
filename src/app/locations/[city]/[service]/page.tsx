@@ -14,6 +14,7 @@ import Navbar from "@/components/Navbar";
 import QuoteCalculator from "@/components/QuoteCalculator";
 import FaqAccordion from "@/components/FaqAccordion";
 import Footer from "@/components/Footer";
+import MobileBottomBar from "@/components/MobileBottomBar";
 import JsonLd from "@/components/JsonLd";
 import {
   getActiveClient,
@@ -351,6 +352,9 @@ export default async function LocationServicePage({ params }: PageProps) {
 
       {/* Footer */}
       <Footer client={client} />
+
+      {/* Fixed High-Converting Mobile Bottom Quick Action Bar */}
+      <MobileBottomBar client={client} />
     </main>
   );
 }

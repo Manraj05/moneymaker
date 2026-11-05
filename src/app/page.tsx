@@ -9,6 +9,7 @@ import ReviewMarquee from "@/components/ReviewMarquee";
 import ServiceAreas from "@/components/ServiceAreas";
 import FaqAccordion from "@/components/FaqAccordion";
 import Footer from "@/components/Footer";
+import MobileBottomBar from "@/components/MobileBottomBar";
 import JsonLd from "@/components/JsonLd";
 import { getActiveClient } from "@/lib/client";
 
@@ -16,7 +17,7 @@ export default function HomePage() {
   const client = getActiveClient();
 
   return (
-    <main className="min-h-screen bg-obsidian text-slate-100">
+    <main className="min-h-screen bg-obsidian text-slate-100 pb-16 sm:pb-0">
       {/* Schema Injection */}
       <JsonLd client={client} />
 
@@ -49,6 +50,9 @@ export default function HomePage() {
 
       {/* Architectural Industrial Footer with Programmatic Local SEO Directory */}
       <Footer client={client} />
+
+      {/* Fixed High-Converting Mobile Bottom Quick Action Bar */}
+      <MobileBottomBar client={client} />
     </main>
   );
 }
