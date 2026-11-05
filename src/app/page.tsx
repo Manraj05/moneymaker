@@ -1,10 +1,12 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import TrustStatsBand from "@/components/TrustStatsBand";
 import ProblemsSolved from "@/components/ProblemsSolved";
+import ComparisonTable from "@/components/ComparisonTable";
+import ProcessBento from "@/components/ProcessBento";
 import ServicesGrid from "@/components/ServicesGrid";
 import QuoteCalculator from "@/components/QuoteCalculator";
-import ProcessBento from "@/components/ProcessBento";
 import ReviewMarquee from "@/components/ReviewMarquee";
 import ServiceAreas from "@/components/ServiceAreas";
 import FaqAccordion from "@/components/FaqAccordion";
@@ -27,22 +29,28 @@ export default function HomePage() {
       {/* Refactored Hero Section: Background Photo Ken Burns + 4 Clean Elements + Embedded BeforeAfterSlider */}
       <HeroSection client={client} />
 
-      {/* 4 Concrete Problems We Permanently Solve Strip */}
+      {/* Full-Width Trust Metric Stat Band */}
+      <TrustStatsBand />
+
+      {/* 4 Concrete Problems We Permanently Solve (Asymmetric Split-Screen Diagnostic) */}
       <ProblemsSolved />
 
-      {/* Residential & Commercial Services Grid with $/sq ft Pills */}
+      {/* Visual Palette Reset: Clean Light Ice-Gray Comparison Table */}
+      <ComparisonTable client={client} />
+
+      {/* Technical 4-Step CSP 3 Diamond Prep Protocol (Connected Horizontal Stepper Timeline) */}
+      <ProcessBento client={client} />
+
+      {/* Residential & Commercial Services Editorial Layout with $/sq ft Pills */}
       <ServicesGrid client={client} />
 
-      {/* Dedicated Full-Width Cost Calculator Section (Horizontal Selectable Rows) */}
+      {/* Dedicated Full-Width Cost Calculator Section (Slate-Blue Gradient Container) */}
       <QuoteCalculator client={client} />
-
-      {/* Technical Comparison Table (Commercial vs Cheap DIY) + 4-Step CSP 3 Diamond Prep */}
-      <ProcessBento client={client} />
 
       {/* Auto-scrolling Verified Google Reviews Marquee Wall */}
       <ReviewMarquee client={client} />
 
-      {/* Regional Service Areas & Coverage */}
+      {/* Regional Service Areas & Coverage Console */}
       <ServiceAreas client={client} />
 
       {/* Frequently Asked Questions */}
