@@ -16,9 +16,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Selection */
+/* Luxury Monochrome Selection */
 ::selection {
-  background-color: #F59E0B;
+  background-color: #FFFFFF;
   color: #090D16;
 }
 
@@ -32,24 +32,31 @@ body {
 
 .bg-dot-pattern {
   background-size: 24px 24px;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
 }
 
-/* Glow Utilities */
-.amber-glow {
-  box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.25);
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.amber-glow-lg {
-  box-shadow: 0 0 45px -5px rgba(245, 158, 11, 0.35);
+.glass-panel-hover {
+  transition: all 0.25s ease;
+}
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.24);
 }
 
-/* Modern Slider Styling */
+/* Silver & White Slider Styling */
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
   background: #1E293B;
-  height: 8px;
+  height: 6px;
   border-radius: 9999px;
   outline: none;
 }
@@ -57,13 +64,13 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
-  background: #F59E0B;
+  background: #FFFFFF;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(245, 158, 11, 0.8);
-  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.85);
+  border: 2px solid #090D16;
   transition: transform 0.15s ease;
 }
 
@@ -72,13 +79,13 @@ input[type="range"]::-webkit-slider-thumb:hover {
 }
 
 input[type="range"]::-moz-range-thumb {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
-  background: #F59E0B;
+  background: #FFFFFF;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(245, 158, 11, 0.8);
-  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.85);
+  border: 2px solid #090D16;
   transition: transform 0.15s ease;
 }
 

@@ -1,178 +1,4 @@
 {
-  "stepx-epoxy": {
-    "id": "stepx-epoxy",
-    "slug": "stepx-epoxy",
-    "niche": "epoxy",
-    "nicheTitle": "Epoxy Flooring & Concrete Coatings",
-    "businessName": "STEPX EPOXY",
-    "ownerName": "STEPX Team",
-    "address": "32 Fulmer Rd, Brampton, ON L7A 4L9",
-    "primaryCity": "Brampton",
-    "province": "ON",
-    "postalCode": "L7A 4L9",
-    "phone": "(647) 403-5801",
-    "phoneHref": "tel:+16474035801",
-    "rating": 5.0,
-    "reviewCount": 24,
-    "tagline": "Showroom-Grade Metallic, Flake & Polyaspartic Floors Across Brampton & the GTA",
-    "heroSubtitle": "Transform your garage, basement, or commercial facility with industrial-grade diamond-ground polyaspartic coatings. Built for brutal Ontario winters and road-salt punishment.",
-    "serviceAreas": [
-      "Brampton",
-      "Mississauga",
-      "Vaughan",
-      "Caledon",
-      "Etobicoke",
-      "Oakville",
-      "Milton"
-    ],
-    "guarantees": [
-      "Industrial HEPA Diamond Grinding (CSP 2-3)",
-      "Hot-Tire & Ontario Road-Salt Proof",
-      "1-Day Turnaround & 15-Year Warranty"
-    ],
-    "trustBadges": [
-      "WSIB Insured & Registered",
-      "$5M Commercial Liability",
-      "15-Year Peeling Warranty",
-      "100% Ontario Owned"
-    ],
-    "pricingTiers": [
-      {
-        "id": "solid",
-        "name": "Solid Commercial Epoxy",
-        "tagline": "Durable, clean, chemical-resistant",
-        "minRate": 5.5,
-        "maxRate": 8.0,
-        "popular": false,
-        "features": ["100% solids epoxy base", "Satin or gloss industrial finish", "Resistant to oil & light chemicals", "Ideal for warehouses & storage"]
-      },
-      {
-        "id": "flake",
-        "name": "Full-Flake Polyaspartic System",
-        "tagline": "Most Popular · Showroom Garage Finish",
-        "minRate": 8.0,
-        "maxRate": 12.0,
-        "popular": true,
-        "features": ["Diamond grind mechanical prep", "Full broadcast flake to rejection", "UV-stable polyaspartic topcoat", "100% hot-tire & road salt proof", "15-year adhesion warranty"]
-      },
-      {
-        "id": "metallic",
-        "name": "3D Marble Metallic System",
-        "tagline": "Luxury decorative architectural finish",
-        "minRate": 12.0,
-        "maxRate": 16.0,
-        "popular": false,
-        "features": ["Custom two-tone artisan swirl", "Mirror-glass depth effect", "Zero-VOC moisture barrier", "Perfect for basements & showrooms"]
-      }
-    ],
-    "calculatorPresets": [
-      { "label": "1-Car Garage (~250 sq ft)", "sqft": 250 },
-      { "label": "2-Car Garage (~450 sq ft)", "sqft": 450 },
-      { "label": "3-Car Garage (~700 sq ft)", "sqft": 700 },
-      { "label": "Full Basement (~1,000 sq ft)", "sqft": 1000 }
-    ],
-    "services": [
-      {
-        "slug": "garage-epoxy-flooring",
-        "name": "Garage Epoxy & Polyaspartic Coatings",
-        "shortDesc": "Heavy-duty flake floors engineered to withstand road salt, automotive fluids, and heavy tire torque.",
-        "icon": "ShieldCheck",
-        "deliverables": ["Full mechanical diamond grinding", "Polyurea pit & crack repair", "Full flake vinyl broadcast", "Non-yellowing polyaspartic clearcoat"]
-      },
-      {
-        "slug": "commercial-epoxy-coating",
-        "name": "Commercial & Industrial Epoxy Systems",
-        "shortDesc": "CFIA compliant, high-traffic seamless flooring for automotive shops, warehouses, and retail spaces.",
-        "icon": "Factory",
-        "deliverables": ["High-build 100% solids epoxy", "Slip-resistant aluminum oxide additive", "USDA/CFIA sanitary compliance", "Fast cure overnight scheduling"]
-      },
-      {
-        "slug": "metallic-marble-epoxy",
-        "name": "3D Metallic & Marble Epoxy Flooring",
-        "shortDesc": "Luxury designer seamless floors with organic pearlescent marbling for modern basements and offices.",
-        "icon": "Sparkles",
-        "deliverables": ["Dual-pigment mica powder dispersion", "Glass-like mirror depth", "100% moisture vapor barrier base", "Seamless architectural aesthetics"]
-      },
-      {
-        "slug": "basement-concrete-polishing",
-        "name": "Basement Floor Sealing & Polished Concrete",
-        "shortDesc": "Moisture-blocking waterproof coatings preventing musty dampness, efflorescence, and concrete dusting.",
-        "icon": "Layers",
-        "deliverables": ["Deep penetrating vapor barrier", "Efflorescence neutralization", "Dust-proof satin seal", "Mold & mildew impervious"]
-      }
-    ],
-    "processSteps": [
-      {
-        "number": "01",
-        "title": "Industrial Diamond Grinding",
-        "subtitle": "Mechanical Profile Prep",
-        "description": "We grind your concrete slab to CSP 2-3 standard using 3-phase Lavina planetary diamond grinders with integrated HEPA dust vacuums. No acid washing, no shortcuts."
-      },
-      {
-        "number": "02",
-        "title": "Polyurea Crack Restoration",
-        "subtitle": "Structural Stitching",
-        "description": "Every spalled pit, hairline fissure, and control joint is chased and bonded with structural polyurea mender that cures harder than concrete itself."
-      },
-      {
-        "number": "03",
-        "title": "Basecoat & Flake Broadcast",
-        "subtitle": "Full Saturation",
-        "description": "We roll down a pure moisture-tolerant epoxy basecoat and broadcast hand-selected custom color vinyl chips to absolute rejection for 100% coverage."
-      },
-      {
-        "number": "04",
-        "title": "UV Polyaspartic Armor Coat",
-        "subtitle": "4x Stronger Than Epoxy",
-        "description": "Scraped flush and locked with pure aliphatic polyaspartic. UV-stable, chemical proof, zero yellowing, and ready for vehicle parking in 24 hours."
-      }
-    ],
-    "reviews": [
-      {
-        "author": "Verified Brampton Homeowner",
-        "city": "Brampton",
-        "rating": 5.0,
-        "date": "2 weeks ago",
-        "text": "Got my garage down in metallic and couldn’t be happier with the results—the floor shines and I get compliments each time."
-      },
-      {
-        "author": "Verified GTA Client",
-        "city": "Mississauga",
-        "rating": 5.0,
-        "date": "1 month ago",
-        "text": "The epoxy flooring with flakes turned out absolutely amazing. Smooth, efficient, and very well priced."
-      },
-      {
-        "author": "Verified Customer",
-        "city": "Caledon",
-        "rating": 5.0,
-        "date": "2 months ago",
-        "text": "Professional, reliable and excellent epoxy work done perfectly. Resists stains and hot-tire pickup."
-      }
-    ],
-    "faqs": [
-      {
-        "question": "How does polyaspartic epoxy hold up against Ontario winter road salt?",
-        "answer": "Unlike hardware-store epoxy paint kits that peel after one winter, our system utilizes a mechanical diamond grind bond and an industrial aliphatic polyaspartic topcoat. Road salt, calcium chloride brine, and slush cannot penetrate the chemical cross-links."
-      },
-      {
-        "question": "Can I park my vehicle on it without hot-tire pickup?",
-        "answer": "Yes. Our polyaspartic topcoats withstand heat ratings up to 150°C. Standard tires coming off the 401 or 410 during peak summer will never lift or delaminate our coatings."
-      },
-      {
-        "question": "How long does installation take?",
-        "answer": "Most standard 2-car and 3-car residential garages are completed in just 1 to 2 days. You can walk on the floor within 6 to 8 hours and park your vehicles after 24 to 48 hours."
-      },
-      {
-        "question": "Do you repair existing pitted, salt-damaged, or cracked concrete?",
-        "answer": "Yes! Preparation is 80% of a lasting floor. We diamond-grind away all surface contaminants, then fill and stitch every crack and salt-pitted crater with ultra-fast curing polyurea mender before coating."
-      },
-      {
-        "question": "What warranty comes with STEPX EPOXY floors?",
-        "answer": "We back our full-flake residential polyaspartic garage installations with a comprehensive 15-year adhesion and anti-peeling warranty."
-      }
-    ]
-  },
   "purest-epoxy": {
     "id": "purest-epoxy",
     "slug": "purest-epoxy",
@@ -189,7 +15,7 @@
     "rating": 4.9,
     "reviewCount": 46,
     "tagline": "Precision Marble Metallic, Full-Flake & CFIA Commercial Epoxy Systems",
-    "heroSubtitle": "Hamilton and Niagara's premier architectural epoxy artisans. Specializing in luxury metallic marble basement floors and bulletproof commercial garage coatings.",
+    "heroSubtitle": "100% solid epoxy base coats and UV-stable polyaspartic topcoats diamond-ground to CSP 3 and rated for -25°C Ontario winters. Starting from $4.50/sq ft installed.",
     "serviceAreas": [
       "Hamilton",
       "Stoney Creek",
@@ -200,43 +26,59 @@
       "Mississauga"
     ],
     "guarantees": [
-      "Owner-Operated Quality Control (Kyle's Direct Oversight)",
-      "Zero-VOC Low-Odor Indoor Formulations",
-      "Commercial Grade Slip-Resistant Topcoats"
+      "CSP 3 Lavina Planetary Diamond Grinding",
+      "100% Solids Epoxy + Aliphatic Polyaspartic",
+      "Hot-Tire & -25°C Winter Salt Proof"
     ],
     "trustBadges": [
-      "WSIB Insured & Bonded",
-      "CFIA Sanitary Certified Materials",
-      "15-Year Delamination Guarantee",
+      "WSIB Certified & Registered",
+      "$2M Comprehensive Liability",
+      "15-Year Delamination Warranty",
       "Top-Rated Hamilton Contractor"
     ],
     "pricingTiers": [
       {
         "id": "solid",
-        "name": "Solid Commercial Epoxy",
-        "tagline": "Durable, clean, chemical-resistant",
-        "minRate": 5.5,
-        "maxRate": 8.0,
+        "name": "Solid / Basement Moisture Shield",
+        "tagline": "Durable, seamless chemical barrier for basements & storage",
+        "minRate": 4.5,
+        "maxRate": 7.5,
         "popular": false,
-        "features": ["100% solids epoxy base", "Satin or gloss industrial finish", "Resistant to oil & light chemicals", "Ideal for warehouses & storage"]
+        "features": [
+          "100% solids epoxy moisture vapor base",
+          "Deep diamond mechanical grind (CSP 3)",
+          "Seamless satin or high-gloss protective finish",
+          "Zero VOC, odorless indoor installation"
+        ]
       },
       {
         "id": "flake",
         "name": "Full-Flake Polyaspartic System",
-        "tagline": "Most Popular · Showroom Garage Finish",
-        "minRate": 8.0,
-        "maxRate": 12.0,
+        "tagline": "Most Popular · Complete Showroom Garage Protection",
+        "minRate": 6.5,
+        "maxRate": 10.0,
         "popular": true,
-        "features": ["Diamond grind mechanical prep", "Full broadcast flake to rejection", "UV-stable polyaspartic topcoat", "100% hot-tire & road salt proof", "15-year adhesion warranty"]
+        "features": [
+          "Commercial planetary diamond grinding",
+          "Full vinyl flake broadcast to complete rejection",
+          "UV-stable non-yellowing polyaspartic clearcoat",
+          "Immune to hot-tire pickup & Ontario winter salt",
+          "15-Year written delamination warranty"
+        ]
       },
       {
         "id": "metallic",
-        "name": "3D Marble Metallic System",
-        "tagline": "Luxury decorative architectural finish",
-        "minRate": 12.0,
+        "name": "3D Designer Metallic Marble System",
+        "tagline": "Luxury architectural glass-depth finish for basements & showrooms",
+        "minRate": 9.0,
         "maxRate": 16.0,
         "popular": false,
-        "features": ["Custom two-tone artisan swirl", "Mirror-glass depth effect", "Zero-VOC moisture barrier", "Perfect for basements & showrooms"]
+        "features": [
+          "Hand-troweled multi-tone pearlescent swirls",
+          "Mirror-gloss architectural 3D depth effect",
+          "High-build 100% solids crystal clear resin",
+          "Commercial scratch & chemical resistance"
+        ]
       }
     ],
     "calculatorPresets": [
@@ -247,58 +89,82 @@
     ],
     "services": [
       {
-        "slug": "garage-epoxy-flooring",
-        "name": "Garage Epoxy & Polyaspartic Coatings",
-        "shortDesc": "Heavy-duty flake floors engineered to withstand road salt, automotive fluids, and heavy tire torque.",
+        "slug": "garage-flake-polyaspartic",
+        "name": "Garage Flake & Polyaspartic Flooring",
+        "shortDesc": "Heavy-duty full broadcast vinyl chip systems engineered to withstand road salt brine, hot summer tires, and oil spills.",
         "icon": "ShieldCheck",
-        "deliverables": ["Full mechanical diamond grinding", "Polyurea pit & crack repair", "Full flake vinyl broadcast", "Non-yellowing polyaspartic clearcoat"]
+        "priceRange": "$6.50 – $10.00 / sq ft",
+        "deliverables": [
+          "Lavina planetary diamond grind (CSP 3 profile)",
+          "Polyurea crack and spall restoration",
+          "100% vinyl flake saturation to rejection",
+          "High-build UV polyaspartic armor topcoat"
+        ]
       },
       {
-        "slug": "commercial-epoxy-coating",
-        "name": "Commercial & Industrial Epoxy Systems",
-        "shortDesc": "CFIA compliant, high-traffic seamless flooring for automotive shops, warehouses, and retail spaces.",
-        "icon": "Factory",
-        "deliverables": ["High-build 100% solids epoxy", "Slip-resistant aluminum oxide additive", "USDA/CFIA sanitary compliance", "Fast cure overnight scheduling"]
-      },
-      {
-        "slug": "metallic-marble-epoxy",
-        "name": "3D Metallic & Marble Epoxy Flooring",
-        "shortDesc": "Luxury designer seamless floors with organic pearlescent marbling for modern basements and offices.",
+        "slug": "3d-metallic-marble-epoxy",
+        "name": "3D Metallic & Marble Epoxy",
+        "shortDesc": "Artisan luxury seamless floors with organic pearlescent marbling and glass-like depth for modern basements and commercial showrooms.",
         "icon": "Sparkles",
-        "deliverables": ["Dual-pigment mica powder dispersion", "Glass-like mirror depth", "100% moisture vapor barrier base", "Seamless architectural aesthetics"]
+        "priceRange": "$9.00 – $16.00 / sq ft",
+        "deliverables": [
+          "Dual-pigment mica pearl hand-swirled dispersion",
+          "100% solids moisture vapor barrier base",
+          "Glass-like mirror depth and light reflection",
+          "Seamless satin or high-gloss protective shield"
+        ]
       },
       {
-        "slug": "basement-concrete-polishing",
-        "name": "Basement Floor Sealing & Polished Concrete",
-        "shortDesc": "Moisture-blocking waterproof coatings preventing musty dampness, efflorescence, and concrete dusting.",
+        "slug": "basement-floor-epoxy",
+        "name": "Basement Floor Waterproof Epoxy",
+        "shortDesc": "Moisture-blocking waterproof coatings preventing musty dampness, concrete dusting, and efflorescence in finished living areas.",
         "icon": "Layers",
-        "deliverables": ["Deep penetrating vapor barrier", "Efflorescence neutralization", "Dust-proof satin seal", "Mold & mildew impervious"]
+        "priceRange": "$4.50 – $10.00 / sq ft",
+        "deliverables": [
+          "Deep penetrating hydrostatic moisture barrier",
+          "Neutralization of concrete efflorescence",
+          "Zero-VOC odorless residential application",
+          "100% impervious to mold and standing water"
+        ]
+      },
+      {
+        "slug": "commercial-warehouse-coatings",
+        "name": "Commercial & Industrial Epoxy Systems",
+        "shortDesc": "CFIA compliant, high-traffic seamless flooring for automotive shops, manufacturing bays, and retail facilities.",
+        "icon": "Factory",
+        "priceRange": "$3.50 – $8.00 / sq ft",
+        "deliverables": [
+          "High-build 100% solids industrial epoxy",
+          "Aluminum oxide slip-resistant safety additive",
+          "CFIA & USDA sanitary compliance",
+          "Rapid-cure overnight scheduling for zero downtime"
+        ]
       }
     ],
     "processSteps": [
       {
         "number": "01",
-        "title": "Lavina Diamond Grinding",
-        "subtitle": "Prep Without Acids",
-        "description": "Every floor undergoes aggressive diamond abrasive tooling to open concrete pores and create an anchor profile for permanent bonding."
+        "title": "Lavina Planetary Diamond Grinding",
+        "subtitle": "CSP 3 Mechanical Anchor",
+        "description": "We grind your concrete slab to CSP 3 profile using heavy Lavina 3-head planetary diamond grinders with integrated HEPA dust vacuums. No acid washing, no shortcuts."
       },
       {
         "number": "02",
-        "title": "Moisture Mitigation Base",
-        "subtitle": "Vapor Barrier Defense",
-        "description": "We test concrete relative humidity (RH) and apply deep-penetrating 100% solids moisture vapor barrier epoxy."
+        "title": "Polyurea Crack & Spall Stitching",
+        "subtitle": "Structural Mending",
+        "description": "Every pit, winter road-salt crater, and control joint is chased and bonded with industrial polyurea mender that cures harder than concrete itself."
       },
       {
         "number": "03",
-        "title": "Artisan Layering & Flake",
-        "subtitle": "Precision Application",
-        "description": "Kyle personally blends and applies the colored vinyl chips or dual metallic pigments to create a one-of-a-kind showroom surface."
+        "title": "100% Solids Moisture Basecoat",
+        "subtitle": "Deep Chemical Penetration",
+        "description": "We apply pure moisture-tolerant epoxy basecoat and broadcast hand-selected custom color vinyl chips to absolute rejection for 100% flake density."
       },
       {
         "number": "04",
-        "title": "Polyaspartic Armor Topcoat",
-        "subtitle": "Non-Yellowing Shield",
-        "description": "Finished with industrial polyaspartic clear topcoat that stays crystal clear under intense UV and resents all battery acids, fluids, and salt."
+        "title": "UV-Stable Polyaspartic Armor Topcoat",
+        "subtitle": "4x Stronger Than Epoxy",
+        "description": "Scraped flush and locked with industrial polyaspartic. UV-stable, chemical proof, zero yellowing, and ready for full vehicle parking in 24 hours."
       }
     ],
     "reviews": [
@@ -326,24 +192,238 @@
     ],
     "faqs": [
       {
-        "question": "Who will be doing the actual work on my floor?",
-        "answer": "Kyle oversees every single project personally. We do not subcontract to day laborers; our trained craftsmen handle prep, repairs, and chemical applications."
+        "question": "How does polyaspartic epoxy hold up against Ontario winter road salt?",
+        "answer": "Unlike hardware-store epoxy paint kits that peel after one winter, our system utilizes a mechanical diamond grind bond (CSP 3) and an industrial aliphatic polyaspartic topcoat. Road salt brine and slush cannot penetrate the chemical cross-links."
       },
       {
-        "question": "Can you install metallic epoxy in finished basements?",
-        "answer": "Absolutely. Our metallic epoxy system is zero-VOC and odorless, making it completely safe for occupied residential basements and living spaces."
+        "question": "Can I park my vehicle on it without hot-tire pickup?",
+        "answer": "Yes. Our polyaspartic topcoats withstand heat ratings up to 150°C. Hot tires coming off the QEW or Red Hill Valley Parkway will never soften, lift, or delaminate our coatings."
       },
       {
-        "question": "How do you clean an epoxy floor once installed?",
-        "answer": "Epoxy floors are virtually maintenance-free. A simple dust mop or damp mopping with warm water and mild dish soap or Simple Green is all that's required."
+        "question": "How long does installation take?",
+        "answer": "Most standard 2-car and 3-car residential garages are completed in just 1 to 2 days. You can walk on the floor within 6 to 8 hours and park your vehicles after 24 to 48 hours."
       },
       {
-        "question": "What happens if there are oil stains in my existing garage concrete?",
-        "answer": "Our commercial degreasers and diamond grinding cut past the oil-saturated layer of concrete to guarantee uncompromised primer adhesion."
+        "question": "Do you repair existing pitted, salt-damaged, or cracked concrete?",
+        "answer": "Yes! Preparation is 80% of a lasting floor. We diamond-grind away all surface contaminants, then fill and stitch every crack and salt-pitted crater with ultra-fast curing polyurea mender before coating."
       },
       {
-        "question": "Do you provide free on-site consultations in the Hamilton & Burlington area?",
-        "answer": "Yes, we visit your property with physical color samples, measure the exact slab square footage, and perform concrete moisture testing completely free."
+        "question": "What warranty comes with Purest Epoxy floors?",
+        "answer": "Kyle backs all residential polyaspartic garage installations with a comprehensive 15-year adhesion and anti-peeling warranty."
+      }
+    ]
+  },
+  "irongrip-epoxy": {
+    "id": "irongrip-epoxy",
+    "slug": "irongrip-epoxy",
+    "niche": "epoxy",
+    "nicheTitle": "Epoxy Flooring & Concrete Coatings",
+    "businessName": "IronGrip Epoxy",
+    "ownerName": "IronGrip Team",
+    "address": "64 Foxsparrow Rd, Brampton, ON L7A 2W3",
+    "primaryCity": "Brampton",
+    "province": "ON",
+    "postalCode": "L7A 2W3",
+    "phone": "(416) 574-2452",
+    "phoneHref": "tel:+14165742452",
+    "rating": 4.6,
+    "reviewCount": 10,
+    "tagline": "Industrial-Grade Polyaspartic & Flake Garage Floor Coatings in Brampton",
+    "heroSubtitle": "100% solid epoxy base coats and UV-stable polyaspartic topcoats diamond-ground to CSP 3 and rated for -25°C Ontario winters. Starting from $4.50/sq ft installed.",
+    "serviceAreas": [
+      "Brampton",
+      "Mississauga",
+      "Caledon",
+      "Vaughan",
+      "Etobicoke",
+      "Oakville",
+      "Milton"
+    ],
+    "guarantees": [
+      "HEPA Planetary Diamond Grinding (CSP 3)",
+      "Zero Hot-Tire Pickup & Salt Proof",
+      "15-Year Delamination Warranty"
+    ],
+    "trustBadges": [
+      "WSIB Certified & Registered",
+      "$2M General Liability",
+      "15-Year Adhesion Guarantee",
+      "Brampton Local Specialists"
+    ],
+    "pricingTiers": [
+      {
+        "id": "solid",
+        "name": "Solid / Basement Moisture Shield",
+        "tagline": "Durable, seamless chemical barrier for basements & storage",
+        "minRate": 4.5,
+        "maxRate": 7.5,
+        "popular": false,
+        "features": [
+          "100% solids epoxy moisture vapor base",
+          "Deep diamond mechanical grind (CSP 3)",
+          "Seamless satin or high-gloss protective finish",
+          "Zero VOC, odorless indoor installation"
+        ]
+      },
+      {
+        "id": "flake",
+        "name": "Full-Flake Polyaspartic System",
+        "tagline": "Most Popular · Complete Showroom Garage Protection",
+        "minRate": 6.5,
+        "maxRate": 10.0,
+        "popular": true,
+        "features": [
+          "Commercial planetary diamond grinding",
+          "Full vinyl flake broadcast to complete rejection",
+          "UV-stable non-yellowing polyaspartic clearcoat",
+          "Immune to hot-tire pickup & Ontario winter salt",
+          "15-Year written delamination warranty"
+        ]
+      },
+      {
+        "id": "metallic",
+        "name": "3D Designer Metallic Marble System",
+        "tagline": "Luxury architectural glass-depth finish for basements & showrooms",
+        "minRate": 9.0,
+        "maxRate": 16.0,
+        "popular": false,
+        "features": [
+          "Hand-troweled multi-tone pearlescent swirls",
+          "Mirror-gloss architectural 3D depth effect",
+          "High-build 100% solids crystal clear resin",
+          "Commercial scratch & chemical resistance"
+        ]
+      }
+    ],
+    "calculatorPresets": [
+      { "label": "1-Car Garage (~250 sq ft)", "sqft": 250 },
+      { "label": "2-Car Garage (~450 sq ft)", "sqft": 450 },
+      { "label": "3-Car Garage (~700 sq ft)", "sqft": 700 },
+      { "label": "Full Basement (~1,000 sq ft)", "sqft": 1000 }
+    ],
+    "services": [
+      {
+        "slug": "garage-flake-polyaspartic",
+        "name": "Garage Flake & Polyaspartic Flooring",
+        "shortDesc": "Heavy-duty full broadcast vinyl chip systems engineered to withstand road salt brine, hot summer tires, and oil spills.",
+        "icon": "ShieldCheck",
+        "priceRange": "$6.50 – $10.00 / sq ft",
+        "deliverables": [
+          "Lavina planetary diamond grind (CSP 3 profile)",
+          "Polyurea crack and spall restoration",
+          "100% vinyl flake saturation to rejection",
+          "High-build UV polyaspartic armor topcoat"
+        ]
+      },
+      {
+        "slug": "3d-metallic-marble-epoxy",
+        "name": "3D Metallic & Marble Epoxy",
+        "shortDesc": "Artisan luxury seamless floors with organic pearlescent marbling and glass-like depth for modern basements and commercial showrooms.",
+        "icon": "Sparkles",
+        "priceRange": "$9.00 – $16.00 / sq ft",
+        "deliverables": [
+          "Dual-pigment mica pearl hand-swirled dispersion",
+          "100% solids moisture vapor barrier base",
+          "Glass-like mirror depth and light reflection",
+          "Seamless satin or high-gloss protective shield"
+        ]
+      },
+      {
+        "slug": "basement-floor-epoxy",
+        "name": "Basement Floor Waterproof Epoxy",
+        "shortDesc": "Moisture-blocking waterproof coatings preventing musty dampness, concrete dusting, and efflorescence in finished living areas.",
+        "icon": "Layers",
+        "priceRange": "$4.50 – $10.00 / sq ft",
+        "deliverables": [
+          "Deep penetrating hydrostatic moisture barrier",
+          "Neutralization of concrete efflorescence",
+          "Zero-VOC odorless residential application",
+          "100% impervious to mold and standing water"
+        ]
+      },
+      {
+        "slug": "commercial-warehouse-coatings",
+        "name": "Commercial & Industrial Epoxy Systems",
+        "shortDesc": "CFIA compliant, high-traffic seamless flooring for automotive shops, manufacturing bays, and retail facilities.",
+        "icon": "Factory",
+        "priceRange": "$3.50 – $8.00 / sq ft",
+        "deliverables": [
+          "High-build 100% solids industrial epoxy",
+          "Aluminum oxide slip-resistant safety additive",
+          "CFIA & USDA sanitary compliance",
+          "Rapid-cure overnight scheduling for zero downtime"
+        ]
+      }
+    ],
+    "processSteps": [
+      {
+        "number": "01",
+        "title": "Industrial Planetary Diamond Grinding",
+        "subtitle": "CSP 3 Mechanical Prep",
+        "description": "We mechanically grind concrete to CSP 3 using diamond planetary equipment with HEPA filtration. We never use acid etching."
+      },
+      {
+        "number": "02",
+        "title": "Polyurea Joint & Pit Stitching",
+        "subtitle": "Crack Restoration",
+        "description": "Deep injection of fast-curing structural polyurea mender into cracks, pits, and saw cuts to restore slab integrity."
+      },
+      {
+        "number": "03",
+        "title": "100% Solids Epoxy Base & Flake",
+        "subtitle": "Full Saturation",
+        "description": "Deep-penetrating moisture mitigating epoxy base followed by heavy broadcast of colored vinyl chips to full rejection."
+      },
+      {
+        "number": "04",
+        "title": "UV Polyaspartic Shield Topcoat",
+        "subtitle": "Rock-Hard Finish",
+        "description": "Clear high-solids polyaspartic that locks in flakes, provides slip resistance, and remains non-yellowing forever."
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Verified Homeowner",
+        "city": "Brampton",
+        "rating": 5.0,
+        "date": "3 weeks ago",
+        "text": "IronGrip transformed our 2-car garage in Brampton. The flake finish looks incredible and handles wet winter tires with zero issues."
+      },
+      {
+        "author": "Auto Shop Owner",
+        "city": "Mississauga",
+        "rating": 5.0,
+        "date": "1 month ago",
+        "text": "Prompt quoting and professional diamond prep. Our commercial auto shop floor is bulletproof."
+      },
+      {
+        "author": "Verified Customer",
+        "city": "Caledon",
+        "rating": 5.0,
+        "date": "2 months ago",
+        "text": "Solid team and great communication from start to finish. Highly recommend IronGrip for garage floors."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How quickly can IronGrip complete my garage floor in Brampton?",
+        "answer": "Most standard 2-car garages are finished in 1 to 2 days. The polyaspartic topcoat cures rapidly, allowing foot traffic within 6 hours and parking within 24 to 48 hours."
+      },
+      {
+        "question": "Will road salt damage this floor?",
+        "answer": "No. Our polyaspartic coating is completely non-porous and chemically inert to road salt brine, de-icers, engine oil, and hydraulic fluid."
+      },
+      {
+        "question": "What prep do you do before applying the epoxy?",
+        "answer": "We mechanically diamond-grind every inch of the concrete slab using planetary grinders with HEPA dust control to open up the concrete pores (CSP 3)."
+      },
+      {
+        "question": "Is there a warranty against peeling?",
+        "answer": "Yes, every full garage system comes with a written 15-year adhesion warranty against hot-tire pickup and delamination."
+      },
+      {
+        "question": "Do you offer free in-person estimates in Peel Region?",
+        "answer": "Yes, we visit your home with physical flake samples and laser measure your floor completely free of charge."
       }
     ]
   },
@@ -424,6 +504,7 @@
         "name": "24-Hour Emergency Roof Leak Repair",
         "shortDesc": "Immediate dispatch across Brampton and Peel for storm damage, flashing leaks, and active drips.",
         "icon": "Flame",
+        "priceRange": "$4.50 – $6.50 / sq ft",
         "deliverables": ["2-hour emergency response tarping", "Infrared leak detection in attic", "Vent pipe gasket replacement", "Same-day waterproof patch"]
       },
       {
@@ -431,6 +512,7 @@
         "name": "Architectural Shingle Roof Replacement",
         "shortDesc": "Complete tear-off and replacement with heavy-duty IKO Dynasty or GAF Timberline HDZ architectural shingles.",
         "icon": "ShieldAlert",
+        "priceRange": "$5.50 – $9.00 / sq ft",
         "deliverables": ["Total strip down to sheathing", "Double ice & water barrier installation", "130 MPH Class-F wind rated shingles", "Ridge vent attic circulation"]
       },
       {
@@ -438,6 +520,7 @@
         "name": "Flat Roof Torch-Down & Commercial Systems",
         "shortDesc": "Multi-layer SBS modified bitumen waterproofing for residential extensions, garages, and commercial decks.",
         "icon": "Layers",
+        "priceRange": "$14.00 – $22.00 / sq ft",
         "deliverables": ["SBS 2-ply torch-grade membrane", "Custom metal edge perimeter flashing", "Zero-ponding positive drainage", "20-year commercial membrane"]
       },
       {
@@ -445,6 +528,7 @@
         "name": "Seamless Eavestrough, Soffit & Fascia Repair",
         "shortDesc": "Continuous 5-inch aluminum eavestroughing with leaf guards to stop foundation moisture and ice damming.",
         "icon": "Wrench",
+        "priceRange": "$8.00 – $14.00 / linear ft",
         "deliverables": ["On-site seamless aluminum roll-forming", "Heavy-gauge hidden aluminum hangers", "Vented soffit attic airflow intake", "Oversized 3x4 downspouts"]
       }
     ],
@@ -597,6 +681,7 @@
         "name": "24-Hour Emergency Roof Leak Repair",
         "shortDesc": "Immediate dispatch across Brampton and Peel for storm damage, flashing leaks, and active drips.",
         "icon": "Flame",
+        "priceRange": "$4.50 – $6.50 / sq ft",
         "deliverables": ["2-hour emergency response tarping", "Infrared leak detection in attic", "Vent pipe gasket replacement", "Same-day waterproof patch"]
       },
       {
@@ -604,6 +689,7 @@
         "name": "Architectural Shingle Roof Replacement",
         "shortDesc": "Complete tear-off and replacement with heavy-duty IKO Dynasty or GAF Timberline HDZ architectural shingles.",
         "icon": "ShieldAlert",
+        "priceRange": "$5.50 – $9.00 / sq ft",
         "deliverables": ["Total strip down to sheathing", "Double ice & water barrier installation", "130 MPH Class-F wind rated shingles", "Ridge vent attic circulation"]
       },
       {
@@ -611,6 +697,7 @@
         "name": "Flat Roof Torch-Down & Commercial Systems",
         "shortDesc": "Multi-layer SBS modified bitumen waterproofing for residential extensions, garages, and commercial decks.",
         "icon": "Layers",
+        "priceRange": "$14.00 – $22.00 / sq ft",
         "deliverables": ["SBS 2-ply torch-grade membrane", "Custom metal edge perimeter flashing", "Zero-ponding positive drainage", "20-year commercial membrane"]
       },
       {
@@ -618,6 +705,7 @@
         "name": "Seamless Eavestrough, Soffit & Fascia Repair",
         "shortDesc": "Continuous 5-inch aluminum eavestroughing with leaf guards to stop foundation moisture and ice damming.",
         "icon": "Wrench",
+        "priceRange": "$8.00 – $14.00 / linear ft",
         "deliverables": ["On-site seamless aluminum roll-forming", "Heavy-gauge hidden aluminum hangers", "Vented soffit attic airflow intake", "Oversized 3x4 downspouts"]
       }
     ],

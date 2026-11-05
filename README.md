@@ -8,8 +8,8 @@ A production-grade, multi-client Next.js 15 web platform built for high-ticket S
 
 | Client Slug | Business Name | Niche | Primary City | Phone | Google Rating |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| `stepx-epoxy` *(Default)* | **STEPX EPOXY** | Epoxy | Brampton, ON | `(647) 403-5801` | 5.0 ★ (24 reviews) |
-| `purest-epoxy` | **Purest Epoxy** (Kyle) | Epoxy | Hamilton, ON | `(905) 745-6085` | 4.9 ★ (46 reviews) |
+| `purest-epoxy` *(Default)* | **Purest Epoxy** (Kyle) | Epoxy | Hamilton, ON | `(905) 745-6085` | 4.9 ★ (46 reviews) |
+| `irongrip-epoxy` | **IronGrip Epoxy** | Epoxy | Brampton, ON | `(416) 574-2452` | 4.6 ★ (10 reviews) |
 | `diamond-roof-brampton` | **Diamond Roof Repair** | Roofing | Brampton, ON | `(437) 215-8624` | 4.9 ★ (87 reviews) |
 | `swan-roofing-brampton` | **Swan Roofing Services** (James) | Roofing | Brampton, ON | `(905) 458-4065` | 4.9 ★ (54 reviews) |
 
@@ -17,7 +17,7 @@ A production-grade, multi-client Next.js 15 web platform built for high-ticket S
 
 ## ⚡ Quick Start & Client Switching
 
-### 1. Preview STEPX EPOXY Locally
+### 1. Preview Purest Epoxy Locally
 ```bash
 npm run dev
 ```
@@ -26,8 +26,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ### 2. Switch to Another Contractor Lead
 Run the built-in helper script to switch active business profiles in one command:
 ```bash
-# Switch to Purest Epoxy in Hamilton
-npm run client -- purest-epoxy
+# Switch to IronGrip Epoxy in Brampton
+npm run client -- irongrip-epoxy
 
 # Switch to Diamond Roof Repair in Brampton
 npm run client -- diamond-roof-brampton
@@ -35,8 +35,8 @@ npm run client -- diamond-roof-brampton
 # Switch to Swan Roofing Services in Brampton
 npm run client -- swan-roofing-brampton
 
-# Switch back to STEPX EPOXY
-npm run client -- stepx-epoxy
+# Switch back to Purest Epoxy
+npm run client -- purest-epoxy
 ```
 
 ### 3. Verify Production Build & Static SEO Generation

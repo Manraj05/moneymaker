@@ -22,6 +22,7 @@ export interface ServiceItem {
   name: string;
   shortDesc: string;
   icon: string;
+  priceRange?: string;
   deliverables: string[];
 }
 
@@ -78,12 +79,12 @@ const clients = clientsData as unknown as Record<string, ClientProfile>;
 export function getActiveClient(overrideSlug?: string): ClientProfile {
   const envSlug = process.env.NEXT_PUBLIC_CLIENT_ID;
   const activeSlug =
-    overrideSlug || envSlug || activeClientData.clientId || "stepx-epoxy";
+    overrideSlug || envSlug || activeClientData.clientId || "purest-epoxy";
   const client = clients[activeSlug];
 
   if (!client) {
-    // Fallback to stepx-epoxy or first client
-    return clients["stepx-epoxy"] || Object.values(clients)[0];
+    // Fallback to purest-epoxy or first client
+    return clients["purest-epoxy"] || Object.values(clients)[0];
   }
   return client;
 }

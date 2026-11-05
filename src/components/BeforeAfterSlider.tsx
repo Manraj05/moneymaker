@@ -1,31 +1,42 @@
 "use client";
 
 import React, { useState, useRef, useCallback, useEffect } from "react";
-import { Sparkles, AlertTriangle, CheckCircle2, MoveHorizontal } from "lucide-react";
-import { ClientProfile } from "@/lib/client";
+import Image from "next/image";
+import { MoveHorizontal } from "lucide-react";
 
 interface BeforeAfterSliderProps {
-  client: ClientProfile;
+  className?: string;
+  isHeroEmbedded?: boolean;
 }
 
-export default function BeforeAfterSlider({ client }: BeforeAfterSliderProps) {
+export default function BeforeAfterSlider({
+  className = "",
+  isHeroEmbedded = false,
+}: BeforeAfterSliderProps) {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const isEpoxy = client.niche === "epoxy";
+  // Automatic intro sweep animation (35% -> 65% -> 50% on initial load)
+  useEffect(() => {
+    const t1 = setTimeout(() => setSliderPosition(35), 400);
+    const t2 = setTimeout(() => setSliderPosition(65), 1100);
+    const t3 = setTimeout(() => setSliderPosition(50), 1900);
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+      clearTimeout(t3);
+    };
+  }, []);
 
   const handleMove = useCallback((clientX: number) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     const x = clientX - rect.left;
     const width = rect.width;
-    const percentage = Math.max(5, Math.min(95, (x / width) * 100));
+    const percentage = Math.max(3, Math.min(97, (x / width) * 100));
     setSliderPosition(percentage);
   }, []);
-
-  const handleMouseDown = () => setIsDragging(true);
-  const handleTouchStart = () => setIsDragging(true);
 
   useEffect(() => {
     const handleMouseUp = () => setIsDragging(false);
@@ -54,236 +65,224 @@ export default function BeforeAfterSlider({ client }: BeforeAfterSliderProps) {
   }, [isDragging, handleMove]);
 
   return (
-    <section id="before-after" className="py-20 border-t border-white/10 bg-obsidian-200/50">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        {/* Section Header */}
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 font-mono text-xs font-semibold text-amber-bright">
-            <Sparkles className="h-3.5 w-3.5" />
-            <span>Proven GTA Transformations</span>
-          </div>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            {isEpoxy
-              ? "From Salt-Eaten Concrete to Showroom Mirror Gloss"
-              : "From Leaking Wind-Damaged Shingles to 130 MPH Protection"}
-          </h2>
-          <p className="mt-3 text-sm text-slate-400">
-            Slide the divider to inspect how {client.businessName} repairs structural degradation,
-            stops Ontario freeze-thaw pitting, and installs multi-layer industrial armor.
-          </p>
-        </div>
+    <div
+      ref={containerRef}
+      className={`relative overflow-hidden select-none cursor-ew-resize rounded-2xl sm:rounded-3xl border border-white/20 bg-slate-950 shadow-2xl ${
+        isHeroEmbedded
+          ? "aspect-[3/4] max-h-[560px] w-full"
+          : "aspect-[3/4] sm:aspect-[4/3] max-h-[580px] w-full"
+      } ${className}`}
+      onMouseDown={(e) => {
+        setIsDragging(true);
+        handleMove(e.clientX);
+      }}
+      onTouchStart={(e) => {
+        setIsDragging(true);
+        if (e.touches.length > 0) handleMove(e.touches[0].clientX);
+      }}
+    >
+      {/* ======================================================== */}
+      {/* 1. RIGHT LAYER: AFTER (Pure Mirror-Gloss Metallic Finish) */}
+      {/* ======================================================== */}
+      <div className="absolute inset-0 h-full w-full">
+        {/* Full resolution garage photo */}
+        <Image
+          src="/after-garage.png"
+          alt="Luxury 3D Metallic Marble Epoxy Garage Floor with Hexagonal LED Ceiling Lights"
+          fill
+          priority
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover object-center pointer-events-none"
+        />
 
-        {/* Interactive Comparison Card */}
-        <div className="mt-12 mx-auto max-w-5xl">
+        {/* Crisp Frosted-Glass Corner Badge (Top Right) */}
+        <div className="absolute top-4 right-4 z-20 flex items-center gap-2 rounded-full border border-white/20 bg-black/60 px-3.5 py-1.5 backdrop-blur-xl shadow-lg">
+          <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
+          <span className="font-mono text-[11px] font-bold tracking-wider text-white uppercase">
+            AFTER: 3D METALLIC EPOXY
+          </span>
+        </div>
+      </div>
+
+      {/* ======================================================== */}
+      {/* 2. LEFT LAYER: BEFORE (Pixel-for-Pixel Upper + Raw Concrete Slab) */}
+      {/* ======================================================== */}
+      <div
+        className="absolute inset-0 h-full overflow-hidden transition-[width] duration-75 ease-out will-change-[width]"
+        style={{ width: `${sliderPosition}%` }}
+      >
+        {/* Underlying Full Image Container to maintain identical aspect ratio & alignment */}
+        <div
+          className="relative h-full pointer-events-none"
+          style={{
+            // Container width dynamically tracks the parent width via containerRef
+            width: containerRef.current
+              ? `${containerRef.current.clientWidth}px`
+              : "100%",
+          }}
+        >
+          {/* Base photo (ceiling, slatwalls, white door, cabinet, tires align 100% pixel-for-pixel) */}
+          <Image
+            src="/after-garage.png"
+            alt="Original Garage Room Structure"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover object-center pointer-events-none"
+          />
+
+          {/* Realistic Raw Unfinished Concrete Slab Composite overlaid over the exact floor polygon */}
           <div
-            ref={containerRef}
-            className="relative h-[380px] sm:h-[460px] w-full overflow-hidden rounded-2xl border border-white/15 shadow-2xl select-none cursor-ew-resize"
-            onMouseDown={(e) => {
-              setIsDragging(true);
-              handleMove(e.clientX);
-            }}
-            onTouchStart={(e) => {
-              setIsDragging(true);
-              if (e.touches.length > 0) handleMove(e.touches[0].clientX);
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              clipPath: "polygon(0% 52.5%, 47% 48.5%, 100% 55%, 100% 100%, 0% 100%)",
             }}
           >
-            {/* RIGHT LAYER: AFTER (High Performance Finish) */}
-            <div className="absolute inset-0 bg-slate-900">
-              {isEpoxy ? (
-                // Epoxy AFTER visual surface
-                <div className="relative h-full w-full bg-[#121926] p-6 flex flex-col justify-between overflow-hidden">
-                  {/* Flake Texture effect */}
-                  <div
-                    className="absolute inset-0 opacity-40 pointer-events-none"
-                    style={{
-                      backgroundImage: `radial-gradient(#F59E0B 1px, transparent 1px), radial-gradient(#FFFFFF 1.5px, transparent 1.5px), radial-gradient(#64748B 2px, transparent 2px)`,
-                      backgroundSize: `16px 16px, 24px 24px, 32px 32px`,
-                      backgroundPosition: `0 0, 8px 8px, 16px 16px`,
-                    }}
-                  />
-                  {/* High gloss specular highlight sheen */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-amber-500/10 to-white/10 pointer-events-none" />
-
-                  {/* Top Right Label */}
-                  <div className="relative z-10 self-end flex items-center gap-2 rounded-full border border-emerald-500/50 bg-emerald-950/80 px-3.5 py-1.5 backdrop-blur-md">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-                    <span className="font-heading text-xs font-bold text-emerald-300">
-                      AFTER: Polyaspartic Full-Flake
-                    </span>
-                  </div>
-
-                  {/* Callout Badges */}
-                  <div className="relative z-10 self-end max-w-xs space-y-2 text-right">
-                    <span className="inline-block rounded-md border border-white/20 bg-slate-950/80 px-2.5 py-1 text-[11px] font-mono text-slate-200">
-                      ✓ 100% Salt & Hot-Tire Proof
-                    </span>
-                    <br />
-                    <span className="inline-block rounded-md border border-white/20 bg-slate-950/80 px-2.5 py-1 text-[11px] font-mono text-emerald-400">
-                      ✓ Zero Peeling Guaranteed (15-Yr)
-                    </span>
-                    <br />
-                    <span className="inline-block rounded-md border border-white/20 bg-slate-950/80 px-2.5 py-1 text-[11px] font-mono text-amber-bright">
-                      ✓ Slip-Resistant Textured Clearcoat
-                    </span>
-                  </div>
-                </div>
-              ) : (
-                // Roofing AFTER visual surface
-                <div className="relative h-full w-full bg-[#18202F] p-6 flex flex-col justify-between overflow-hidden">
-                  {/* Architectural Shingle Texture */}
-                  <div
-                    className="absolute inset-0 opacity-50 pointer-events-none"
-                    style={{
-                      backgroundImage: `repeating-linear-gradient(0deg, #0F172A 0px, #0F172A 18px, #334155 19px, #1E293B 20px)`,
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent pointer-events-none" />
-
-                  <div className="relative z-10 self-end flex items-center gap-2 rounded-full border border-emerald-500/50 bg-emerald-950/80 px-3.5 py-1.5 backdrop-blur-md">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-                    <span className="font-heading text-xs font-bold text-emerald-300">
-                      AFTER: Architectural Shingles
-                    </span>
-                  </div>
-
-                  <div className="relative z-10 self-end max-w-xs space-y-2 text-right">
-                    <span className="inline-block rounded-md border border-white/20 bg-slate-950/80 px-2.5 py-1 text-[11px] font-mono text-slate-200">
-                      ✓ Class-F 130 MPH Wind Rated
-                    </span>
-                    <br />
-                    <span className="inline-block rounded-md border border-white/20 bg-slate-950/80 px-2.5 py-1 text-[11px] font-mono text-emerald-400">
-                      ✓ Double Ice & Water Shield Barrier
-                    </span>
-                    <br />
-                    <span className="inline-block rounded-md border border-white/20 bg-slate-950/80 px-2.5 py-1 text-[11px] font-mono text-amber-bright">
-                      ✓ 50-Year Non-Prorated Lifetime
-                    </span>
-                  </div>
-                </div>
-              )}
+            {/* 2a. Desaturated, low-contrast, weathered base concrete */}
+            <div className="absolute inset-0">
+              <Image
+                src="/after-garage.png"
+                alt="Desaturated Concrete Slab"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover object-center pointer-events-none"
+                style={{
+                  filter: "grayscale(100%) contrast(45%) brightness(85%)",
+                }}
+              />
             </div>
 
-            {/* LEFT LAYER: BEFORE (Clipped by slider position) */}
+            {/* 2b. Matte Industrial Cement Tint Layer */}
+            <div className="absolute inset-0 bg-[#5A6068]/60 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-[#42474E]/40 mix-blend-overlay" />
+
+            {/* 2c. Gritty Surface Noise & Salt Texture */}
             <div
-              className="absolute inset-0 overflow-hidden bg-stone-950"
-              style={{ width: `${sliderPosition}%` }}
-            >
-              {isEpoxy ? (
-                // Epoxy BEFORE visual surface
-                <div className="relative h-full w-[1000px] bg-[#242220] p-6 flex flex-col justify-between overflow-hidden">
-                  {/* Concrete Pitting & Cracking Texture */}
-                  <div
-                    className="absolute inset-0 opacity-60 pointer-events-none"
-                    style={{
-                      backgroundImage: `radial-gradient(#151413 2px, transparent 2px), radial-gradient(#3B3733 3px, transparent 3px)`,
-                      backgroundSize: `20px 20px, 40px 40px`,
-                    }}
-                  />
-                  {/* Crack Lines */}
-                  <svg className="absolute inset-0 h-full w-full pointer-events-none opacity-70">
-                    <path
-                      d="M 40 50 L 120 180 L 190 230 L 280 340 L 320 420"
-                      stroke="#111111"
-                      strokeWidth="3"
-                      fill="none"
-                    />
-                    <path
-                      d="M 120 180 L 180 160 L 240 190"
-                      stroke="#0a0a0a"
-                      strokeWidth="2"
-                      fill="none"
-                    />
-                    <circle cx="210" cy="270" r="35" fill="#1c1a17" opacity="0.8" />
-                  </svg>
+              className="absolute inset-0 opacity-45 mix-blend-color-burn"
+              style={{
+                backgroundImage: `radial-gradient(#1E232A 1.5px, transparent 1.5px), radial-gradient(#2C333C 2px, transparent 2px)`,
+                backgroundSize: `12px 12px, 20px 20px`,
+                backgroundPosition: `0 0, 10px 10px`,
+              }}
+            />
 
-                  {/* Top Left Label */}
-                  <div className="relative z-10 self-start flex items-center gap-2 rounded-full border border-red-500/40 bg-red-950/80 px-3.5 py-1.5 backdrop-blur-md">
-                    <AlertTriangle className="h-4 w-4 text-red-400" />
-                    <span className="font-heading text-xs font-bold text-red-300">
-                      BEFORE: Salt-Pitted Raw Concrete
-                    </span>
-                  </div>
-
-                  {/* Callout Badges */}
-                  <div className="relative z-10 self-start max-w-xs space-y-2 text-left">
-                    <span className="inline-block rounded-md border border-red-500/30 bg-black/80 px-2.5 py-1 text-[11px] font-mono text-red-400">
-                      ⚠ Ontario Road Salt Flaking & Spalling
-                    </span>
-                    <br />
-                    <span className="inline-block rounded-md border border-white/20 bg-black/80 px-2.5 py-1 text-[11px] font-mono text-stone-300">
-                      ⚠ Stubborn Oil Stains & Fractures
-                    </span>
-                    <br />
-                    <span className="inline-block rounded-md border border-white/20 bg-black/80 px-2.5 py-1 text-[11px] font-mono text-stone-400">
-                      ⚠ Concrete Dusting into House
-                    </span>
-                  </div>
-                </div>
-              ) : (
-                // Roofing BEFORE visual surface
-                <div className="relative h-full w-[1000px] bg-[#221c1a] p-6 flex flex-col justify-between overflow-hidden">
-                  {/* Weathered, Missing Shingle Texture */}
-                  <div
-                    className="absolute inset-0 opacity-70 pointer-events-none"
-                    style={{
-                      backgroundImage: `repeating-linear-gradient(0deg, #161210 0px, #161210 22px, #3A2F2A 23px, #2A221E 24px)`,
-                    }}
-                  />
-                  <svg className="absolute inset-0 h-full w-full pointer-events-none opacity-80">
-                    <rect x="80" y="120" width="70" height="35" fill="#0d0a09" />
-                    <rect x="220" y="240" width="90" height="40" fill="#0d0a09" />
-                    <circle cx="160" cy="180" r="25" fill="#1b2a1a" opacity="0.6" />
-                  </svg>
-
-                  <div className="relative z-10 self-start flex items-center gap-2 rounded-full border border-red-500/40 bg-red-950/80 px-3.5 py-1.5 backdrop-blur-md">
-                    <AlertTriangle className="h-4 w-4 text-red-400" />
-                    <span className="font-heading text-xs font-bold text-red-300">
-                      BEFORE: Failing 3-Tab Shingles
-                    </span>
-                  </div>
-
-                  <div className="relative z-10 self-start max-w-xs space-y-2 text-left">
-                    <span className="inline-block rounded-md border border-red-500/30 bg-black/80 px-2.5 py-1 text-[11px] font-mono text-red-400">
-                      ⚠ Missing Tabs & Wind Uplift
-                    </span>
-                    <br />
-                    <span className="inline-block rounded-md border border-white/20 bg-black/80 px-2.5 py-1 text-[11px] font-mono text-stone-300">
-                      ⚠ Winter Ice Damming Leaks
-                    </span>
-                    <br />
-                    <span className="inline-block rounded-md border border-white/20 bg-black/80 px-2.5 py-1 text-[11px] font-mono text-stone-400">
-                      ⚠ Granular Loss Clogging Gutters
-                    </span>
-                  </div>
-                </div>
-              )}
+            {/* 2d. Dark Oil Stain & Tire Track Patches */}
+            <div className="absolute inset-0 pointer-events-none">
+              {/* Central engine oil drip puddle */}
+              <div
+                className="absolute rounded-full bg-[#181A1D]/80 blur-md"
+                style={{
+                  top: "72%",
+                  left: "38%",
+                  width: "28%",
+                  height: "18%",
+                  transform: "rotate(-10deg)",
+                }}
+              />
+              {/* Secondary automotive fluid stain */}
+              <div
+                className="absolute rounded-full bg-[#1A1D20]/75 blur-sm"
+                style={{
+                  top: "63%",
+                  left: "18%",
+                  width: "18%",
+                  height: "12%",
+                  transform: "rotate(15deg)",
+                }}
+              />
+              {/* Right side tire salt burn mark */}
+              <div
+                className="absolute rounded-full bg-[#2B2F36]/80 blur-md"
+                style={{
+                  top: "68%",
+                  left: "64%",
+                  width: "26%",
+                  height: "22%",
+                }}
+              />
             </div>
 
-            {/* Draggable Divider Handle */}
+            {/* 2e. SVG Jagged Winter Salt Cracks & Fractures */}
+            <svg
+              className="absolute inset-0 h-full w-full pointer-events-none opacity-85"
+              viewBox="0 0 1000 1000"
+              preserveAspectRatio="none"
+            >
+              {/* Major cross-slab freeze crack */}
+              <path
+                d="M 120 540 Q 220 620 340 680 T 560 770 T 820 890"
+                stroke="#121417"
+                strokeWidth="5"
+                fill="none"
+                strokeLinecap="round"
+              />
+              <path
+                d="M 120 540 Q 220 620 340 680 T 560 770 T 820 890"
+                stroke="#2A2F37"
+                strokeWidth="2.5"
+                fill="none"
+                strokeLinecap="round"
+              />
+              {/* Branching spider fractures */}
+              <path
+                d="M 340 680 L 410 630 L 470 655"
+                stroke="#15171A"
+                strokeWidth="3"
+                fill="none"
+              />
+              <path
+                d="M 560 770 L 520 840 L 490 870"
+                stroke="#181B1F"
+                strokeWidth="3.5"
+                fill="none"
+              />
+              <path
+                d="M 240 780 L 290 840 L 310 920"
+                stroke="#121417"
+                strokeWidth="4"
+                fill="none"
+              />
+              {/* Salt pockmark craters */}
+              <circle cx="380" cy="740" r="14" fill="#20242B" />
+              <circle cx="490" cy="690" r="10" fill="#1C1F26" />
+              <circle cx="720" cy="820" r="16" fill="#181B21" />
+            </svg>
+
+            {/* 2f. Soft feathering along the baseboard seam */}
             <div
-              className="absolute top-0 bottom-0 z-30 w-1 bg-amber shadow-[0_0_15px_rgba(245,158,11,0.9)] cursor-ew-resize"
-              style={{ left: `${sliderPosition}%` }}
-            >
-              <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-amber text-obsidian shadow-2xl transition-transform hover:scale-110 active:scale-95">
-                <MoveHorizontal className="h-5 w-5" />
-              </div>
-            </div>
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(to bottom, rgba(15,18,24,0.7) 48%, transparent 58%)",
+              }}
+            />
           </div>
 
-          {/* Helper caption */}
-          <div className="mt-4 flex items-center justify-between text-xs text-slate-400 font-mono">
-            <span className="flex items-center gap-1.5 text-red-400">
-              <span>◀</span> Drag Left to Reveal AFTER Finish
-            </span>
-            <span className="hidden sm:inline text-slate-500">
-              Interactive Divider · Click or Drag Anywhere
-            </span>
-            <span className="flex items-center gap-1.5 text-emerald-400">
-              Drag Right to Inspect BEFORE Damage <span>▶</span>
+          {/* Crisp Frosted-Glass Corner Badge (Top Left) */}
+          <div className="absolute top-4 left-4 z-20 flex items-center gap-2 rounded-full border border-white/20 bg-black/75 px-3.5 py-1.5 backdrop-blur-xl shadow-lg">
+            <span className="h-2 w-2 rounded-full bg-slate-400" />
+            <span className="font-mono text-[11px] font-bold tracking-wider text-slate-200 uppercase">
+              BEFORE: CRACKED BARE CONCRETE
             </span>
           </div>
         </div>
       </div>
-    </section>
+
+      {/* ======================================================== */}
+      {/* 3. VERTICAL DIVIDER & DRAGGABLE HANDLE */}
+      {/* ======================================================== */}
+      <div
+        className="absolute top-0 bottom-0 z-30 w-[2px] bg-white shadow-[0_0_18px_rgba(255,255,255,0.95)]"
+        style={{ left: `${sliderPosition}%` }}
+      >
+        <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full border-2 border-white bg-black/85 text-white shadow-2xl backdrop-blur-xl transition-transform hover:scale-110 active:scale-95">
+          <MoveHorizontal className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+        </div>
+      </div>
+
+      {/* Bottom helper pill on hover */}
+      <div className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 z-20 rounded-full border border-white/10 bg-black/60 px-3 py-1 font-mono text-[10px] text-slate-300 backdrop-blur-md opacity-80 sm:opacity-90">
+        Drag left/right to compare
+      </div>
+    </div>
   );
 }

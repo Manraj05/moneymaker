@@ -1,119 +1,128 @@
 "use client";
 
 import React from "react";
-import { Phone, Star, ShieldCheck, CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Phone, ArrowRight, ShieldCheck, Star } from "lucide-react";
 import { ClientProfile } from "@/lib/client";
-import QuoteCalculator from "./QuoteCalculator";
+import BeforeAfterSlider from "./BeforeAfterSlider";
 
 interface HeroSectionProps {
   client: ClientProfile;
 }
 
 export default function HeroSection({ client }: HeroSectionProps) {
-  const isEpoxy = client.niche === "epoxy";
-
   return (
-    <section className="relative overflow-hidden pt-8 pb-16 lg:pt-14 lg:pb-24 bg-obsidian-300">
-      {/* Background Architectural Grid Pattern */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
+    <section className="relative min-h-[85vh] lg:min-h-[90vh] overflow-hidden bg-obsidian flex items-center pt-8 pb-16 lg:py-20">
+      {/* ======================================================== */}
+      {/* Full-Bleed Ken Burns Background with Dark Obsidian Overlay */}
+      {/* ======================================================== */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <motion.div
+          animate={{ scale: [1, 1.07] }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+          }}
+          className="relative h-full w-full"
+        >
+          <Image
+            src="/after-garage.png"
+            alt="Hamilton & GTA Showroom Epoxy Garage"
+            fill
+            priority
+            quality={90}
+            className="object-cover object-center"
+          />
+        </motion.div>
 
-      {/* Ambient Radial Glows */}
-      <div className="pointer-events-none absolute -top-40 left-1/4 h-96 w-96 rounded-full bg-amber-500/10 blur-[120px]" />
-      <div className="pointer-events-none absolute top-1/2 -right-40 h-96 w-96 rounded-full bg-emerald-500/10 blur-[140px]" />
+        {/* Deep Obsidian Gradients for Text Legibility & Architectural Depth */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#090D16]/95 via-[#090D16]/85 to-[#090D16]/65" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#090D16] via-transparent to-[#090D16]/50" />
+      </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
-          {/* Left Column: Asymmetric Conversion Copy */}
-          <div className="lg:col-span-7">
-            {/* Google Rating Pill */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-3.5 py-1.5 backdrop-blur-md">
-              <div className="flex text-amber">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-3.5 w-3.5 fill-amber text-amber" />
-                ))}
-              </div>
-              <span className="font-mono text-xs font-semibold text-white">
-                ★ {client.rating.toFixed(1)} Google Rating
+      {/* ======================================================== */}
+      {/* Main Content: Sleek Split Layout */}
+      {/* ======================================================== */}
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
+        <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
+          {/* Left Column (Max 4 Clean Elements) */}
+          <div className="lg:col-span-6 space-y-6">
+            {/* 1. Minimal Frosted-Glass Badge */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-4 py-1.5 backdrop-blur-2xl shadow-lg">
+              <span className="flex items-center text-white text-xs">
+                ★ <span className="ml-1 font-mono font-bold">{client.rating.toFixed(1)}</span>
               </span>
-              <span className="text-slate-500">·</span>
-              <span className="font-mono text-xs text-amber-bright">
-                {client.reviewCount} Verified Reviews
+              <span className="text-white/30 text-xs">·</span>
+              <span className="text-xs font-medium text-slate-200">
+                Google Rating
+              </span>
+              <span className="text-white/30 text-xs">·</span>
+              <span className="text-xs font-mono text-slate-300">
+                WSIB Certified
+              </span>
+              <span className="text-white/30 text-xs">·</span>
+              <span className="text-xs font-mono text-slate-300">
+                $2M Liability
               </span>
             </div>
 
-            {/* Localized Bold H1 */}
-            <h1 className="mt-5 font-heading text-3xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-5xl xl:text-6xl leading-[1.08]">
-              {isEpoxy ? (
-                <>
-                  Showroom-Grade{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber to-amber-bright">
-                    Epoxy & Polyaspartic
-                  </span>{" "}
-                  Flooring in {client.primaryCity}, ON
-                </>
-              ) : (
-                <>
-                  24-Hour Emergency{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber to-amber-bright">
-                    Roof Leak Repair & Shingle
-                  </span>{" "}
-                  Replacement in {client.primaryCity}
-                </>
-              )}
+            {/* 2. Clean Crisp White H1 */}
+            <h1 className="font-heading text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-black tracking-tight text-white leading-[1.08]">
+              Garage, Basement & Commercial Epoxy Flooring in{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-400">
+                {client.primaryCity}
+              </span>
             </h1>
 
-            {/* Tagline / Subtitle */}
-            <p className="mt-5 text-sm sm:text-base leading-relaxed text-slate-300 max-w-2xl">
-              {client.heroSubtitle}
+            {/* 3. Concise High-Conversion Subheadline */}
+            <p className="text-sm sm:text-base leading-relaxed text-slate-300 max-w-xl">
+              100% solid epoxy base coats and UV-stable polyaspartic topcoats diamond-ground to CSP 3 and rated for -25°C Ontario winters. Starting from <strong className="text-white font-mono">$4.50/sq ft</strong> installed.
             </p>
 
-            {/* 3 Technical Guarantees */}
-            <div className="mt-6 space-y-3">
-              {client.guarantees.map((guarantee, idx) => (
-                <div key={idx} className="flex items-center gap-3">
-                  <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
-                    <CheckCircle2 className="h-4 w-4" />
-                  </div>
-                  <span className="text-xs sm:text-sm font-medium text-slate-200">
-                    {guarantee}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {/* CTAs */}
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            {/* 4. Two Sleek Buttons: Pure Crisp White + Frosted Dark Glass */}
+            <div className="pt-2 flex flex-wrap items-center gap-3.5 sm:gap-4">
               <a
                 href="#calculator"
-                className="group inline-flex items-center gap-2 rounded-xl bg-amber px-6 py-3.5 font-heading text-sm font-bold uppercase tracking-wider text-obsidian shadow-xl shadow-amber/20 transition-all hover:bg-amber-bright hover:shadow-2xl hover:shadow-amber/30"
+                className="group inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 font-heading text-xs sm:text-sm font-bold uppercase tracking-wider text-obsidian shadow-2xl transition-all duration-200 hover:bg-slate-100 hover:scale-[1.02] active:scale-95"
               >
-                <span>Get Instant Price Estimate</span>
+                <span>Calculate Your Floor Cost</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
 
               <a
                 href={client.phoneHref}
-                className="inline-flex items-center gap-2.5 rounded-xl border border-white/15 bg-slate-900/80 px-5 py-3.5 font-mono text-sm font-bold text-white shadow transition-all hover:border-amber-500/50 hover:bg-slate-900 hover:text-amber-bright"
+                className="inline-flex items-center gap-2.5 rounded-xl border border-white/20 bg-white/[0.05] px-5 py-3.5 font-mono text-xs sm:text-sm font-bold text-white shadow-lg backdrop-blur-2xl transition-all duration-200 hover:border-white/40 hover:bg-white/[0.1] active:scale-95"
               >
-                <Phone className="h-4 w-4 text-amber-bright" />
+                <Phone className="h-4 w-4 text-slate-300" />
                 <span>Call {client.phone}</span>
               </a>
             </div>
 
-            {/* Trust Badges Bar */}
-            <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400">
-              {client.trustBadges.map((badge, idx) => (
-                <span key={idx} className="flex items-center gap-1.5 text-slate-300">
-                  <span className="text-emerald-400">✓</span>
-                  <span>{badge}</span>
-                </span>
-              ))}
+            {/* Subtle Quick Guarantee Pills */}
+            <div className="pt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-mono text-slate-400">
+              <span className="flex items-center gap-1.5 text-slate-300">
+                <span className="h-1.5 w-1.5 rounded-full bg-white" />
+                Free On-Site Laser Measure
+              </span>
+              <span className="flex items-center gap-1.5 text-slate-300">
+                <span className="h-1.5 w-1.5 rounded-full bg-white" />
+                1-Day Turnaround Available
+              </span>
+              <span className="flex items-center gap-1.5 text-slate-300">
+                <span className="h-1.5 w-1.5 rounded-full bg-white" />
+                15-Year Written Warranty
+              </span>
             </div>
           </div>
 
-          {/* Right Column: Embedded Interactive Instant Quote Calculator */}
-          <div className="lg:col-span-5">
-            <QuoteCalculator client={client} isEmbedded={true} />
+          {/* Right Column: Embedded Interactive Before & After Slider */}
+          <div className="lg:col-span-6 flex justify-center">
+            <div className="w-full max-w-lg lg:max-w-none">
+              <BeforeAfterSlider isHeroEmbedded={true} />
+            </div>
           </div>
         </div>
       </div>

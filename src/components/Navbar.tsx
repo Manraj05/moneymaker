@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Phone, MapPin, Menu, X, Shield, ArrowRight } from "lucide-react";
+import { Phone, Menu, X, ArrowRight } from "lucide-react";
 import { ClientProfile } from "@/lib/client";
 
 interface NavbarProps {
@@ -13,29 +13,29 @@ export default function Navbar({ client }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-obsidian-300/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-obsidian-300/85 backdrop-blur-2xl">
       {/* Top Notification Bar */}
-      <div className="hidden border-b border-white/5 bg-slate-950/60 px-4 py-1.5 text-xs text-slate-400 sm:block">
+      <div className="hidden border-b border-white/5 bg-slate-950/70 px-4 py-1.5 text-xs text-slate-400 sm:block">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-60"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-white"></span>
             </span>
             <span className="font-medium text-slate-300">
-              Active Crew Ready in <span className="text-white font-semibold">{client.primaryCity}, {client.province}</span>
+              Active Crew Dispatched in <span className="text-white font-semibold">{client.primaryCity}, {client.province}</span>
             </span>
             <span className="text-slate-600">|</span>
-            <span className="text-slate-400">Same-Day On-Site Estimates Available</span>
+            <span className="text-slate-400">Same-Day On-Site Laser Estimates Available</span>
           </div>
           <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1.5 text-amber-bright">
+            <span className="flex items-center gap-1.5 text-slate-200">
               <span>★</span>
               <span className="font-mono font-semibold text-white">{client.rating.toFixed(1)}</span>
-              <span className="text-slate-400">({client.reviewCount} Google Reviews)</span>
+              <span className="text-slate-400 font-mono">({client.reviewCount} Reviews)</span>
             </span>
             <span className="text-slate-600">|</span>
-            <span className="text-emerald-400 font-mono font-medium">✓ WSIB Insured</span>
+            <span className="text-slate-300 font-mono text-[11px]">WSIB Certified · $2M Liability</span>
           </div>
         </div>
       </div>
@@ -44,17 +44,15 @@ export default function Navbar({ client }: NavbarProps) {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6">
         {/* Logo / Brand */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-amber-500/40 bg-gradient-to-br from-amber-500/20 to-amber-950/40 font-heading text-lg font-black tracking-tighter text-amber transition-transform duration-300 group-hover:scale-105 group-hover:border-amber">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-white/[0.06] font-heading text-lg font-black tracking-tighter text-white transition-transform duration-300 group-hover:scale-105">
             {client.businessName.substring(0, 2).toUpperCase()}
           </div>
           <div>
-            <div className="flex items-center gap-2">
-              <span className="font-heading text-lg font-bold tracking-tight text-white transition-colors group-hover:text-amber">
-                {client.businessName}
-              </span>
-            </div>
+            <span className="font-heading text-lg font-bold tracking-tight text-white transition-colors group-hover:text-slate-200">
+              {client.businessName}
+            </span>
             <p className="font-mono text-[11px] text-slate-400 tracking-wider uppercase">
-              {client.niche === "epoxy" ? "Industrial Concrete Coatings" : "Architectural Roofing & Leak Repair"}
+              {client.nicheTitle}
             </p>
           </div>
         </Link>
@@ -69,22 +67,15 @@ export default function Navbar({ client }: NavbarProps) {
           </Link>
           <Link
             href="#calculator"
-            className="flex items-center gap-1.5 text-sm font-medium text-amber-bright transition-colors hover:text-amber"
+            className="text-sm font-semibold text-white transition-colors hover:text-slate-300"
           >
-            <span className="relative flex h-1.5 w-1.5 rounded-full bg-amber"></span>
             Price Calculator
-          </Link>
-          <Link
-            href="#before-after"
-            className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
-          >
-            Before & After
           </Link>
           <Link
             href="#process"
             className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
           >
-            Engineering Process
+            Standards
           </Link>
           <Link
             href="#reviews"
@@ -92,22 +83,28 @@ export default function Navbar({ client }: NavbarProps) {
           >
             Reviews
           </Link>
+          <Link
+            href="#service-areas"
+            className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
+          >
+            Service Areas
+          </Link>
         </nav>
 
         {/* Right Action / Direct Click-to-Call */}
         <div className="hidden sm:flex items-center gap-3">
           <a
             href={client.phoneHref}
-            className="group relative inline-flex items-center gap-2.5 overflow-hidden rounded-lg border border-amber-500/50 bg-amber-500/10 px-4 py-2 font-mono text-sm font-bold text-amber-bright shadow-sm transition-all duration-300 hover:border-amber hover:bg-amber hover:text-obsidian hover:shadow-lg hover:shadow-amber/20"
+            className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/[0.05] px-4 py-2 font-mono text-sm font-bold text-white shadow backdrop-blur-xl transition-all duration-200 hover:border-white/40 hover:bg-white/[0.1]"
           >
-            <Phone className="h-4 w-4 transition-transform group-hover:rotate-12" />
+            <Phone className="h-4 w-4 text-slate-300" />
             <span>{client.phone}</span>
           </a>
           <a
             href="#calculator"
-            className="hidden md:inline-flex items-center gap-1.5 rounded-lg bg-amber px-4 py-2 text-xs font-bold uppercase tracking-wider text-obsidian shadow-md transition-all duration-300 hover:bg-amber-bright hover:shadow-amber/30"
+            className="inline-flex items-center gap-1.5 rounded-xl bg-white px-4 py-2 font-heading text-xs font-bold uppercase tracking-wider text-obsidian shadow-lg transition-all duration-200 hover:bg-slate-100"
           >
-            <span>Instant Quote</span>
+            <span>Quote</span>
             <ArrowRight className="h-3.5 w-3.5" />
           </a>
         </div>
@@ -116,14 +113,14 @@ export default function Navbar({ client }: NavbarProps) {
         <div className="flex items-center gap-2 lg:hidden">
           <a
             href={client.phoneHref}
-            className="inline-flex items-center justify-center rounded-lg border border-amber-500/40 bg-amber-500/10 p-2 text-amber-bright"
+            className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/[0.05] p-2 text-white"
             aria-label="Call Now"
           >
             <Phone className="h-5 w-5" />
           </a>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="inline-flex items-center justify-center rounded-lg border border-white/10 bg-slate-900 p-2 text-slate-300 hover:text-white"
+            className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-slate-900 p-2 text-slate-300 hover:text-white"
             aria-label="Toggle Menu"
           >
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -133,15 +130,15 @@ export default function Navbar({ client }: NavbarProps) {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="border-b border-white/10 bg-slate-950/95 px-4 py-5 backdrop-blur-xl lg:hidden">
+        <div className="border-b border-white/10 bg-slate-950/95 px-4 py-5 backdrop-blur-2xl lg:hidden">
           <div className="flex flex-col gap-4">
-            <div className="rounded-lg border border-white/10 bg-slate-900/60 p-3">
-              <div className="flex items-center gap-2 text-xs font-medium text-emerald-400">
-                <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
+            <div className="rounded-xl border border-white/10 bg-slate-900/60 p-3">
+              <div className="flex items-center gap-2 text-xs font-medium text-white">
+                <span className="h-2 w-2 rounded-full bg-white"></span>
                 <span>Active Crew Dispatched in {client.primaryCity}</span>
               </div>
               <p className="mt-1 text-xs text-slate-400 font-mono">
-                Direct Dispatch: {client.phone}
+                Direct Line: {client.phone}
               </p>
             </div>
 
@@ -149,44 +146,43 @@ export default function Navbar({ client }: NavbarProps) {
               <Link
                 href="#services"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-1.5 text-base hover:text-amber"
+                className="py-1.5 text-base hover:text-white"
               >
-                Services
+                Services & Pricing
               </Link>
               <Link
                 href="#calculator"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-between py-1.5 text-base font-semibold text-amber"
+                className="py-1.5 text-base font-bold text-white"
               >
-                <span>Instant 60s Quote Calculator</span>
-                <span className="rounded bg-amber/20 px-2 py-0.5 text-xs text-amber-bright">Live</span>
-              </Link>
-              <Link
-                href="#before-after"
-                onClick={() => setMobileMenuOpen(false)}
-                className="py-1.5 text-base hover:text-amber"
-              >
-                Before & After Transformations
+                Instant Price Calculator
               </Link>
               <Link
                 href="#process"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-1.5 text-base hover:text-amber"
+                className="py-1.5 text-base hover:text-white"
               >
-                4-Step Engineering Process
+                Commercial Standards
               </Link>
               <Link
                 href="#reviews"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-1.5 text-base hover:text-amber"
+                className="py-1.5 text-base hover:text-white"
               >
-                Verified Google Reviews ({client.reviewCount})
+                Verified Google Reviews
+              </Link>
+              <Link
+                href="#service-areas"
+                onClick={() => setMobileMenuOpen(false)}
+                className="py-1.5 text-base hover:text-white"
+              >
+                GTA Service Areas
               </Link>
             </nav>
 
             <a
               href={client.phoneHref}
-              className="mt-2 flex w-full items-center justify-center gap-2 rounded-lg bg-amber py-3 text-center font-mono text-base font-bold text-obsidian shadow-lg"
+              className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-white py-3.5 text-center font-mono text-base font-bold text-obsidian shadow-lg"
             >
               <Phone className="h-5 w-5" />
               <span>Call {client.phone}</span>
