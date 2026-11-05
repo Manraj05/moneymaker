@@ -1,73 +1,97 @@
 "use client";
 
 import React from "react";
-import { ThermometerSnowflake, ShieldCheck, Flame, Droplets } from "lucide-react";
+import { ThermometerSnowflake, ShieldCheck, Flame, Droplets, CheckCircle2 } from "lucide-react";
 
-const stats = [
+interface StatItem {
+  value: string;
+  unit: string;
+  title: string;
+  spec: string;
+  subtext: string;
+  badge: string;
+}
+
+const stats: StatItem[] = [
   {
-    icon: <ThermometerSnowflake className="h-5 w-5 text-slate-300" />,
     value: "-25°C",
     unit: "Winter Certified",
-    label: "Freeze-Thaw Resilient",
-    desc: "Absorbs thermal shock without micro-fissuring or lifting",
+    title: "Freeze-Thaw Elasticity",
+    spec: "ASTM C-666 Protocol",
+    subtext: "Flexes with slab micro-expansion; zero spalling or brine lifting.",
+    badge: "Ontario Winter Proof",
   },
   {
-    icon: <ShieldCheck className="h-5 w-5 text-slate-300" />,
-    value: "15-Year",
+    value: "15-Yr",
     unit: "Delamination",
-    label: "Written Warranty",
-    desc: "100% contractor-backed anti-peeling protection",
+    title: "Written Adhesion Warranty",
+    spec: "400+ PSI Pull-Off Strength",
+    subtext: "Mechanical CSP 3 anchor penetrates deeper than concrete tensile failure.",
+    badge: "Contractor Backed",
   },
   {
-    icon: <Flame className="h-5 w-5 text-slate-300" />,
     value: "150°C",
-    unit: "Heat Rating",
-    label: "Hot-Tire Immune",
-    desc: "Zero softening or pickup from hot summer tire tread",
+    unit: "Thermal Peak",
+    title: "Hot-Tire Torque Immune",
+    spec: "Zero Plasticizer Migration",
+    subtext: "Withstands scorching summer tires straight from 400-series highway runs.",
+    badge: "Zero Tire Pickup",
   },
   {
-    icon: <Droplets className="h-5 w-5 text-slate-300" />,
     value: "100%",
-    unit: "Solids Resin",
-    label: "Zero Water Dilution",
-    desc: "Impermeable barrier against winter road-salt brine",
+    unit: "Resin Solids",
+    title: "Zero Water or Solvent Dilution",
+    spec: "Commercial Pure Build",
+    subtext: "Dense molecular cross-link forms an impermeable shield against salt slurry.",
+    badge: "CFIA Compliant Base",
   },
 ];
 
 export default function TrustStatsBand() {
   return (
-    <section className="relative z-20 -mt-2 border-y border-white/10 bg-gradient-to-r from-slate-950 via-slate-900/95 to-slate-950 py-8 backdrop-blur-2xl">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4 lg:divide-x lg:divide-white/10">
+    <section className="relative z-20 -mt-2 border-y border-white/10 bg-gradient-to-b from-slate-950 via-[#0B0F19] to-slate-950 py-10 shadow-2xl backdrop-blur-2xl">
+      {/* Precision hairline grid background */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+        {/* Architectural Datum Strip */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 lg:divide-x lg:divide-white/10">
           {stats.map((stat, idx) => (
             <div
               key={idx}
               className={`flex flex-col justify-between ${
-                idx !== 0 ? "lg:pl-6" : ""
-              }`}
+                idx !== 0 ? "lg:pl-8" : ""
+              } ${idx !== stats.length - 1 ? "lg:pr-8" : ""}`}
             >
-              <div className="flex items-center gap-2 mb-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04]">
-                  {stat.icon}
-                </div>
-                <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-slate-400">
-                  {stat.label}
-                </span>
-              </div>
-
               <div>
-                <div className="flex items-baseline gap-1.5 font-mono">
-                  <span className="font-heading text-2xl sm:text-3xl font-black tracking-tight text-white">
+                {/* Micro Specification Header */}
+                <div className="flex items-center justify-between gap-2 mb-3">
+                  <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                    {stat.spec}
+                  </span>
+                  <span className="inline-flex items-center rounded-full border border-white/15 bg-white/[0.04] px-2 py-0.5 text-[9px] font-mono text-slate-300">
+                    {stat.badge}
+                  </span>
+                </div>
+
+                {/* Primary Metric Number Display */}
+                <div className="flex items-baseline gap-2">
+                  <span className="font-heading text-3xl sm:text-4xl font-black tracking-tight text-white">
                     {stat.value}
                   </span>
-                  <span className="text-xs font-semibold text-slate-300 uppercase tracking-wide">
+                  <span className="font-mono text-xs font-semibold uppercase tracking-wider text-slate-400">
                     {stat.unit}
                   </span>
                 </div>
-                <p className="mt-1 text-[11px] text-slate-400 leading-snug">
-                  {stat.desc}
-                </p>
+
+                <h4 className="mt-2 font-heading text-sm font-bold text-white">
+                  {stat.title}
+                </h4>
               </div>
+
+              <p className="mt-2 text-xs text-slate-400 leading-relaxed">
+                {stat.subtext}
+              </p>
             </div>
           ))}
         </div>
