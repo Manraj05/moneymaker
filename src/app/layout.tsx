@@ -29,33 +29,39 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  const client = getActiveClient();
-  const isEpoxy = client.niche === "epoxy";
-
   return {
     title: {
-      default: `${client.businessName} | ${client.tagline}`,
-      template: `%s | ${client.businessName}`,
+      default: "Grimmer Agentics — Web Architecture, SEO & GEO",
+      template: "%s | Grimmer Agentics",
     },
-    description: `${client.businessName} delivers ${isEpoxy ? "commercial polyaspartic and epoxy flooring" : "emergency roof leak repair and architectural shingles"} in ${client.primaryCity} and across the GTA. ${client.rating}★ Google Rating. Call ${client.phone}.`,
+    description:
+      "Grimmer Agentics engineers sub-second web applications, programmatic local SEO matrices, and direct Generative Engine Optimization (GEO) for modern businesses.",
     keywords: [
-      client.businessName,
-      `${client.primaryCity} ${isEpoxy ? "epoxy flooring" : "roofing contractor"}`,
-      `${client.primaryCity} garage floor coating`,
-      "Ontario contractor quote calculator",
-      "GTA home exterior renovation",
-      ...client.serviceAreas.map((city) => `${city} ${client.niche}`),
+      "Grimmer Agentics",
+      "Web Architecture Agency",
+      "Generative Engine Optimization",
+      "GEO Agency",
+      "Programmatic SEO Toronto",
+      "Next.js Engineering",
+      "AI Search Optimization",
     ],
-    authors: [{ name: client.businessName }],
-    creator: client.businessName,
-    metadataBase: new URL("https://example.com"),
+    authors: [{ name: "Grimmer Agentics Inc." }],
+    creator: "Grimmer Agentics Inc.",
+    metadataBase: new URL("https://grimmeragentics.com"),
     openGraph: {
       type: "website",
       locale: "en_CA",
-      url: "https://example.com",
-      title: `${client.businessName} — ${client.tagline}`,
-      description: client.heroSubtitle,
-      siteName: client.businessName,
+      url: "https://grimmeragentics.com",
+      title: "Grimmer Agentics — Web Architecture, SEO & GEO",
+      description:
+        "Websites engineered for human search and autonomous AI agents.",
+      siteName: "Grimmer Agentics",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Grimmer Agentics — Web Architecture, SEO & GEO",
+      description:
+        "Websites engineered for human search and autonomous AI agents.",
     },
   };
 }
