@@ -23,6 +23,10 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
+  // If building for Vercel production, disable public teaser routes
+  if (process.env.VERCEL === "1") {
+    return [];
+  }
   const clients = getAllClients();
   return clients.map((c) => ({
     clientId: c.slug,
@@ -30,6 +34,11 @@ export function generateStaticParams() {
 }
 
 export default async function TeaserPage({ params }: PageProps) {
+  // Keep teasers strictly as internal local image assets; do not expose live on Vercel
+  if (process.env.VERCEL === "1") {
+    notFound();
+  }
+
   const { clientId } = await params;
   const client = getClientBySlug(clientId) || getActiveClient();
 
