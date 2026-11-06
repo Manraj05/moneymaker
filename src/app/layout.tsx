@@ -68,9 +68,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} dark`}
+      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="min-h-screen bg-obsidian text-slate-100 antialiased selection:bg-white selection:text-obsidian font-body">
+      <body className="min-h-screen bg-white text-slate-900 antialiased selection:bg-slate-900 selection:text-white font-body">
         {children}
       </body>
     </html>

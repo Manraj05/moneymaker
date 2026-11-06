@@ -9,6 +9,8 @@ import {
   ThermometerSnowflake,
   ArrowRight,
   ChevronRight,
+  ShieldCheck,
+  Clock,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import QuoteCalculator from "@/components/QuoteCalculator";
@@ -104,7 +106,7 @@ export default async function LocationServicePage({ params }: PageProps) {
   ];
 
   return (
-    <main className="min-h-screen bg-obsidian text-slate-100">
+    <main className="min-h-screen bg-white text-slate-900 pb-16 sm:pb-0">
       {/* Schema Injection */}
       <JsonLd client={client} faqs={localizedFaqs} canonicalUrl={canonicalUrl} />
 
@@ -112,62 +114,62 @@ export default async function LocationServicePage({ params }: PageProps) {
       <Navbar client={client} />
 
       {/* Localized Breadcrumb Strip */}
-      <div className="border-b border-white/5 bg-slate-950/70 px-4 py-2.5 sm:px-6">
-        <div className="mx-auto flex max-w-7xl items-center gap-2 text-xs text-slate-400 font-mono">
-          <Link href="/" className="hover:text-white transition-colors">
+      <div className="border-b border-slate-200 bg-slate-50 px-4 py-2.5 sm:px-6">
+        <div className="mx-auto flex max-w-7xl items-center gap-2 text-xs text-slate-500 font-mono">
+          <Link href="/" className="hover:text-slate-900 transition-colors">
             Home
           </Link>
-          <ChevronRight className="h-3 w-3 text-slate-600" />
-          <Link href="/#service-areas" className="hover:text-white transition-colors">
+          <ChevronRight className="h-3 w-3 text-slate-400" />
+          <Link href="/#service-areas" className="hover:text-slate-900 transition-colors">
             Locations
           </Link>
-          <ChevronRight className="h-3 w-3 text-slate-600" />
-          <span className="text-slate-300">{cityName}, ON</span>
-          <ChevronRight className="h-3 w-3 text-slate-600" />
-          <span className="text-white font-semibold">{service.name}</span>
+          <ChevronRight className="h-3 w-3 text-slate-400" />
+          <span className="text-slate-700">{cityName}, ON</span>
+          <ChevronRight className="h-3 w-3 text-slate-400" />
+          <span className="text-slate-950 font-bold">{service.name}</span>
         </div>
       </div>
 
-      {/* Localized Hero Section */}
-      <section className="relative overflow-hidden pt-10 pb-16 bg-obsidian-300">
-        <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
+      {/* Localized Hero Section: Bright & Luminous */}
+      <section className="relative overflow-hidden pt-12 pb-20 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200">
+        <div className="absolute inset-0 bg-grid-pattern-light opacity-30 pointer-events-none" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             {/* Localized Rating Pill */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-4 py-1.5 backdrop-blur-xl">
-              <MapPin className="h-3.5 w-3.5 text-white" />
-              <span className="font-mono text-xs font-semibold text-white">
-                Serving {cityName}, ON & Surrounding Areas
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-1.5 shadow-xs">
+              <MapPin className="h-3.5 w-3.5 text-slate-900" />
+              <span className="font-mono text-xs font-bold text-slate-900">
+                Serving {cityName}, ON &amp; Surrounding Municipalities
               </span>
-              <span className="text-slate-500">·</span>
-              <span className="font-mono text-xs text-slate-300">
-                ★ {client.rating.toFixed(1)} Rating
+              <span className="text-slate-300">·</span>
+              <span className="font-mono text-xs font-semibold text-amber-600">
+                ★ {client.rating.toFixed(1)} Google Rating
               </span>
             </div>
 
             {/* Localized H1 */}
-            <h1 className="mt-4 font-heading text-3xl font-extrabold tracking-tight text-white sm:text-5xl leading-tight">
+            <h1 className="mt-4 font-heading text-3xl font-black tracking-tight text-slate-950 sm:text-5xl leading-tight">
               {service.name} in{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-400">
+              <span className="text-slate-900 underline decoration-slate-300 decoration-wavy">
                 {cityName}, Ontario
               </span>
             </h1>
 
-            <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-300">
-              {service.shortDesc} Specially engineered for {cityName} homes and commercial facilities facing Ontario winter freeze-thaw stresses, road salt exposure, and heavy use.
+            <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-600">
+              {service.shortDesc} Specially engineered for {cityName} homes and commercial facilities facing Ontario winter freeze-thaw stresses, road salt exposure, and heavy daily vehicle traffic.
             </p>
 
-            {/* Deliverables Checklist */}
-            <div className="mt-6 rounded-2xl border border-white/10 bg-slate-900/60 p-5 backdrop-blur-xl">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-300 font-heading block">
+            {/* Deliverables Checklist Card */}
+            <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-900 font-heading block">
                 Standard Specifications for {cityName} Projects:
               </span>
-              <div className="mt-3 grid gap-2 sm:grid-cols-2">
+              <div className="mt-3.5 grid gap-2.5 sm:grid-cols-2">
                 {service.deliverables.map((item, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs text-slate-200">
-                    <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0" />
-                    <span>{item}</span>
+                  <div key={i} className="flex items-center gap-2.5 text-xs text-slate-800">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-600 flex-shrink-0" />
+                    <span className="font-medium">{item}</span>
                   </div>
                 ))}
               </div>
@@ -177,7 +179,7 @@ export default async function LocationServicePage({ params }: PageProps) {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
                 href="#calculator"
-                className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 font-heading text-xs sm:text-sm font-bold uppercase tracking-wider text-obsidian shadow-2xl hover:bg-slate-100 transition-all"
+                className="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-6 py-3.5 font-heading text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md hover:bg-slate-800 transition-all hover:gap-3"
               >
                 <span>Instant {cityName} Price Estimate</span>
                 <ArrowRight className="h-4 w-4" />
@@ -185,23 +187,23 @@ export default async function LocationServicePage({ params }: PageProps) {
 
               <a
                 href={client.phoneHref}
-                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/[0.05] px-5 py-3.5 font-mono text-xs sm:text-sm font-bold text-white hover:border-white/40 transition-all"
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3.5 font-mono text-xs sm:text-sm font-bold text-slate-900 hover:border-slate-400 hover:bg-slate-50 transition-all"
               >
-                <Phone className="h-4 w-4 text-slate-300" />
+                <Phone className="h-4 w-4 text-slate-700" />
                 <span>Call {client.phone}</span>
               </a>
             </div>
 
             {/* Quick Assurances */}
-            <div className="mt-6 flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400">
-              <span className="flex items-center gap-1.5 text-slate-300">
-                <span className="h-1.5 w-1.5 rounded-full bg-white" /> 15-Year Delamination Warranty
+            <div className="mt-6 flex flex-wrap items-center gap-4 text-xs font-mono text-slate-500">
+              <span className="flex items-center gap-1.5 text-slate-700 font-medium">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> 15-Year Delamination Warranty
               </span>
-              <span className="flex items-center gap-1.5 text-slate-300">
-                <span className="h-1.5 w-1.5 rounded-full bg-white" /> WSIB Certified
+              <span className="flex items-center gap-1.5 text-slate-700 font-medium">
+                <span className="h-1.5 w-1.5 rounded-full bg-slate-950" /> WSIB Certified Crews
               </span>
-              <span className="flex items-center gap-1.5 text-slate-300">
-                <span className="h-1.5 w-1.5 rounded-full bg-white" /> Free Laser On-Site Measure
+              <span className="flex items-center gap-1.5 text-slate-700 font-medium">
+                <span className="h-1.5 w-1.5 rounded-full bg-slate-950" /> Free Laser On-Site Measure
               </span>
             </div>
           </div>
@@ -212,34 +214,34 @@ export default async function LocationServicePage({ params }: PageProps) {
       <QuoteCalculator client={client} />
 
       {/* Climate & Engineering Section for this City */}
-      <section className="py-16 border-t border-white/10 bg-obsidian-200">
+      <section className="py-20 border-b border-slate-200 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="grid gap-8 lg:grid-cols-2 items-center">
+          <div className="grid gap-10 lg:grid-cols-2 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 font-mono text-xs font-semibold text-slate-200">
-                <ThermometerSnowflake className="h-3.5 w-3.5" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-slate-50 px-3 py-1 font-mono text-xs font-semibold text-slate-700 shadow-xs">
+                <ThermometerSnowflake className="h-3.5 w-3.5 text-slate-900" />
                 <span>Ontario Climate Engineering</span>
               </div>
-              <h2 className="mt-3 font-heading text-2xl sm:text-3xl font-bold tracking-tight text-white">
+              <h2 className="mt-3 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950">
                 Why {cityName} Properties Require Industrial-Grade Materials
               </h2>
-              <p className="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Southern Ontario winters subject {cityName} buildings to intense thermal cycling. Between November and April, road salt, calcium brine, and freezing moisture penetrate untreated concrete pores.
               </p>
-              <div className="mt-5 space-y-3">
-                <div className="rounded-xl border border-white/10 bg-slate-900/60 p-4">
-                  <h4 className="font-heading text-xs font-bold text-white">
-                    Protection Against Winter Road Salt & Spalling
+              <div className="mt-6 space-y-3.5">
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                  <h4 className="font-heading text-sm font-bold text-slate-950">
+                    Protection Against Winter Road Salt &amp; Spalling
                   </h4>
-                  <p className="mt-1 text-xs text-slate-400">
-                    Ontario road salt aggressively deteriorates unprotected concrete slabs. Our 100% solids polyaspartic topcoat forms an impermeable shield.
+                  <p className="mt-1 text-xs text-slate-600 leading-relaxed">
+                    Ontario road salt aggressively deteriorates unprotected concrete slabs. Our 100% solids polyaspartic topcoat forms an impermeable shield against chemical pitting.
                   </p>
                 </div>
-                <div className="rounded-xl border border-white/10 bg-slate-900/60 p-4">
-                  <h4 className="font-heading text-xs font-bold text-white">
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                  <h4 className="font-heading text-sm font-bold text-slate-950">
                     Thermal Flexibility (-25°C to +35°C)
                   </h4>
-                  <p className="mt-1 text-xs text-slate-400">
+                  <p className="mt-1 text-xs text-slate-600 leading-relaxed">
                     Unlike brittle retail DIY products that crack during summer heatwaves or sub-zero snaps, our commercial materials maintain structural flexibility year-round.
                   </p>
                 </div>
@@ -247,43 +249,43 @@ export default async function LocationServicePage({ params }: PageProps) {
             </div>
 
             {/* City Dispatch Info Card */}
-            <div className="rounded-2xl border border-white/15 bg-slate-900/80 p-6 sm:p-8 backdrop-blur-xl">
-              <h3 className="font-heading text-lg font-bold text-white">
+            <div className="rounded-3xl border border-slate-200 bg-slate-50 p-7 sm:p-9 shadow-md">
+              <h3 className="font-heading text-xl font-bold text-slate-950">
                 {client.businessName} Service Dispatch in {cityName}
               </h3>
-              <p className="mt-2 text-xs text-slate-400">
+              <p className="mt-2 text-xs text-slate-600 leading-relaxed">
                 We provide prompt, direct service to all residential neighborhoods and commercial zones in {cityName}, ON.
               </p>
 
               <div className="mt-6 space-y-3 font-mono text-xs">
-                <div className="flex items-center justify-between border-b border-white/5 pb-2">
-                  <span className="text-slate-400">Primary Region:</span>
-                  <span className="text-white font-semibold">{cityName}, ON</span>
+                <div className="flex items-center justify-between border-b border-slate-200 pb-2.5">
+                  <span className="text-slate-500">Primary Region:</span>
+                  <span className="text-slate-950 font-bold">{cityName}, ON</span>
                 </div>
-                <div className="flex items-center justify-between border-b border-white/5 pb-2">
-                  <span className="text-slate-400">Headquarters Address:</span>
-                  <span className="text-white">{client.address}</span>
+                <div className="flex items-center justify-between border-b border-slate-200 pb-2.5">
+                  <span className="text-slate-500">Headquarters Address:</span>
+                  <span className="text-slate-800">{client.address}</span>
                 </div>
-                <div className="flex items-center justify-between border-b border-white/5 pb-2">
-                  <span className="text-slate-400">Direct Phone:</span>
-                  <a href={client.phoneHref} className="text-white font-bold hover:underline">
+                <div className="flex items-center justify-between border-b border-slate-200 pb-2.5">
+                  <span className="text-slate-500">Direct Phone:</span>
+                  <a href={client.phoneHref} className="text-slate-950 font-bold hover:underline">
                     {client.phone}
                   </a>
                 </div>
-                <div className="flex items-center justify-between border-b border-white/5 pb-2">
-                  <span className="text-slate-400">Typical Estimate Turnaround:</span>
-                  <span className="text-white">Within 24 Hours</span>
+                <div className="flex items-center justify-between border-b border-slate-200 pb-2.5">
+                  <span className="text-slate-500">Typical Estimate Turnaround:</span>
+                  <span className="text-slate-950 font-semibold">Within 24 Hours</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-400">Workmanship Guarantee:</span>
-                  <span className="text-white font-semibold">15-Year Written Warranty</span>
+                  <span className="text-slate-500">Workmanship Guarantee:</span>
+                  <span className="text-slate-950 font-bold">15-Year Written Warranty</span>
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-white/10 text-center">
+              <div className="mt-6 pt-5 border-t border-slate-200 text-center">
                 <a
                   href={client.phoneHref}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white py-3.5 text-xs font-bold font-mono uppercase text-obsidian shadow hover:bg-slate-100"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-slate-950 py-3.5 text-xs font-bold font-mono uppercase text-white shadow hover:bg-slate-800 transition-colors"
                 >
                   <Phone className="h-4 w-4" />
                   <span>Call {cityName} Dispatch: {client.phone}</span>
@@ -303,25 +305,25 @@ export default async function LocationServicePage({ params }: PageProps) {
       />
 
       {/* Internal Cross-Linking Matrix */}
-      <section className="py-16 border-t border-white/10 bg-slate-950">
+      <section className="py-20 border-b border-slate-200 bg-slate-50 text-slate-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="grid gap-10 lg:grid-cols-2">
             {/* Other Services in this City */}
             <div>
-              <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-white mb-3">
+              <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-slate-950 mb-3">
                 Other Services Available in {cityName}, ON:
               </h4>
-              <div className="grid gap-2 sm:grid-cols-2">
+              <div className="grid gap-2.5 sm:grid-cols-2">
                 {client.services
                   .filter((s) => s.slug !== service.slug)
                   .map((otherSvc) => (
                     <Link
                       key={otherSvc.slug}
                       href={`/locations/${citySlug}/${otherSvc.slug}`}
-                      className="rounded-xl border border-white/10 bg-slate-900/60 p-3.5 text-xs text-slate-300 hover:border-white/30 hover:text-white transition-colors"
+                      className="rounded-2xl border border-slate-200 bg-white p-4 text-xs text-slate-700 hover:border-slate-300 hover:shadow-xs hover:text-slate-950 transition-all"
                     >
-                      <span className="font-semibold block text-white">{otherSvc.name}</span>
-                      <span className="text-[11px] text-slate-400">{cityName}, ON</span>
+                      <span className="font-bold block text-slate-950 mb-0.5">{otherSvc.name}</span>
+                      <span className="text-[11px] text-slate-500 font-mono">{cityName}, ON</span>
                     </Link>
                   ))}
               </div>
@@ -329,8 +331,8 @@ export default async function LocationServicePage({ params }: PageProps) {
 
             {/* Same Service in Other GTA Cities */}
             <div>
-              <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-white mb-3">
-                {service.name} in Other GTA Municipalities:
+              <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-slate-950 mb-3">
+                {service.name} in Other Municipalities:
               </h4>
               <div className="flex flex-wrap gap-2">
                 {client.serviceAreas
@@ -339,7 +341,7 @@ export default async function LocationServicePage({ params }: PageProps) {
                     <Link
                       key={otherCity}
                       href={`/locations/${slugify(otherCity)}/${service.slug}`}
-                      className="rounded-lg border border-white/10 bg-slate-900/60 px-3 py-1.5 font-mono text-xs text-slate-300 hover:border-white/30 hover:text-white transition-colors"
+                      className="rounded-xl border border-slate-200 bg-white px-3.5 py-2 font-mono text-xs text-slate-700 hover:border-slate-300 hover:bg-slate-100 hover:text-slate-950 transition-colors shadow-2xs"
                     >
                       {otherCity}, ON
                     </Link>

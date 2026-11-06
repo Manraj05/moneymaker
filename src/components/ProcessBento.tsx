@@ -41,7 +41,7 @@ const detailedProtocol: StepDetail[] = [
     surfaceProfile: "CSP 3 (Concrete Surface Profile: Medium 60-Grit Sandpaper)",
     cureSchedule: "Immediate Mechanical Anchor (Zero Moisture Added)",
     inspections: [
-      "Zero chemical etching or dangerous acid vapors inside your home",
+      "Zero chemical etching or dangerous acid fumes inside your home",
       "Integrated industrial HEPA extractors capture 99.9% of silica dust",
       "Completely opens aggregate capillaries for deep resin penetration",
     ],
@@ -63,7 +63,7 @@ const detailedProtocol: StepDetail[] = [
       "Eliminates tire-pounding expansion joint gaps for easy broom sweeping",
     ],
     whyItMatters:
-      "Standard concrete patch compounds are brittle and crack under vehicular weight. Polyurea forms a chemical weld with 4,500 PSI tensile strength—stronger than the surrounding slab itself.",
+      "Standard concrete patch compounds are brittle and crack under vehicular weight. Polyurea forms a chemical weld with 4,500 PSI tensile strength—significantly stronger than the surrounding slab itself.",
   },
   {
     number: "03",
@@ -108,22 +108,22 @@ export default function ProcessBento({ client }: ProcessBentoProps) {
   return (
     <section
       id="process"
-      className="py-24 border-t border-white/10 bg-[#090D16] relative overflow-hidden scroll-mt-20"
+      className="py-24 bg-white border-b border-slate-200 text-slate-900 relative overflow-hidden scroll-mt-20"
     >
-      {/* Precision blueprint grid accent */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-25 pointer-events-none" />
+      {/* Precision light grid accent */}
+      <div className="absolute inset-0 bg-grid-pattern-light opacity-30 pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center mb-16">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-4 py-1 text-xs font-mono font-semibold text-slate-300 shadow-sm backdrop-blur-xl">
-            <Hammer className="h-3.5 w-3.5 text-white" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-slate-50 px-4 py-1 text-xs font-mono font-semibold text-slate-700 shadow-xs">
+            <Hammer className="h-3.5 w-3.5 text-slate-900" />
             <span>Industrial Engineering Protocol</span>
           </div>
-          <h2 className="mt-3 font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
+          <h2 className="mt-3 font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-950">
             The 4-Step CSP 3 Diamond-Grinding Protocol
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Mechanical surface prep is 80% of a lifetime coating. Here is the exact diamond-grinding and chemical cross-linking standard {client.businessName} executes on every single Ontario floor.
           </p>
         </div>
@@ -140,14 +140,14 @@ export default function ProcessBento({ client }: ProcessBentoProps) {
                   onClick={() => setActiveStepIdx(idx)}
                   className={`group relative text-left rounded-2xl border p-4 sm:p-5 transition-all duration-200 ${
                     isActive
-                      ? "border-white bg-white text-obsidian shadow-2xl scale-[1.02]"
-                      : "border-white/10 bg-slate-900/60 text-slate-300 hover:border-white/25 hover:bg-slate-900 hover:text-white"
+                      ? "border-slate-950 bg-slate-950 text-white shadow-xl scale-[1.02]"
+                      : "border-slate-200 bg-slate-50 text-slate-700 hover:border-slate-300 hover:bg-white"
                   }`}
                 >
                   <div className="flex items-center justify-between mb-2">
                     <span
                       className={`font-mono text-xl sm:text-2xl font-black ${
-                        isActive ? "text-obsidian" : "text-slate-500 group-hover:text-slate-300"
+                        isActive ? "text-white" : "text-slate-400 group-hover:text-slate-900"
                       }`}
                     >
                       {step.number}
@@ -155,8 +155,8 @@ export default function ProcessBento({ client }: ProcessBentoProps) {
                     <span
                       className={`rounded-full px-2 py-0.5 font-mono text-[9px] font-bold uppercase tracking-wider ${
                         isActive
-                          ? "bg-obsidian text-white"
-                          : "border border-white/10 bg-white/5 text-slate-400"
+                          ? "bg-white text-slate-950"
+                          : "border border-slate-200 bg-white text-slate-600"
                       }`}
                     >
                       Phase {idx + 1}
@@ -165,14 +165,14 @@ export default function ProcessBento({ client }: ProcessBentoProps) {
 
                   <h3
                     className={`font-heading text-xs sm:text-sm font-bold leading-tight ${
-                      isActive ? "text-obsidian" : "text-white"
+                      isActive ? "text-white" : "text-slate-950"
                     }`}
                   >
                     {step.phaseName}
                   </h3>
                   <span
                     className={`font-mono text-[10px] block mt-1 ${
-                      isActive ? "text-slate-700" : "text-slate-400"
+                      isActive ? "text-slate-300" : "text-slate-500"
                     }`}
                   >
                     {step.surfaceProfile.split("(")[0]}
@@ -183,38 +183,38 @@ export default function ProcessBento({ client }: ProcessBentoProps) {
           </div>
         </div>
 
-        {/* Active Protocol Feature Stage (Deep Dramatic Card) */}
-        <div className="rounded-3xl border border-white/15 bg-gradient-to-br from-slate-900 via-slate-950 to-[#0A0E1A] p-6 sm:p-10 shadow-2xl backdrop-blur-2xl">
+        {/* Active Protocol Feature Stage */}
+        <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-10 shadow-lg">
           <div className="grid gap-10 lg:grid-cols-12 items-start">
             {/* Left Narrative Column (7 Cols) */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1 text-xs font-mono text-white">
-                <span>Phase {activeStep.number} of 04</span>
+              <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3.5 py-1 text-xs font-mono text-slate-800">
+                <span className="font-bold">Phase {activeStep.number} of 04</span>
                 <span>·</span>
                 <span>{activeStep.phaseName}</span>
               </div>
 
-              <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+              <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-950 leading-tight">
                 {activeStep.title}
               </h3>
 
-              <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                 {activeStep.tradeSummary}
               </p>
 
               {/* Execution Checkpoints */}
               <div className="pt-2">
-                <span className="font-mono text-xs uppercase tracking-wider text-slate-400 block mb-3 font-bold">
+                <span className="font-mono text-xs uppercase tracking-wider text-slate-500 block mb-3 font-bold">
                   Quality Assurance Checkpoints in this Phase:
                 </span>
-                <div className="space-y-2.5 text-xs text-slate-200">
+                <div className="space-y-2.5 text-xs text-slate-800">
                   {activeStep.inspections.map((check, i) => (
                     <div
                       key={i}
-                      className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.03] p-3"
+                      className="flex items-start gap-3 rounded-xl border border-slate-200 bg-slate-50 p-3.5"
                     >
-                      <CheckCircle2 className="h-4 w-4 text-white mt-0.5 flex-shrink-0" />
-                      <span className="leading-relaxed">{check}</span>
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+                      <span className="leading-relaxed font-medium">{check}</span>
                     </div>
                   ))}
                 </div>
@@ -223,34 +223,34 @@ export default function ProcessBento({ client }: ProcessBentoProps) {
 
             {/* Right Engineering Specs Column (5 Cols) */}
             <div className="lg:col-span-5 space-y-4">
-              <div className="rounded-2xl border border-white/15 bg-slate-900/90 p-6 shadow-xl space-y-4 font-mono text-xs">
-                <span className="text-[10px] uppercase tracking-widest text-slate-400 block border-b border-white/10 pb-2 font-bold">
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm space-y-4 font-mono text-xs text-slate-900">
+                <span className="text-[10px] uppercase tracking-widest text-slate-500 block border-b border-slate-200 pb-2 font-bold">
                   Machine &amp; Material Specifications
                 </span>
 
                 <div>
-                  <span className="text-slate-400 block text-[11px]">Primary Machinery:</span>
-                  <span className="text-white font-bold block mt-0.5 font-sans text-xs">
+                  <span className="text-slate-500 block text-[11px] font-medium">Primary Machinery:</span>
+                  <span className="text-slate-950 font-bold block mt-0.5 font-sans text-xs">
                     {activeStep.machinery}
                   </span>
                 </div>
 
                 <div>
-                  <span className="text-slate-400 block text-[11px]">Substrate Profile Target:</span>
-                  <span className="text-white font-bold block mt-0.5 font-sans text-xs">
+                  <span className="text-slate-500 block text-[11px] font-medium">Substrate Profile Target:</span>
+                  <span className="text-slate-950 font-bold block mt-0.5 font-sans text-xs">
                     {activeStep.surfaceProfile}
                   </span>
                 </div>
 
                 <div>
-                  <span className="text-slate-400 block text-[11px]">Cure &amp; Traffic Window:</span>
-                  <span className="text-white font-bold block mt-0.5 font-sans text-xs">
+                  <span className="text-slate-500 block text-[11px] font-medium">Cure &amp; Traffic Window:</span>
+                  <span className="text-slate-950 font-bold block mt-0.5 font-sans text-xs">
                     {activeStep.cureSchedule}
                   </span>
                 </div>
 
-                <div className="pt-3 border-t border-white/10 text-slate-300 text-xs font-sans leading-relaxed">
-                  <strong className="text-white font-bold block font-mono text-[11px] mb-1">
+                <div className="pt-3 border-t border-slate-200 text-slate-700 text-xs font-sans leading-relaxed">
+                  <strong className="text-slate-950 font-bold block font-mono text-[11px] mb-1">
                     Why This Phase is Non-Negotiable:
                   </strong>
                   {activeStep.whyItMatters}
@@ -258,18 +258,18 @@ export default function ProcessBento({ client }: ProcessBentoProps) {
               </div>
 
               {/* Instant Action Prompt */}
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 flex items-center justify-between">
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 flex items-center justify-between">
                 <div>
-                  <span className="text-xs text-slate-300 block font-heading font-bold">
+                  <span className="text-xs text-slate-950 block font-heading font-bold">
                     Need on-site laser assessment?
                   </span>
-                  <span className="font-mono text-[10px] text-slate-400">
+                  <span className="font-mono text-[10px] text-slate-500">
                     Free in {client.primaryCity} &amp; surrounding areas
                   </span>
                 </div>
                 <a
                   href={client.phoneHref}
-                  className="rounded-xl bg-white px-3.5 py-2 font-mono text-xs font-bold uppercase text-obsidian hover:bg-slate-100 transition-colors"
+                  className="rounded-xl bg-slate-950 px-3.5 py-2 font-mono text-xs font-bold uppercase text-white hover:bg-slate-800 transition-colors shadow-xs"
                 >
                   Call {client.phone}
                 </a>

@@ -5,6 +5,7 @@ import TrustStatsBand from "@/components/TrustStatsBand";
 import ProblemsSolved from "@/components/ProblemsSolved";
 import ComparisonTable from "@/components/ComparisonTable";
 import ProcessBento from "@/components/ProcessBento";
+import ProjectGallery from "@/components/ProjectGallery";
 import ServicesGrid from "@/components/ServicesGrid";
 import QuoteCalculator from "@/components/QuoteCalculator";
 import ReviewMarquee from "@/components/ReviewMarquee";
@@ -19,7 +20,7 @@ export default function HomePage() {
   const client = getActiveClient();
 
   return (
-    <main className="min-h-screen bg-obsidian text-slate-100 pb-16 sm:pb-0">
+    <main className="min-h-screen bg-white text-slate-900 pb-16 sm:pb-0">
       {/* Schema Injection */}
       <JsonLd client={client} />
 
@@ -29,22 +30,25 @@ export default function HomePage() {
       {/* Refactored Hero Section: Background Photo Ken Burns + 4 Clean Elements + Embedded BeforeAfterSlider */}
       <HeroSection client={client} />
 
-      {/* Full-Width Trust Metric Stat Band */}
+      {/* Full-Width Architectural Trust Metric Stat Band */}
       <TrustStatsBand />
 
       {/* 4 Concrete Problems We Permanently Solve (Asymmetric Split-Screen Diagnostic) */}
       <ProblemsSolved />
 
-      {/* Visual Palette Reset: Clean Light Ice-Gray Comparison Table */}
+      {/* Materials Engineering Comparison Table (Why Hardware Store Kits Fail) */}
       <ComparisonTable client={client} />
 
       {/* Technical 4-Step CSP 3 Diamond Prep Protocol (Connected Horizontal Stepper Timeline) */}
       <ProcessBento client={client} />
 
+      {/* Recent Work Portfolio & Completed Installations Gallery */}
+      <ProjectGallery client={client} />
+
       {/* Residential & Commercial Services Editorial Layout with $/sq ft Pills */}
       <ServicesGrid client={client} />
 
-      {/* Dedicated Full-Width Cost Calculator Section (Slate-Blue Gradient Container) */}
+      {/* Dedicated Full-Width Cost Calculator Section */}
       <QuoteCalculator client={client} />
 
       {/* Auto-scrolling Verified Google Reviews Marquee Wall */}

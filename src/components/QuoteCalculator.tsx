@@ -75,42 +75,42 @@ export default function QuoteCalculator({
   return (
     <section
       id="calculator"
-      className="py-24 border-t border-white/10 bg-gradient-to-b from-[#090D16] via-[#0D1527] to-[#090D16] relative overflow-hidden"
+      className="py-24 bg-slate-50 border-b border-slate-200 text-slate-900 relative overflow-hidden scroll-mt-20"
     >
-      {/* Cool Slate-Blue Ambient Radial Glow */}
-      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[800px] rounded-full bg-blue-900/15 blur-[160px]" />
+      {/* Precision light grid accent */}
+      <div className="absolute inset-0 bg-grid-pattern-light opacity-30 pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
         {/* Section Header */}
         <div className="mx-auto max-w-3xl text-center mb-14">
-          <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-1 text-xs font-mono font-semibold text-blue-300 shadow-sm backdrop-blur-xl">
-            <Calculator className="h-3.5 w-3.5 text-blue-200" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-1 text-xs font-mono font-semibold text-slate-700 shadow-xs">
+            <Calculator className="h-3.5 w-3.5 text-slate-900" />
             <span>Interactive Ontario Ballpark Estimator</span>
           </div>
-          <h2 className="mt-3 font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
+          <h2 className="mt-3 font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-950">
             60-Second Instant Floor Cost Calculator
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-slate-300 max-w-2xl mx-auto">
+          <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Choose your square footage and finish system. Transparent pricing calculated using 2026 Ontario commercial-grade contractor rates.
           </p>
         </div>
 
-        {/* Distinct Slate-Blue Glass Container */}
-        <div className="rounded-3xl border border-slate-700/60 bg-[#0F172A]/80 p-6 sm:p-10 shadow-[0_0_50px_rgba(15,23,42,0.8)] backdrop-blur-2xl">
+        {/* Luminous Interactive Cockpit */}
+        <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-10 shadow-xl">
           <div className="grid gap-10 lg:grid-cols-12 items-start">
-            {/* LEFT COLUMN (7 Cols): Slider + 3 Full-Width Horizontal Rows */}
+            {/* LEFT COLUMN (7 Cols): Slider + Finish Systems */}
             <div className="lg:col-span-7 space-y-7">
               {/* 1. Square Footage Slider & Presets */}
-              <div className="rounded-2xl border border-slate-700/50 bg-slate-900/80 p-6 backdrop-blur-xl">
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-xs">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-300 font-heading">
+                  <span className="text-xs font-bold uppercase tracking-wider text-slate-700 font-heading">
                     1. Choose Slab Square Footage
                   </span>
                   <div className="flex items-baseline gap-1.5 font-mono">
-                    <span className="text-2xl font-black text-white">
+                    <span className="text-2xl font-black text-slate-950">
                       {sqft.toLocaleString()}
                     </span>
-                    <span className="text-xs font-normal text-slate-400">SQ FT</span>
+                    <span className="text-xs font-semibold text-slate-500">SQ FT</span>
                   </div>
                 </div>
 
@@ -124,7 +124,7 @@ export default function QuoteCalculator({
                     onChange={(e) => setSqft(Number(e.target.value))}
                     className="w-full cursor-pointer"
                   />
-                  <div className="mt-2 flex justify-between text-[11px] font-mono text-slate-400">
+                  <div className="mt-2 flex justify-between text-[11px] font-mono text-slate-500">
                     <span>{client.niche === "epoxy" ? "200 sq ft" : "800 sq ft"}</span>
                     <span>Typical GTA 2-Car: 450 sq ft</span>
                     <span>{client.niche === "epoxy" ? "2,500 sq ft" : "3,500 sq ft"}</span>
@@ -142,8 +142,8 @@ export default function QuoteCalculator({
                         onClick={() => setSqft(preset.sqft)}
                         className={`rounded-xl border px-3.5 py-1.5 text-xs font-mono transition-all ${
                           isActive
-                            ? "border-white bg-white text-obsidian font-bold shadow-md"
-                            : "border-slate-700 bg-slate-950/80 text-slate-300 hover:border-slate-500 hover:text-white"
+                            ? "border-slate-950 bg-slate-950 text-white font-bold shadow-sm"
+                            : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-100"
                         }`}
                       >
                         {preset.label}
@@ -153,9 +153,9 @@ export default function QuoteCalculator({
                 </div>
               </div>
 
-              {/* 2. Full-Width Horizontal Selectable Rows */}
+              {/* 2. Horizontal Selectable Finish Rows */}
               <div className="space-y-3">
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-300 font-heading block">
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-700 font-heading block">
                   2. Select Your Floor Finish System
                 </span>
 
@@ -165,10 +165,10 @@ export default function QuoteCalculator({
                     <div
                       key={tier.id}
                       onClick={() => setSelectedTierId(tier.id)}
-                      className={`group relative cursor-pointer rounded-2xl border p-5 backdrop-blur-xl transition-all duration-200 ${
+                      className={`group relative cursor-pointer rounded-2xl border p-5 transition-all duration-200 ${
                         isSelected
-                          ? "border-white bg-white/[0.1] shadow-2xl scale-[1.01]"
-                          : "border-slate-700/60 bg-slate-900/50 hover:border-slate-600 hover:bg-slate-900/80"
+                          ? "border-slate-950 bg-slate-50 shadow-md ring-1 ring-slate-950 scale-[1.01]"
+                          : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50/50"
                       }`}
                     >
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
@@ -177,42 +177,42 @@ export default function QuoteCalculator({
                           <div
                             className={`flex h-5 w-5 items-center justify-center rounded-full border transition-all ${
                               isSelected
-                                ? "border-white bg-white text-obsidian"
-                                : "border-slate-500 bg-transparent group-hover:border-white"
+                                ? "border-slate-950 bg-slate-950 text-white"
+                                : "border-slate-300 bg-white group-hover:border-slate-400"
                             }`}
                           >
-                            {isSelected && <div className="h-2 w-2 rounded-full bg-obsidian" />}
+                            {isSelected && <div className="h-2 w-2 rounded-full bg-white" />}
                           </div>
 
                           <div>
                             <div className="flex items-center gap-2">
-                              <span className="font-heading text-sm sm:text-base font-bold text-white">
+                              <span className="font-heading text-sm sm:text-base font-bold text-slate-950">
                                 {tier.name}
                               </span>
                               {tier.popular && (
-                                <span className="rounded-full border border-blue-400/40 bg-blue-500/20 px-2.5 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider text-blue-200">
+                                <span className="rounded-full bg-slate-950 text-white px-2.5 py-0.5 text-[9px] font-mono font-bold uppercase tracking-wider">
                                   Most Popular
                                 </span>
                               )}
                             </div>
-                            <p className="text-xs text-slate-400 mt-0.5">
+                            <p className="text-xs text-slate-600 mt-0.5">
                               {tier.tagline}
                             </p>
                           </div>
                         </div>
 
                         <div className="sm:text-right font-mono self-start sm:self-auto pl-8 sm:pl-0">
-                          <span className="text-sm sm:text-base font-bold text-white">
+                          <span className="text-sm sm:text-base font-black text-slate-950">
                             ${tier.minRate.toFixed(2)}–${tier.maxRate.toFixed(2)}
                           </span>
-                          <span className="text-xs text-slate-400"> / sq ft</span>
+                          <span className="text-xs text-slate-500"> / sq ft</span>
                         </div>
                       </div>
 
-                      <div className="mt-3.5 pt-3 border-t border-slate-800 pl-8 grid sm:grid-cols-2 gap-x-4 gap-y-1 text-[11px] text-slate-300">
+                      <div className="mt-3.5 pt-3 border-t border-slate-100 pl-8 grid sm:grid-cols-2 gap-x-4 gap-y-1 text-[11px] text-slate-700">
                         {tier.features.map((feature, idx) => (
                           <div key={idx} className="flex items-center gap-2">
-                            <Check className="h-3 w-3 text-white flex-shrink-0" />
+                            <Check className="h-3 w-3 text-slate-900 flex-shrink-0" />
                             <span>{feature}</span>
                           </div>
                         ))}
@@ -223,11 +223,11 @@ export default function QuoteCalculator({
               </div>
             </div>
 
-            {/* RIGHT COLUMN (5 Cols): Live Estimate Box + Form */}
+            {/* RIGHT COLUMN (5 Cols): Live Estimate Display & Form */}
             <div className="lg:col-span-5 space-y-6">
-              {/* Ballpark Counter Card */}
-              <div className="rounded-2xl border border-slate-700 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 p-6 shadow-2xl backdrop-blur-2xl text-center">
-                <span className="text-xs font-mono uppercase tracking-widest text-slate-400">
+              {/* High-Contrast Estimate Display Box */}
+              <div className="rounded-2xl border border-slate-900 bg-slate-950 p-6 shadow-2xl text-center text-white">
+                <span className="text-xs font-mono uppercase tracking-widest text-slate-400 font-semibold">
                   Live 2026 Ontario Ballpark Estimate
                 </span>
 
@@ -242,9 +242,9 @@ export default function QuoteCalculator({
                   <span className="text-xs text-slate-400 font-mono">CAD</span>
                 </div>
 
-                <div className="mt-4 rounded-xl border border-slate-800 bg-slate-950/80 p-3.5 text-xs text-slate-300 space-y-1.5 font-mono">
+                <div className="mt-4 rounded-xl border border-white/10 bg-white/5 p-3.5 text-xs text-slate-300 space-y-1.5 font-mono text-left">
                   <div className="flex justify-between">
-                    <span className="text-slate-400">Estimated Size:</span>
+                    <span className="text-slate-400">Estimated Area:</span>
                     <span className="text-white font-semibold">{sqft} sq ft</span>
                   </div>
                   <div className="flex justify-between">
@@ -255,17 +255,17 @@ export default function QuoteCalculator({
                     <span className="text-slate-400">Turnaround Schedule:</span>
                     <span className="text-white">1–2 Days</span>
                   </div>
-                  <div className="flex justify-between border-t border-slate-800 pt-1.5 text-slate-200">
+                  <div className="flex justify-between border-t border-white/10 pt-1.5 text-slate-200">
                     <span className="text-slate-400">Warranty Coverage:</span>
                     <span className="text-white font-semibold">15-Year Delamination</span>
                   </div>
                 </div>
 
-                {/* Booking Form */}
-                <div className="mt-6 border-t border-slate-800 pt-5 text-left">
+                {/* Form Injection */}
+                <div className="mt-6 border-t border-white/10 pt-5 text-left">
                   {!isSubmitted ? (
                     <form onSubmit={handleSubmit} className="space-y-3.5">
-                      <span className="text-xs font-bold uppercase tracking-wider text-slate-300 font-heading block">
+                      <span className="text-xs font-bold uppercase tracking-wider text-slate-200 font-heading block">
                         Lock In This Ballpark &amp; Request Free Laser Measure
                       </span>
 
@@ -276,7 +276,7 @@ export default function QuoteCalculator({
                           placeholder="Your Full Name *"
                           value={name}
                           onChange={(e) => setName(e.target.value)}
-                          className="w-full rounded-xl border border-slate-700 bg-slate-950/90 px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
+                          className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-base sm:text-sm text-white placeholder-slate-400 focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
                         />
                       </div>
 
@@ -287,7 +287,7 @@ export default function QuoteCalculator({
                           placeholder="Phone Number (Cell) *"
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
-                          className="w-full rounded-xl border border-slate-700 bg-slate-950/90 px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 font-mono focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
+                          className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-base sm:text-sm text-white placeholder-slate-400 font-mono focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
                         />
                       </div>
 
@@ -295,7 +295,7 @@ export default function QuoteCalculator({
                         <select
                           value={city}
                           onChange={(e) => setCity(e.target.value)}
-                          className="w-full rounded-xl border border-slate-700 bg-slate-950/90 px-3.5 py-3 text-base sm:text-sm text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
+                          className="w-full rounded-xl border border-white/20 bg-slate-900 px-3.5 py-3 text-base sm:text-sm text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
                         >
                           {client.serviceAreas.map((area) => (
                             <option key={area} value={area} className="bg-slate-900 text-white">
@@ -308,7 +308,7 @@ export default function QuoteCalculator({
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="group flex w-full items-center justify-center gap-2 rounded-xl bg-white py-3.5 font-heading text-xs sm:text-sm font-bold uppercase tracking-wider text-obsidian shadow-2xl transition-all hover:bg-slate-100 hover:scale-[1.01] active:scale-95 disabled:opacity-50"
+                        className="group flex w-full items-center justify-center gap-2 rounded-xl bg-white py-3.5 font-heading text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-950 shadow-2xl transition-all hover:bg-slate-100 hover:scale-[1.01] active:scale-95 disabled:opacity-50"
                       >
                         {isSubmitting ? (
                           <span>Locking In Ballpark...</span>
@@ -331,7 +331,7 @@ export default function QuoteCalculator({
                       animate={{ opacity: 1, scale: 1 }}
                       className="rounded-xl border border-white/20 bg-white/[0.04] p-5 text-center"
                     >
-                      <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-white text-obsidian mb-2.5">
+                      <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-white text-slate-950 mb-2.5">
                         <CheckCircle2 className="h-5 w-5" />
                       </div>
                       <span className="rounded-full border border-white/20 bg-black/60 px-2.5 py-0.5 font-mono text-xs text-white">
@@ -348,7 +348,7 @@ export default function QuoteCalculator({
                       <div className="mt-4 flex flex-col gap-2">
                         <a
                           href={client.phoneHref}
-                          className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-2 font-mono text-xs font-bold text-obsidian shadow"
+                          className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-2 font-mono text-xs font-bold text-slate-950 shadow"
                         >
                           <PhoneCall className="h-3.5 w-3.5" />
                           <span>Direct Call: {client.phone}</span>
