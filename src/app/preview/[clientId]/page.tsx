@@ -77,34 +77,34 @@ export default async function ClientPreviewPage({ params }: PreviewPageProps) {
       {/* Full-Width Architectural Trust Metric Stat Band */}
       <TrustStatsBand />
 
-      {/* 4 Concrete Problems We Permanently Solve */}
-      <ProblemsSolved />
-
-      {/* Materials Engineering Comparison Table */}
-      <ComparisonTable client={client} />
-
-      {/* Technical 4-Step CSP 3 Diamond Prep Protocol */}
-      <ProcessBento client={client} />
-
-      {/* Recent Work Portfolio & Completed Installations Gallery */}
+      {/* 1. Recent Work Portfolio & Completed Installations Gallery (Moved Up First) */}
       <ProjectGallery client={client} />
 
-      {/* Residential & Commercial Services Editorial Layout with $/sq ft Pills */}
-      <ServicesGrid client={client} />
-
-      {/* Dedicated Full-Width Cost Calculator Section */}
+      {/* 2. Dedicated Full-Width Cost Calculator Section (Moved Up Second) */}
       <QuoteCalculator client={client} />
 
-      {/* Auto-scrolling Verified Google Reviews Marquee Wall */}
+      {/* 3. Auto-scrolling Verified Google Reviews Marquee Wall (Immediate Social Proof) */}
       <ReviewMarquee client={client} />
 
-      {/* Regional Service Areas & Coverage Console */}
+      {/* 4. Concrete Problems We Permanently Solve (Substrate Pathology Deep Dive) */}
+      <ProblemsSolved />
+
+      {/* 5. Materials Engineering Comparison Table (Why Hardware Store Kits Fail) */}
+      <ComparisonTable client={client} />
+
+      {/* 6. Technical 4-Step CSP 3 Diamond Prep Protocol */}
+      <ProcessBento client={client} />
+
+      {/* 7. Residential & Commercial Services Editorial Layout with $/sq ft Pills */}
+      <ServicesGrid client={client} />
+
+      {/* 8. Regional Service Areas & Coverage Console */}
       <ServiceAreas client={client} />
 
-      {/* Frequently Asked Questions */}
+      {/* 9. Frequently Asked Questions */}
       <FaqAccordion client={client} />
 
-      {/* Architectural Industrial Footer */}
+      {/* 10. Architectural Industrial Footer */}
       <Footer client={client} />
 
       {/* Fixed High-Converting Mobile Bottom Quick Action Bar */}

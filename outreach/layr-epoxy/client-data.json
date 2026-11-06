@@ -335,7 +335,7 @@
       "finishType": "Granite Pebble Non-Slip Matrix",
       "tierId": "flake-porch",
       "description": "Complete mechanical grind and polyaspartic flake broadcast on front entrance steps and porch. Impervious to winter freeze-thaw cycles and calcium chloride.",
-      "imageSrc": "/after-garage.png",
+      "imageSrc": "/projects/porch-flake.jpg",
       "badge": "Porch Transformation",
       "keyHighlights": [
         "100% UV-Stable (Zero Sun Yellowing)",
@@ -356,7 +356,7 @@
       "finishType": "White Carrara Marble with Metallic Charcoal Veins",
       "tierId": "artisan-countertop",
       "description": "Seamless poured epoxy countertop over existing laminate with zero seams, zero grout lines, and 250°C heat resistance.",
-      "imageSrc": "/after-garage.png",
+      "imageSrc": "/projects/marble-countertop.jpg",
       "badge": "Artisan Countertop",
       "keyHighlights": [
         "100% Food-Safe & Antibacterial",
@@ -377,7 +377,7 @@
       "finishType": "Tuxedo Granite Flake Matrix",
       "tierId": "flake-garage",
       "description": "Commercial mechanical preparation with Lavina diamond grinders, polyurea crack mending, and 100% vinyl flake saturation to rejection.",
-      "imageSrc": "/after-garage.png",
+      "imageSrc": "/projects/tuxedo-garage.jpg",
       "badge": "Showroom Garage",
       "keyHighlights": [
         "Hot-Tire Torque Immune (150°C)",
@@ -398,7 +398,7 @@
       "finishType": "Silver Pearl & Obsidian Swirl",
       "tierId": "metallic-marble",
       "description": "Hand-manipulated metallic pearlescent pigments creating liquid marble depth for a luxury basement and entertainment suite.",
-      "imageSrc": "/after-garage.png",
+      "imageSrc": "/projects/metallic-marble.png",
       "badge": "Luxury Interior",
       "keyHighlights": [
         "Hand-Troweled Liquid Marble Veining",
@@ -419,7 +419,7 @@
       "finishType": "Medium Industrial Gray with Slip Resistant Texture",
       "tierId": "flake-garage",
       "description": "Engineered for hydraulic vehicle jacks, oil spills, and high-frequency tool drops with chemical immersion resistance.",
-      "imageSrc": "/after-garage.png",
+      "imageSrc": "/projects/commercial-bay.jpg",
       "badge": "Commercial Heavy",
       "keyHighlights": [
         "Chemical & Brake Fluid Proof",
@@ -440,7 +440,7 @@
       "finishType": "Desert Sand Earth Flake Blend",
       "tierId": "flake-porch",
       "description": "Restoration of pitted exterior concrete walkway with diamond grind, crack welding, and weatherproof UV-stable polyaspartic coating.",
-      "imageSrc": "/after-garage.png",
+      "imageSrc": "/projects/patio-walkway.jpg",
       "badge": "Outdoor Walkway",
       "keyHighlights": [
         "ASTM D-2047 0.70+ Anti-Slip",

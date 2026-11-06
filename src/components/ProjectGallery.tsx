@@ -190,7 +190,7 @@ export default function ProjectGallery({ client }: ProjectGalleryProps) {
   return (
     <section
       id="gallery"
-      className="py-24 bg-white text-slate-900 border-b border-slate-200 relative overflow-hidden scroll-mt-20"
+      className="py-24 bg-[#F8FAFC] text-slate-900 border-b border-slate-200 relative overflow-hidden scroll-mt-20"
     >
       {/* Subtle light architectural grid */}
       <div className="absolute inset-0 bg-grid-pattern-light opacity-30 pointer-events-none" />

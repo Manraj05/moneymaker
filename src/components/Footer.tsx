@@ -170,7 +170,18 @@ export default function Footer({ client }: FooterProps) {
             © {new Date().getFullYear()} {client.businessName}. All Rights Reserved. Ontario Registered Contractor.
           </p>
           <div className="flex items-center gap-4">
-            <span>Powered by GTA Contractor SEO Engine</span>
+            <a
+              href="/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white transition-colors group"
+            >
+              <span className="text-slate-500">Engineered &amp; Powered by</span>
+              <span className="font-semibold text-slate-300 group-hover:text-blue-400 transition-colors">
+                Grimmer Agentics
+              </span>
+              <span className="text-[10px] text-blue-400 opacity-80 group-hover:translate-x-0.5 transition-transform">↗</span>
+            </a>
             <Link href="/llms.txt" className="text-slate-400 hover:text-white">
               /llms.txt
             </Link>

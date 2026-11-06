@@ -75,22 +75,23 @@ export default function QuoteCalculator({
   return (
     <section
       id="calculator"
-      className="py-24 bg-slate-50 border-b border-slate-200 text-slate-900 relative overflow-hidden scroll-mt-20"
+      className="py-24 bg-[#0B101D] border-b border-slate-800 text-white relative overflow-hidden scroll-mt-20"
     >
-      {/* Precision light grid accent */}
-      <div className="absolute inset-0 bg-grid-pattern-light opacity-30 pointer-events-none" />
+      {/* Precision ambient glow */}
+      <div className="absolute top-0 left-1/4 h-96 w-96 rounded-full bg-blue-500/5 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 h-96 w-96 rounded-full bg-emerald-500/5 blur-3xl pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
         {/* Section Header */}
         <div className="mx-auto max-w-3xl text-center mb-14">
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-1 text-xs font-mono font-semibold text-slate-700 shadow-xs">
-            <Calculator className="h-3.5 w-3.5 text-slate-900" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/80 px-4 py-1 text-xs font-mono font-semibold text-emerald-400 shadow-sm backdrop-blur-md">
+            <Calculator className="h-3.5 w-3.5 text-emerald-400" />
             <span>Interactive Ontario Ballpark Estimator</span>
           </div>
-          <h2 className="mt-3 font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-950">
+          <h2 className="mt-3 font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
             60-Second Instant Floor Cost Calculator
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-3 text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
             Choose your square footage and finish system. Transparent pricing calculated using 2026 Ontario commercial-grade contractor rates.
           </p>
         </div>

@@ -84,21 +84,21 @@ export default function ProblemsSolved() {
   const activeDiag = diagnostics.find((d) => d.id === selectedId) || diagnostics[0];
 
   return (
-    <section className="relative py-24 bg-[#F8FAFC] border-b border-slate-200 text-slate-900 overflow-hidden">
-      {/* Subtle light architectural grid */}
-      <div className="absolute inset-0 bg-grid-pattern-light opacity-30 pointer-events-none" />
+    <section className="relative py-24 bg-[#0A0D16] border-b border-slate-800 text-white overflow-hidden scroll-mt-20">
+      {/* Precision ambient glow */}
+      <div className="absolute top-1/4 right-0 h-96 w-96 rounded-full bg-blue-500/5 blur-3xl pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-3.5 py-1 text-xs font-mono font-semibold text-slate-700 shadow-xs">
-            <Activity className="h-3.5 w-3.5 text-slate-900" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/80 px-3.5 py-1 text-xs font-mono font-semibold text-emerald-400 shadow-sm backdrop-blur-md">
+            <Activity className="h-3.5 w-3.5 text-emerald-400" />
             <span>Forensic Concrete Pathology</span>
           </div>
-          <h2 className="mt-3 font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-950 leading-tight">
+          <h2 className="mt-3 font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
             Why Bare Concrete Fails in Southern Ontario
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+          <p className="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed">
             Ontario is one of the harshest environments on earth for concrete slabs. Understanding the physics of substrate degradation explains why paint kits peel and why diamond-profiled polyaspartic lasts for decades.
           </p>
         </div>
@@ -114,8 +114,8 @@ export default function ProblemsSolved() {
                 onClick={() => setSelectedId(diag.id)}
                 className={`group relative rounded-xl border px-4 py-2.5 text-left font-mono text-xs transition-all duration-200 ${
                   isSelected
-                    ? "border-slate-950 bg-slate-950 text-white font-bold shadow-md scale-[1.02]"
-                    : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50"
+                    ? "border-emerald-500 bg-emerald-500/10 text-emerald-300 font-bold shadow-md scale-[1.02]"
+                    : "border-slate-800 bg-slate-900/60 text-slate-400 hover:border-slate-700 hover:text-white"
                 }`}
               >
                 <span>{diag.tabLabel}</span>
@@ -127,76 +127,75 @@ export default function ProblemsSolved() {
         {/* Asymmetric Split-Screen Diagnostic Stage */}
         <div className="grid gap-8 lg:grid-cols-12 items-stretch">
           {/* Left Panel (7 Cols): Forensic Breakdown & Contractor Solution */}
-          <div className="lg:col-span-7 flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-6 sm:p-9 shadow-md">
+          <div className="lg:col-span-7 flex flex-col justify-between rounded-3xl border border-slate-800 bg-[#111522] p-6 sm:p-9 shadow-xl">
             <div className="space-y-6">
-              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-4">
-                <span className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-rose-600">
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-800/80 pb-4">
+                <span className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-rose-400">
                   <span className="h-2 w-2 rounded-full bg-rose-500 animate-pulse" />
                   Primary Failure Mode
                 </span>
-                <span className="rounded-full border border-slate-200 bg-slate-100 px-3 py-1 font-mono text-xs font-semibold text-slate-800">
+                <span className="rounded-full border border-slate-700 bg-slate-800/80 px-3 py-1 font-mono text-xs font-semibold text-slate-200">
                   {activeDiag.mechanicsTag}
                 </span>
               </div>
 
               <div>
-                <h3 className="font-heading text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-950">
+                <h3 className="font-heading text-xl sm:text-2xl lg:text-3xl font-extrabold text-white">
                   {activeDiag.title}
                 </h3>
-                <p className="mt-2 text-xs sm:text-sm font-semibold text-slate-600">
-                  <strong className="text-slate-900 font-bold">Root Cause: </strong>
+                <p className="mt-2 text-xs sm:text-sm text-slate-300">
+                  <strong className="text-white font-bold">Root Cause: </strong>
                   {activeDiag.rootCause}
                 </p>
               </div>
 
               {/* Forensic Physics Analysis */}
-              <div className="rounded-2xl border border-rose-200 bg-rose-50/60 p-5">
-                <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-rose-900 flex items-center gap-2 mb-2">
-                  <AlertTriangle className="h-4 w-4 text-rose-600 flex-shrink-0" />
+              <div className="rounded-2xl border border-rose-500/20 bg-rose-500/5 p-5">
+                <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-rose-400 flex items-center gap-2 mb-2">
+                  <AlertTriangle className="h-4 w-4 text-rose-400 flex-shrink-0" />
                   How Unprotected Concrete Degrades Micro-Structurally:
                 </span>
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-sans">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
                   {activeDiag.microscopicDestruction}
                 </p>
               </div>
 
               {/* Commercial Engineering Fix */}
-              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-                <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-slate-900 flex items-center gap-2 mb-2">
-                  <ShieldCheck className="h-4 w-4 text-slate-900 flex-shrink-0" />
+              <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-5">
+                <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-2 mb-2">
+                  <ShieldCheck className="h-4 w-4 text-emerald-400 flex-shrink-0" />
                   The Commercial Preparation &amp; Polymer Cure:
                 </span>
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-sans">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
                   {activeDiag.contractorSolution}
                 </p>
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
-              <span className="font-mono text-xs text-slate-500">
+            <div className="mt-8 pt-6 border-t border-slate-800/80 flex items-center justify-between">
+              <span className="font-mono text-xs text-slate-400">
                 Backed by our comprehensive 15-year delamination warranty
               </span>
               <a
                 href="#calculator"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-950 hover:text-slate-600 transition-colors"
+                className="font-mono text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors"
               >
-                <span>Calculate Floor Prep Cost</span>
-                <ArrowRight className="h-3.5 w-3.5" />
+                Calculate Floor Prep Cost →
               </a>
             </div>
           </div>
 
           {/* Right Panel (5 Cols): Architectural Cross-Section Schematic */}
-          <div className="lg:col-span-5 flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-md">
+          <div className="lg:col-span-5 flex flex-col justify-between rounded-3xl border border-slate-800 bg-[#111522] p-6 sm:p-8 shadow-xl">
             <div>
-              <div className="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
+              <div className="flex items-center justify-between border-b border-slate-800/80 pb-4 mb-6">
                 <div className="flex items-center gap-2">
-                  <Layers className="h-4 w-4 text-slate-900" />
-                  <span className="font-heading text-sm font-bold text-slate-950">
+                  <Layers className="h-4 w-4 text-emerald-400" />
+                  <span className="font-heading text-sm font-bold text-white">
                     Slab Profile Cross-Section
                   </span>
                 </div>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500 font-bold">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-slate-400 font-bold">
                   Engineering Schematic
                 </span>
               </div>
@@ -204,51 +203,51 @@ export default function ProblemsSolved() {
               {/* Visual Multi-Layer Stratum Diagram */}
               <div className="space-y-3 font-mono text-xs">
                 {/* Stratum 01: Clear Armor Topcoat */}
-                <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-4">
                   <div className="flex items-center justify-between">
-                    <span className="font-bold text-slate-950">Topcoat: Aliphatic Polyaspartic (4–6 Mils)</span>
-                    <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                    <span className="font-bold text-white">Topcoat: Aliphatic Polyaspartic (4–6 Mils)</span>
+                    <span className="text-[10px] font-bold text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/30">
                       100% UV &amp; Heat Safe
                     </span>
                   </div>
-                  <p className="mt-1.5 text-[11px] text-slate-600 font-sans leading-relaxed">
+                  <p className="mt-1.5 text-[11px] text-slate-300 font-sans leading-relaxed">
                     Resists 150°C hot tires, brake fluids, engine oils, and calcium chloride road salt slush.
                   </p>
                 </div>
 
                 {/* Stratum 02: Full Broadcast Chip Matrix */}
-                <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-xs">
+                <div className="rounded-xl border border-slate-700/80 bg-slate-900/80 p-4 shadow-sm">
                   <div className="flex items-center justify-between">
-                    <span className="font-bold text-slate-950">Decorative Matrix: Vinyl Chip Broadcast</span>
-                    <span className="text-[10px] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">
+                    <span className="font-bold text-white">Decorative Matrix: Vinyl Chip Broadcast</span>
+                    <span className="text-[10px] font-semibold text-slate-300 bg-slate-800 px-2 py-0.5 rounded">
                       100% Saturation
                     </span>
                   </div>
-                  <p className="mt-1.5 text-[11px] text-slate-600 font-sans leading-relaxed">
+                  <p className="mt-1.5 text-[11px] text-slate-300 font-sans leading-relaxed">
                     Provides multi-dimensional texture, hides concrete imperfections, and guarantees non-slip traction.
                   </p>
                 </div>
 
                 {/* Stratum 03: 100% Solids Deep Penetrating Base */}
-                <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div className="rounded-xl border border-slate-700/80 bg-slate-900/80 p-4">
                   <div className="flex items-center justify-between">
-                    <span className="font-bold text-slate-950">Prime Base: 100% Solids Epoxy Primer</span>
-                    <span className="text-[10px] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">
+                    <span className="font-bold text-white">Prime Base: 100% Solids Epoxy Primer</span>
+                    <span className="text-[10px] font-semibold text-slate-300 bg-slate-800 px-2 py-0.5 rounded">
                       2–3mm Infiltration
                     </span>
                   </div>
-                  <p className="mt-1.5 text-[11px] text-slate-600 font-sans leading-relaxed">
+                  <p className="mt-1.5 text-[11px] text-slate-300 font-sans leading-relaxed">
                     Fuses mechanically into opened concrete pores. Resists hydrostatic moisture back-pressure.
                   </p>
                 </div>
 
                 {/* Stratum 04: CSP 3 Diamond-Profiled Concrete */}
-                <div className="rounded-xl border border-dashed border-slate-300 bg-slate-100/70 p-4">
+                <div className="rounded-xl border border-dashed border-slate-700 bg-slate-900/40 p-4">
                   <div className="flex items-center justify-between">
-                    <span className="font-bold text-slate-900">Substrate: CSP 3 Diamond-Ground Slab</span>
-                    <span className="text-[10px] font-mono text-slate-500">Medium Sandpaper Profile</span>
+                    <span className="font-bold text-slate-300">Substrate: CSP 3 Diamond-Ground Slab</span>
+                    <span className="text-[10px] font-mono text-slate-400">Medium Sandpaper Profile</span>
                   </div>
-                  <p className="mt-1.5 text-[11px] text-slate-600 font-sans leading-relaxed">
+                  <p className="mt-1.5 text-[11px] text-slate-400 font-sans leading-relaxed">
                     Weak surface laitance, oils, and curing agents completely milled away using heavy planetary grinders.
                   </p>
                 </div>
@@ -256,16 +255,16 @@ export default function ProblemsSolved() {
             </div>
 
             {/* Metric Callout Card */}
-            <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-4 flex items-center justify-between">
+            <div className="mt-6 rounded-2xl border border-slate-800 bg-[#0A0D16] p-4 flex items-center justify-between">
               <div>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500 block font-bold">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-slate-400 block font-bold">
                   {activeDiag.metricLabel}
                 </span>
-                <span className="font-heading text-2xl font-black text-slate-950">
+                <span className="font-heading text-2xl font-black text-white">
                   {activeDiag.criticalMetric}
                 </span>
               </div>
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-white shadow">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 shadow">
                 <Sparkles className="h-5 w-5" />
               </div>
             </div>
