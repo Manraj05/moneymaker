@@ -69,11 +69,11 @@ export default function ServicesGrid({ client }: ServicesGridProps) {
                     </div>
                     <div>
                       <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-slate-500">
-                        System 01 · Flagship
+                        {flakeService.systemTag || "System 01 · Flagship"}
                       </span>
                       <div className="flex items-center gap-2">
                         <span className="rounded-full bg-slate-100 border border-slate-200 px-2.5 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider text-slate-900">
-                          Most Popular in GTA
+                          {flakeService.badge || "Most Popular in GTA"}
                         </span>
                       </div>
                     </div>
@@ -152,10 +152,10 @@ export default function ServicesGrid({ client }: ServicesGridProps) {
                     </div>
                     <div>
                       <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-slate-500">
-                        System 02 · Artisan
+                        {metallicService.systemTag || "System 02 · Artisan"}
                       </span>
                       <span className="rounded-full bg-slate-100 border border-slate-200 px-2 py-0.5 text-[10px] font-mono font-bold uppercase text-slate-800 block mt-0.5">
-                        High-Gloss Luxury
+                        {metallicService.badge || "High-Gloss Luxury"}
                       </span>
                     </div>
                   </div>
@@ -231,7 +231,7 @@ export default function ServicesGrid({ client }: ServicesGridProps) {
                   </div>
                   <div>
                     <span className="font-mono text-[10px] font-bold uppercase text-slate-500">
-                      System 03
+                      {basementService.systemTag || "System 03"}
                     </span>
                     <h4 className="font-heading text-lg font-bold text-slate-950">
                       {basementService.name}
@@ -252,7 +252,7 @@ export default function ServicesGrid({ client }: ServicesGridProps) {
                   href={`/locations/${citySlug}/${basementService.slug}`}
                   className="font-mono text-xs font-bold text-slate-900 hover:underline"
                 >
-                  {client.primaryCity} Basement Ingress Details →
+                  {basementService.name} Engineering Specs →
                 </Link>
                 <a
                   href="#calculator"
@@ -274,7 +274,7 @@ export default function ServicesGrid({ client }: ServicesGridProps) {
                   </div>
                   <div>
                     <span className="font-mono text-[10px] font-bold uppercase text-slate-500">
-                      System 04
+                      {commercialService.systemTag || "System 04"}
                     </span>
                     <h4 className="font-heading text-lg font-bold text-slate-950">
                       {commercialService.name}
@@ -295,7 +295,7 @@ export default function ServicesGrid({ client }: ServicesGridProps) {
                   href={`/locations/${citySlug}/${commercialService.slug}`}
                   className="font-mono text-xs font-bold text-slate-900 hover:underline"
                 >
-                  CFIA Industrial Standards →
+                  {commercialService.name} Specs →
                 </Link>
                 <a
                   href={client.phoneHref}

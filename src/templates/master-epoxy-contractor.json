@@ -1,0 +1,489 @@
+{
+  "templateName": "Ontario Epoxy & Concrete Coatings Contractor High-Converting Engine",
+  "version": "1.0.0",
+  "lastUpdated": "2026-11-06T21:06:46.123Z",
+  "supportedNiches": [
+    "epoxy",
+    "roofing"
+  ],
+  "requiredFields": [
+    "id",
+    "slug",
+    "niche",
+    "nicheTitle",
+    "businessName",
+    "address",
+    "primaryCity",
+    "province",
+    "postalCode",
+    "phone",
+    "phoneHref",
+    "rating",
+    "reviewCount",
+    "tagline",
+    "heroHeadline",
+    "heroSubtitle",
+    "serviceAreas",
+    "guarantees",
+    "trustBadges",
+    "pricingTiers",
+    "calculatorPresets",
+    "services",
+    "processSteps",
+    "reviews",
+    "faqs"
+  ],
+  "sampleProfile": {
+    "id": "layr-epoxy",
+    "slug": "layr-epoxy",
+    "niche": "epoxy",
+    "nicheTitle": "Flake Porch, Garage & Epoxy Countertop Specialists",
+    "businessName": "LAYR EPOXY",
+    "ownerName": "The LAYR Team",
+    "address": "6677 Meadowvale Town Centre Cir, Mississauga, ON L5N 2R5, Canada",
+    "primaryCity": "Mississauga",
+    "province": "ON",
+    "postalCode": "L5N 2R5",
+    "phone": "(437) 365-6841",
+    "phoneHref": "tel:+14373656841",
+    "rating": 5,
+    "reviewCount": 7,
+    "tagline": "Precision Flake Porches, Showroom Garages & Custom Resin Countertops in Mississauga",
+    "heroHeadline": "Flake Porch, Garage & Epoxy Countertop Specialists in Mississauga",
+    "heroSubtitle": "100% solid commercial epoxy and UV-stable polyaspartic coatings diamond-ground to CSP 3 and rated for Ontario winter freeze-thaw cycles. Starting from $4.50/sq ft installed.",
+    "serviceAreas": [
+      "Mississauga",
+      "Meadowvale",
+      "Streetsville",
+      "Brampton",
+      "Oakville",
+      "Milton",
+      "Erin Mills",
+      "Port Credit",
+      "Etobicoke"
+    ],
+    "guarantees": [
+      "Lavina Planetary Diamond Grinding (CSP 3 Profile)",
+      "100% UV-Stable Polyaspartic (Zero Porch Sun Yellowing)",
+      "Heat & Stain Proof Food-Safe Countertop Resins",
+      "15-Year Delamination Adhesion Guarantee"
+    ],
+    "trustBadges": [
+      "5.0 ★ Top-Rated Mississauga Contractor",
+      "100% Five-Star Google Reviews",
+      "WSIB Certified & Registered",
+      "$2M Comprehensive Liability"
+    ],
+    "pricingTiers": [
+      {
+        "id": "flake-porch",
+        "name": "Flake Porch & Front Steps Coating",
+        "tagline": "High-Traction Weatherproof Outdoor Curb Appeal",
+        "minRate": 6.5,
+        "maxRate": 10.5,
+        "popular": false,
+        "features": [
+          "Planetary diamond grind & concrete spall restoration",
+          "Moisture-barrier epoxy basecoat with full flake broadcast",
+          "100% UV-stable aliphatic polyaspartic clear topcoat",
+          "ASTM anti-slip wet & ice safety traction",
+          "Winter road-salt & freeze-thaw spall immune"
+        ]
+      },
+      {
+        "id": "flake-garage",
+        "name": "Showroom Full-Flake Polyaspartic Garage",
+        "tagline": "Most Popular · Complete Garage Floor Shield",
+        "minRate": 6.5,
+        "maxRate": 9.5,
+        "popular": true,
+        "features": [
+          "Lavina 3-head planetary diamond grind (CSP 3)",
+          "Polyurea crack & control-joint stitching",
+          "100% solids epoxy base + full vinyl chip broadcast",
+          "High-build UV polyaspartic armor topcoat",
+          "Zero hot-tire pickup & 15-year adhesion warranty"
+        ]
+      },
+      {
+        "id": "artisan-countertop",
+        "name": "Artisan Epoxy Countertops & Custom Resin",
+        "tagline": "Luxury Marble & Granite Look with Zero Grout Lines",
+        "minRate": 12,
+        "maxRate": 22,
+        "popular": false,
+        "features": [
+          "Food-safe, non-porous antibacterial surface",
+          "Custom hand-poured marble veining & metallic accents",
+          "Heat resistant up to 250°C and impact proof",
+          "Seamless pour over existing laminate, quartz, or wood",
+          "Never requires resealing like natural stone"
+        ]
+      },
+      {
+        "id": "metallic-marble",
+        "name": "3D Designer Metallic Marble Epoxy",
+        "tagline": "Luxury architectural glass-depth finish for living spaces",
+        "minRate": 9,
+        "maxRate": 16,
+        "popular": false,
+        "features": [
+          "Hand-troweled multi-tone pearlescent swirls",
+          "Mirror-gloss architectural 3D depth effect",
+          "High-build 100% solids crystal clear resin",
+          "Commercial scratch & chemical resistance"
+        ]
+      }
+    ],
+    "calculatorPresets": [
+      {
+        "label": "Exterior Front Porch (~140 sq ft)",
+        "sqft": 140
+      },
+      {
+        "label": "1-Car Garage (~250 sq ft)",
+        "sqft": 250
+      },
+      {
+        "label": "2-Car Garage (~450 sq ft)",
+        "sqft": 450
+      },
+      {
+        "label": "3-Car Garage (~680 sq ft)",
+        "sqft": 680
+      },
+      {
+        "label": "Kitchen Counter & Island (~75 sq ft)",
+        "sqft": 75
+      },
+      {
+        "label": "Finished Basement (~950 sq ft)",
+        "sqft": 950
+      }
+    ],
+    "services": [
+      {
+        "slug": "flake-porches-patios",
+        "name": "Exterior Flake Porches & Concrete Steps",
+        "shortDesc": "High-traction, UV-stable polyaspartic coatings transforming weathered front porches and exterior concrete steps into elegant, salt-proof entryways.",
+        "icon": "Sun",
+        "priceRange": "$6.50 – $10.50 / sq ft",
+        "systemTag": "System 01 · Exterior Flagship",
+        "badge": "High-Curb-Appeal Outdoor System",
+        "deliverables": [
+          "Planetary diamond grinding to remove weathered concrete laitance",
+          "Polyurea repair of spalled step edges and seasonal freeze cracks",
+          "Full vinyl flake saturation with slip-resistant traction aggregate",
+          "100% UV-stable aliphatic polyaspartic topcoat (never ambers or yellows)"
+        ]
+      },
+      {
+        "slug": "garage-flake-polyaspartic",
+        "name": "Showroom Garage Flake & Polyaspartic",
+        "shortDesc": "Heavy-duty full broadcast vinyl chip systems engineered to withstand road salt brine, hot summer tires, and oil spills in Mississauga garages.",
+        "icon": "ShieldCheck",
+        "priceRange": "$6.50 – $9.50 / sq ft",
+        "systemTag": "System 02 · Flagship Garage",
+        "badge": "Most Popular in Mississauga",
+        "deliverables": [
+          "Lavina planetary diamond grind (CSP 3 profile)",
+          "Polyurea crack and spall restoration",
+          "100% vinyl flake saturation to complete rejection",
+          "High-build UV polyaspartic armor topcoat"
+        ]
+      },
+      {
+        "slug": "epoxy-countertops-surfaces",
+        "name": "Artisan Epoxy Countertops & Custom Surfaces",
+        "shortDesc": "Seamless, food-safe resin countertops featuring hand-poured marble veining and heat resistance for kitchens, bathrooms, and commercial bars.",
+        "icon": "Sparkles",
+        "priceRange": "$12.00 – $22.00 / sq ft",
+        "systemTag": "System 03 · Artisan Surfaces",
+        "badge": "Food-Safe & 250°C Heat Proof",
+        "deliverables": [
+          "Custom seamless pour over existing counters or new substrates",
+          "Antibacterial non-porous finish with zero grout lines to clean",
+          "Heat resistant up to 250°C and stain proof",
+          "Hand-manipulated metallic and marble veining customized to your decor"
+        ]
+      },
+      {
+        "slug": "3d-metallic-marble-epoxy",
+        "name": "3D Metallic Marble Interior Floors",
+        "shortDesc": "Artisan luxury seamless floors with organic pearlescent marbling and glass-like depth for basements, living areas, and boutique retail spaces.",
+        "icon": "Layers",
+        "priceRange": "$9.00 – $16.00 / sq ft",
+        "systemTag": "System 04 · Luxury Interior",
+        "badge": "Glass-Like Mirror Depth",
+        "deliverables": [
+          "Dual-pigment mica pearl hand-swirled dispersion",
+          "100% solids moisture vapor barrier base",
+          "Glass-like mirror depth and light reflection",
+          "Seamless satin or high-gloss protective shield"
+        ]
+      }
+    ],
+    "processSteps": [
+      {
+        "number": "01",
+        "title": "Lavina Planetary Diamond Grinding",
+        "subtitle": "CSP 3 Substrate Mechanical Anchor",
+        "description": "We grind your concrete slab to CSP 3 profile using heavy Lavina planetary diamond grinders with integrated HEPA dust vacuums. No acid washing, no shortcuts."
+      },
+      {
+        "number": "02",
+        "title": "Polyurea Crack & Edge Stitching",
+        "subtitle": "Structural Foundation Repair",
+        "description": "Every winter road-salt crater, porch step fissure, and control joint is chased and bonded with industrial polyurea mender that cures harder than concrete itself."
+      },
+      {
+        "number": "03",
+        "title": "100% Solids Moisture Basecoat",
+        "subtitle": "Deep Chemical Fusion",
+        "description": "We apply pure moisture-tolerant epoxy basecoat and broadcast hand-selected custom color vinyl chips to absolute rejection for 100% density and texture."
+      },
+      {
+        "number": "04",
+        "title": "UV-Stable Polyaspartic Armor Topcoat",
+        "subtitle": "Weather & Hot-Tire Proof",
+        "description": "Scraped flush and locked with industrial polyaspartic. 100% UV-stable, chemical proof, zero yellowing, and ready for full foot traffic in 6 hours."
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Snap Khan",
+        "city": "Mississauga",
+        "rating": 5,
+        "date": "5 months ago",
+        "text": "Did a flake porch for us this week. Did great work from start to finish we knew we were in good hands. Quality work recommended",
+        "ownerReply": "Thank you for the kind words. Really appreciate the business. Looking forward to many more projects.",
+        "projectTag": "Exterior Flake Porch",
+        "verifiedBadges": [
+          "6 Reviews",
+          "1 Photo"
+        ]
+      },
+      {
+        "author": "Rabia S",
+        "city": "Mississauga",
+        "rating": 5,
+        "date": "5 months ago",
+        "text": "Honest, straight forward. Quality work. The team at LAYR resin walked us through the entire job laid out the steps from start to finish. I didn’t know anything about epoxy before, learned so much from them. They did our porch and garage. Highly recommended!",
+        "projectTag": "Porch & Garage Package",
+        "verifiedBadges": [
+          "Local Guide",
+          "44 Reviews",
+          "7 Photos"
+        ]
+      },
+      {
+        "author": "uzma aijaz",
+        "city": "Mississauga",
+        "rating": 5,
+        "date": "8 months ago",
+        "text": "Did an amazing job on our counter top. Highly recommend. 10/10",
+        "ownerReply": "You’re most welcome. Your counter top project was an absolute pleasure. Please remember to post the pictures on socials and tag us.",
+        "projectTag": "Artisan Epoxy Countertop",
+        "verifiedBadges": [
+          "1 Review"
+        ]
+      },
+      {
+        "author": "Arshpreet Kaur",
+        "city": "Meadowvale",
+        "rating": 5,
+        "date": "3 months ago",
+        "text": "Layr epoxy did a fantastic job for my garage, very happy with the result.",
+        "projectTag": "2-Car Garage Flake Floor",
+        "verifiedBadges": [
+          "4 Reviews"
+        ]
+      },
+      {
+        "author": "Shaheer Pirzada",
+        "city": "Mississauga",
+        "rating": 5,
+        "date": "5 months ago",
+        "text": "Did an excellent job on my house! More than happy",
+        "projectTag": "Residential Interior Installation",
+        "verifiedBadges": [
+          "12 Reviews",
+          "2 Photos"
+        ]
+      },
+      {
+        "author": "Asia Kasiulewicz",
+        "city": "Mississauga",
+        "rating": 5,
+        "date": "2 months ago",
+        "text": "Contacted them for an epoxy job, they finished quickly and I love the outcome. 10/10.",
+        "projectTag": "Epoxy Floor Coating",
+        "verifiedBadges": [
+          "Local Guide",
+          "8 Reviews"
+        ]
+      },
+      {
+        "author": "Varun Verma",
+        "city": "Mississauga",
+        "rating": 5,
+        "date": "3 months ago",
+        "text": "Professional, on-time, and high quality epoxy finish. Smooth and seamless experience from start to finish.",
+        "projectTag": "Commercial / Residential Epoxy",
+        "verifiedBadges": [
+          "4 Reviews"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How does polyaspartic hold up on outdoor porches against Ontario sun and snow?",
+        "answer": "Unlike standard epoxy which quickly turns yellow and chalky under direct UV rays, our porch systems use 100% aliphatic polyaspartic topcoats. They are completely UV-stable, maintain non-slip traction even when wet, and resist freeze-thaw spalling from winter road salt."
+      },
+      {
+        "question": "How do custom epoxy countertops compare to quartz or granite?",
+        "answer": "Our resin countertops are poured seamlessly with zero grout lines or seams to harbor bacteria. They are heat-resistant up to 250°C, 100% food-safe, stain-proof against wine and oils, and can be poured directly over existing laminate, quartz, or wood at 40%–60% lower cost than full demolition."
+      },
+      {
+        "question": "Can you park hot vehicle tires on your garage floors without peeling?",
+        "answer": "Yes. Our industrial polyaspartic topcoat has a heat rating up to 150°C. Scorching summer tires coming directly off Highway 401 or Highway 403 will never cause hot-tire pickup, softening, or delamination."
+      },
+      {
+        "question": "How long does a typical porch or garage installation take?",
+        "answer": "Most 2-car garages and front porches are completed in just 1 to 2 days. The rapid-cure polyaspartic topcoat is ready for foot traffic in 6 to 8 hours and vehicle parking after 24 to 48 hours."
+      },
+      {
+        "question": "What warranty does LAYR EPOXY provide?",
+        "answer": "We stand behind our preparation and materials with a written 15-year adhesion and anti-delamination warranty on all residential garage and porch installations in Mississauga."
+      }
+    ],
+    "galleryProjects": [
+      {
+        "id": "layr-porch-meadowvale",
+        "title": "Exterior Flake Porch & Step System",
+        "category": "porch",
+        "categoryLabel": "Flake Porch",
+        "city": "Meadowvale, Mississauga",
+        "sqft": 160,
+        "duration": "1-Day Turnaround",
+        "system": "UV-Stable Polyaspartic Flake Coating",
+        "finishType": "Granite Pebble Non-Slip Matrix",
+        "tierId": "flake-porch",
+        "description": "Complete mechanical grind and polyaspartic flake broadcast on front entrance steps and porch. Impervious to winter freeze-thaw cycles and calcium chloride.",
+        "imageSrc": "/after-garage.png",
+        "badge": "Porch Transformation",
+        "keyHighlights": [
+          "100% UV-Stable (Zero Sun Yellowing)",
+          "Non-Slip Traction Aggregate",
+          "Cures in 6 Hours",
+          "15-Year Adhesion Guarantee"
+        ]
+      },
+      {
+        "id": "layr-countertop-mississauga",
+        "title": "Artisan White Carrara Marble Epoxy Countertops",
+        "category": "countertop",
+        "categoryLabel": "Epoxy Countertop",
+        "city": "Central Mississauga",
+        "sqft": 65,
+        "duration": "2-Day Pour",
+        "system": "Food-Safe High-Build Resin + Clear Armor",
+        "finishType": "White Carrara Marble with Metallic Charcoal Veins",
+        "tierId": "artisan-countertop",
+        "description": "Seamless poured epoxy countertop over existing laminate with zero seams, zero grout lines, and 250°C heat resistance.",
+        "imageSrc": "/after-garage.png",
+        "badge": "Artisan Countertop",
+        "keyHighlights": [
+          "100% Food-Safe & Antibacterial",
+          "Zero Grout Lines or Seams",
+          "Heat Resistant to 250°C",
+          "Never Requires Resealing"
+        ]
+      },
+      {
+        "id": "layr-garage-meadowvale",
+        "title": "Showroom Tuxedo Full-Flake 2-Car Garage",
+        "category": "flake",
+        "categoryLabel": "Garage Flake",
+        "city": "Meadowvale Town Centre",
+        "sqft": 450,
+        "duration": "1-Day Rapid Install",
+        "system": "Planetary Diamond Grind CSP 3 + Polyaspartic Armor",
+        "finishType": "Tuxedo Granite Flake Matrix",
+        "tierId": "flake-garage",
+        "description": "Commercial mechanical preparation with Lavina diamond grinders, polyurea crack mending, and 100% vinyl flake saturation to rejection.",
+        "imageSrc": "/after-garage.png",
+        "badge": "Showroom Garage",
+        "keyHighlights": [
+          "Hot-Tire Torque Immune (150°C)",
+          "Impermeable to Road Salt Brine",
+          "Walk on in 6 Hours / Park in 24 Hours",
+          "15-Year Written Warranty"
+        ]
+      },
+      {
+        "id": "layr-metallic-living",
+        "title": "Artisan 3D Metallic Marble Finished Floor",
+        "category": "metallic",
+        "categoryLabel": "3D Metallic",
+        "city": "Streetsville, Mississauga",
+        "sqft": 580,
+        "duration": "2-Day Precision Pour",
+        "system": "Deep-Pour Pearlescent Metallic Epoxy + Satin Armor",
+        "finishType": "Silver Pearl & Obsidian Swirl",
+        "tierId": "metallic-marble",
+        "description": "Hand-manipulated metallic pearlescent pigments creating liquid marble depth for a luxury basement and entertainment suite.",
+        "imageSrc": "/after-garage.png",
+        "badge": "Luxury Interior",
+        "keyHighlights": [
+          "Hand-Troweled Liquid Marble Veining",
+          "Seamless Glass-Depth Optics",
+          "CFIA Odorless Low-VOC Formulation",
+          "Effortless Dust-Free Cleaning"
+        ]
+      },
+      {
+        "id": "layr-commercial-mississauga",
+        "title": "Heavy-Traffic Commercial Automotive Bay",
+        "category": "commercial",
+        "categoryLabel": "Commercial Bay",
+        "city": "Mississauga Logistics Hub",
+        "sqft": 1400,
+        "duration": "2-Day Turnaround",
+        "system": "High-Solids Industrial Polyurea + Polyaspartic",
+        "finishType": "Medium Industrial Gray with Slip Resistant Texture",
+        "tierId": "flake-garage",
+        "description": "Engineered for hydraulic vehicle jacks, oil spills, and high-frequency tool drops with chemical immersion resistance.",
+        "imageSrc": "/after-garage.png",
+        "badge": "Commercial Heavy",
+        "keyHighlights": [
+          "Chemical & Brake Fluid Proof",
+          "ASTM Slip Resistance Compliant",
+          "WSIB Certified & $2M Liability",
+          "Zero Downtime Rapid Cure"
+        ]
+      },
+      {
+        "id": "layr-patio-churchill",
+        "title": "Exterior Walkway & Patio Flake Shield",
+        "category": "porch",
+        "categoryLabel": "Flake Porch",
+        "city": "Churchill Meadows, Mississauga",
+        "sqft": 280,
+        "duration": "1-Day Application",
+        "system": "Moisture-Mitigation Base + Aliphatic Polyaspartic",
+        "finishType": "Desert Sand Earth Flake Blend",
+        "tierId": "flake-porch",
+        "description": "Restoration of pitted exterior concrete walkway with diamond grind, crack welding, and weatherproof UV-stable polyaspartic coating.",
+        "imageSrc": "/after-garage.png",
+        "badge": "Outdoor Walkway",
+        "keyHighlights": [
+          "ASTM D-2047 0.70+ Anti-Slip",
+          "Withstands -25°C Winter Ground Heave",
+          "100% Aliphatic Chemistry",
+          "Zero Peeling Guarantee"
+        ]
+      }
+    ]
+  }
+}

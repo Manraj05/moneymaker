@@ -13,7 +13,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ client }: HeroSectionProps) {
   return (
-    <section className="relative min-h-[85vh] lg:min-h-[90vh] overflow-hidden bg-obsidian flex items-center pt-6 pb-12 sm:pt-8 sm:pb-16 lg:py-20">
+    <section className="relative overflow-hidden bg-obsidian flex items-center py-6 sm:py-10 lg:py-16">
       {/* ======================================================== */}
       {/* Full-Bleed Ken Burns Background with Dark Obsidian Overlay */}
       {/* ======================================================== */}
@@ -30,7 +30,7 @@ export default function HeroSection({ client }: HeroSectionProps) {
         >
           <Image
             src="/after-garage.png"
-            alt="Hamilton & GTA Showroom Epoxy Garage"
+            alt={`${client.businessName} - ${client.primaryCity} Showroom Epoxy & Surface Coatings`}
             fill
             priority
             sizes="100vw"
@@ -56,27 +56,34 @@ export default function HeroSection({ client }: HeroSectionProps) {
                 ★ <span className="ml-1 font-mono">{client.rating.toFixed(1)}</span>
               </span>
               <span className="text-white/30">·</span>
-              <span className="text-slate-200">Google Rating</span>
+              <span className="text-slate-200">{client.reviewCount} Verified Reviews</span>
               <span className="text-white/30">·</span>
-              <span className="font-mono text-slate-300">WSIB Certified</span>
+              <span className="font-mono text-slate-300">{client.primaryCity} &amp; GTA</span>
               <span className="text-white/30 hidden xs:inline">·</span>
-              <span className="font-mono text-slate-300 hidden xs:inline">$2M Liability</span>
+              <span className="font-mono text-slate-300 hidden xs:inline">15-Yr Warranty</span>
             </div>
 
             {/* 2. Responsive H1 Structured with Clean Line Breaks */}
             <h1 className="font-heading text-xl sm:text-3xl lg:text-5xl xl:text-6xl font-black tracking-tight text-white leading-tight">
-              <span>Garage, Basement &amp; Commercial</span>{" "}
-              <span className="block mt-0.5 sm:mt-1">
-                Epoxy Flooring in{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-400">
-                  {client.primaryCity}
-                </span>
-              </span>
+              {client.heroHeadline ? (
+                <span>{client.heroHeadline}</span>
+              ) : (
+                <>
+                  <span>Garage, Basement &amp; Commercial</span>{" "}
+                  <span className="block mt-0.5 sm:mt-1">
+                    Epoxy Flooring in{" "}
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-400">
+                      {client.primaryCity}
+                    </span>
+                  </span>
+                </>
+              )}
             </h1>
 
             {/* 3. Concise High-Conversion Subheadline */}
             <p className="text-xs sm:text-sm md:text-base leading-relaxed text-slate-300 max-w-xl">
-              100% solid epoxy base coats and UV-stable polyaspartic topcoats diamond-ground to CSP 3 and rated for -25°C Ontario winters. Starting from <strong className="text-white font-mono">$4.50/sq ft</strong> installed.
+              {client.heroSubtitle ||
+                "100% solid epoxy base coats and UV-stable polyaspartic topcoats diamond-ground to CSP 3 and rated for -25°C Ontario winters. Starting from $4.50/sq ft installed."}
             </p>
 
             {/* 4. Two Sleek Buttons: Pure Crisp White + Frosted Dark Glass */}

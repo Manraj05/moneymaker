@@ -114,136 +114,14 @@ export default function BeforeAfterSlider({
           clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100%, 0 100%)`,
         }}
       >
-        {/* Identical Image - 100% same container width & height */}
         <Image
-          src="/after-garage.png"
-          alt="Original Garage Room Structure"
+          src="/before-garage.png"
+          alt="Original Bare Weathered Concrete Slab Floor Before Coating"
           fill
           priority
           sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover object-center pointer-events-none"
         />
-
-        {/* Realistic Raw Unfinished Concrete Slab Composite overlaid over the exact floor polygon */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            clipPath: "polygon(0% 52.5%, 47% 48.5%, 100% 55%, 100% 100%, 0% 100%)",
-          }}
-        >
-          {/* 2a. Desaturated, low-contrast, weathered base concrete */}
-          <div className="absolute inset-0">
-            <Image
-              src="/after-garage.png"
-              alt="Desaturated Concrete Slab"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover object-center pointer-events-none"
-              style={{
-                filter: "grayscale(100%) contrast(45%) brightness(85%)",
-              }}
-            />
-          </div>
-
-          {/* 2b. Matte Industrial Cement Tint Layer */}
-          <div className="absolute inset-0 bg-[#5A6068]/60 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-[#42474E]/40 mix-blend-overlay" />
-
-          {/* 2c. Gritty Surface Noise & Salt Texture */}
-          <div
-            className="absolute inset-0 opacity-45 mix-blend-color-burn"
-            style={{
-              backgroundImage: `radial-gradient(#1E232A 1.5px, transparent 1.5px), radial-gradient(#2C333C 2px, transparent 2px)`,
-              backgroundSize: `12px 12px, 20px 20px`,
-              backgroundPosition: `0 0, 10px 10px`,
-            }}
-          />
-
-          {/* 2d. Dark Oil Stain & Tire Track Patches */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div
-              className="absolute rounded-full bg-[#181A1D]/80 blur-md"
-              style={{
-                top: "72%",
-                left: "38%",
-                width: "28%",
-                height: "18%",
-                transform: "rotate(-10deg)",
-              }}
-            />
-            <div
-              className="absolute rounded-full bg-[#1A1D20]/75 blur-sm"
-              style={{
-                top: "63%",
-                left: "18%",
-                width: "18%",
-                height: "12%",
-                transform: "rotate(15deg)",
-              }}
-            />
-            <div
-              className="absolute rounded-full bg-[#2B2F36]/80 blur-md"
-              style={{
-                top: "68%",
-                left: "64%",
-                width: "26%",
-                height: "22%",
-              }}
-            />
-          </div>
-
-          {/* 2e. SVG Jagged Winter Salt Cracks & Fractures */}
-          <svg
-            className="absolute inset-0 h-full w-full pointer-events-none opacity-85"
-            viewBox="0 0 1000 1000"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M 120 540 Q 220 620 340 680 T 560 770 T 820 890"
-              stroke="#121417"
-              strokeWidth="5"
-              fill="none"
-              strokeLinecap="round"
-            />
-            <path
-              d="M 120 540 Q 220 620 340 680 T 560 770 T 820 890"
-              stroke="#2A2F37"
-              strokeWidth="2.5"
-              fill="none"
-              strokeLinecap="round"
-            />
-            <path
-              d="M 340 680 L 410 630 L 470 655"
-              stroke="#15171A"
-              strokeWidth="3"
-              fill="none"
-            />
-            <path
-              d="M 560 770 L 520 840 L 490 870"
-              stroke="#181B1F"
-              strokeWidth="3.5"
-              fill="none"
-            />
-            <path
-              d="M 240 780 L 290 840 L 310 920"
-              stroke="#121417"
-              strokeWidth="4"
-              fill="none"
-            />
-            <circle cx="380" cy="740" r="14" fill="#20242B" />
-            <circle cx="490" cy="690" r="10" fill="#1C1F26" />
-            <circle cx="720" cy="820" r="16" fill="#181B21" />
-          </svg>
-
-          {/* 2f. Soft feathering along the baseboard seam */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                "linear-gradient(to bottom, rgba(15,18,24,0.7) 48%, transparent 58%)",
-            }}
-          />
-        </div>
 
         {/* Crisp Frosted-Glass Corner Badge (Top Left) */}
         <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-20 flex items-center gap-1.5 rounded-full border border-white/20 bg-black/80 px-2.5 py-1 sm:px-3 sm:py-1.5 backdrop-blur-xl shadow-lg whitespace-nowrap">

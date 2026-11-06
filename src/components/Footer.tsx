@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Phone, MapPin, Shield, Star } from "lucide-react";
 import { ClientProfile } from "@/lib/client";
 import { slugify } from "@/lib/utils";
+import BrandLogo from "./BrandLogo";
 
 interface FooterProps {
   client: ClientProfile;
@@ -48,9 +49,7 @@ export default function Footer({ client }: FooterProps) {
           {/* Col 1: Business Overview */}
           <div>
             <div className="flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/20 bg-white/5 text-white font-heading font-black text-sm">
-                {client.businessName.substring(0, 2).toUpperCase()}
-              </div>
+              <BrandLogo size="sm" variant="glass" />
               <span className="font-heading text-lg font-bold text-white">
                 {client.businessName}
               </span>
@@ -111,7 +110,7 @@ export default function Footer({ client }: FooterProps) {
               ))}
             </div>
             <p className="mt-4 text-[11px] text-slate-500">
-              Active mobile crews dispatched across Hamilton, Halton, Peel, and surrounding areas.
+              Active mobile crews dispatched across {client.primaryCity}, Peel, Halton, and surrounding GTA communities.
             </p>
           </div>
 

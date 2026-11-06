@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "description": "Cold Outreach Pipeline & Target Registry",
+  "activeTarget": "layr-epoxy",
+  "targets": [
+    {
+      "id": "layr-epoxy",
+      "targetNumber": 1,
+      "businessName": "LAYR EPOXY",
+      "status": "READY_FOR_OUTREACH",
+      "phone": "(437) 365-6841",
+      "phoneHref": "tel:+14373656841",
+      "address": "6677 Meadowvale Town Centre Cir, Mississauga, ON L5N 2R5, Canada",
+      "primaryCity": "Mississauga",
+      "province": "ON",
+      "rating": 5.0,
+      "reviewCount": 7,
+      "niche": "epoxy",
+      "specialties": [
+        "Flake Porches",
+        "Showroom Garages",
+        "Epoxy Countertops"
+      ],
+      "createdDate": "2026-11-06",
+      "lastContacted": null,
+      "outreachChannel": "SMS",
+      "vaultDir": "outreach/layr-epoxy",
+      "screenshotPath": "outreach/layr-epoxy/teaser-mobile.png",
+      "smsScriptPath": "outreach/layr-epoxy/sms-script.txt",
+      "clientDataPath": "outreach/layr-epoxy/client-data.json",
+      "livePreviewRoute": "/teaser/layr-epoxy",
+      "notes": "Target #1. Pristine 5.0 Google rating. High-converting teaser screenshot saved with authentic bare concrete before/after split, custom architectural resin emblem, and 60-second floor cost estimator CTA."
+    }
+  ]
+}

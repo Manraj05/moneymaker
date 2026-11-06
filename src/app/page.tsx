@@ -1,4 +1,5 @@
 import React from "react";
+import ClientPitchBanner from "@/components/ClientPitchBanner";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import TrustStatsBand from "@/components/TrustStatsBand";
@@ -23,6 +24,9 @@ export default function HomePage() {
     <main className="min-h-screen bg-white text-slate-900 pb-16 sm:pb-0">
       {/* Schema Injection */}
       <JsonLd client={client} />
+
+      {/* Client Pitch Preview Concept Banner */}
+      <ClientPitchBanner client={client} />
 
       {/* Conversion Sticky Navigation */}
       <Navbar client={client} />

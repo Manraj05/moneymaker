@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start -H 0.0.0.0",
     "lint": "next lint",
-    "client": "node scripts/switch-client.mjs"
+    "client": "node scripts/switch-client.mjs",
+    "teaser": "node scripts/generate-teaser.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

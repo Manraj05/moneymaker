@@ -86,9 +86,20 @@ export default function ReviewMarquee({ client }: ReviewMarqueeProps) {
                   </div>
                   <span className="text-slate-300">|</span>
                   <span className="rounded-full border border-slate-200 bg-white px-2.5 py-0.5 font-mono text-[10px] text-slate-700 font-medium">
-                    Full-Flake Polyaspartic System
+                    {featuredReview.projectTag || "Verified Customer Project"}
                   </span>
                 </div>
+
+                {featuredReview.ownerReply && (
+                  <div className="mt-4 rounded-2xl border border-slate-200/90 bg-white/90 p-4 text-xs text-slate-700 shadow-xs">
+                    <div className="flex items-center gap-1.5 font-heading font-bold text-slate-950 mb-1">
+                      <span>{client.businessName} (Owner Response)</span>
+                    </div>
+                    <p className="italic text-slate-600">
+                      &ldquo;{featuredReview.ownerReply}&rdquo;
+                    </p>
+                  </div>
+                )}
               </div>
 
               <div className="flex-shrink-0 self-start md:self-center">
@@ -130,6 +141,25 @@ export default function ReviewMarquee({ client }: ReviewMarqueeProps) {
                 <p className="mt-4 text-xs sm:text-sm text-slate-700 italic leading-relaxed">
                   &ldquo;{rev.text}&rdquo;
                 </p>
+
+                {rev.projectTag && (
+                  <div className="mt-3">
+                    <span className="inline-block rounded-md bg-slate-100 border border-slate-200 px-2 py-0.5 text-[10px] font-mono text-slate-700 font-semibold">
+                      {rev.projectTag}
+                    </span>
+                  </div>
+                )}
+
+                {rev.ownerReply && (
+                  <div className="mt-3 rounded-xl bg-slate-50 border border-slate-200/80 p-2.5 text-[11px] text-slate-600">
+                    <span className="font-bold text-slate-900 block text-[10px] uppercase font-mono">
+                      Owner Response:
+                    </span>
+                    <p className="italic line-clamp-2 mt-0.5">
+                      &ldquo;{rev.ownerReply}&rdquo;
+                    </p>
+                  </div>
+                )}
               </div>
 
               {/* Author & City */}

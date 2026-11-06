@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Phone, Menu, X, ArrowRight, ShieldCheck } from "lucide-react";
 import { ClientProfile } from "@/lib/client";
+import BrandLogo from "./BrandLogo";
 
 interface NavbarProps {
   client: ClientProfile;
@@ -44,9 +45,7 @@ export default function Navbar({ client }: NavbarProps) {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
         {/* Logo / Brand */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-950 font-heading text-lg font-black tracking-tighter text-white shadow-sm transition-transform duration-200 group-hover:scale-105">
-            {client.businessName.substring(0, 2).toUpperCase()}
-          </div>
+          <BrandLogo size="md" variant="dark" />
           <div>
             <span className="font-heading text-lg font-extrabold tracking-tight text-slate-950 transition-colors group-hover:text-slate-700">
               {client.businessName}

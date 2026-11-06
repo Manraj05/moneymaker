@@ -14,27 +14,10 @@ import {
   Calculator,
   CheckCircle2,
 } from "lucide-react";
-import { ClientProfile } from "@/lib/client";
+import { ClientProfile, ProjectItem } from "@/lib/client";
 
 interface ProjectGalleryProps {
   client: ClientProfile;
-}
-
-interface ProjectItem {
-  id: string;
-  title: string;
-  category: "all" | "metallic" | "flake" | "commercial" | "basement";
-  categoryLabel: string;
-  city: string;
-  sqft: number;
-  duration: string;
-  system: string;
-  finishType: string;
-  tierId: string;
-  description: string;
-  imageSrc: string;
-  badge: string;
-  keyHighlights: string[];
 }
 
 const projects: ProjectItem[] = [
@@ -176,10 +159,33 @@ export default function ProjectGallery({ client }: ProjectGalleryProps) {
   const [activeTab, setActiveTab] = useState<string>("all");
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
 
+  const projectList =
+    client.galleryProjects && client.galleryProjects.length > 0
+      ? client.galleryProjects
+      : projects;
+
+  const categories = React.useMemo(() => {
+    const cats: { id: string; label: string }[] = [
+      { id: "all", label: `All Projects (${projectList.length})` },
+    ];
+    const seen = new Set<string>();
+    projectList.forEach((p) => {
+      if (!seen.has(p.category)) {
+        seen.add(p.category);
+        const count = projectList.filter((item) => item.category === p.category).length;
+        cats.push({
+          id: p.category,
+          label: `${p.categoryLabel} (${count})`,
+        });
+      }
+    });
+    return cats;
+  }, [projectList]);
+
   const filteredProjects =
     activeTab === "all"
-      ? projects
-      : projects.filter((p) => p.category === activeTab);
+      ? projectList
+      : projectList.filter((p) => p.category === activeTab);
 
   return (
     <section
@@ -200,19 +206,13 @@ export default function ProjectGallery({ client }: ProjectGalleryProps) {
             Recent Work Across {client.primaryCity} &amp; the GTA
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Inspect real finished residential garages, artisan 3D metallic basements, and commercial facilities installed by {client.ownerName || "our"} and the {client.businessName} crew.
+            Inspect real finished residential garages, exterior flake porches, and seamless artisan countertops installed by {client.ownerName || "our"} and the {client.businessName} crew.
           </p>
         </div>
 
         {/* Filter Navigation Pills */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-          {[
-            { id: "all", label: "All Projects (6)" },
-            { id: "flake", label: "Full-Flake Garages (2)" },
-            { id: "metallic", label: "3D Metallic Marble (2)" },
-            { id: "commercial", label: "Commercial Bays (1)" },
-            { id: "basement", label: "Basement Waterproofing (1)" },
-          ].map((tab) => {
+          {categories.map((tab) => {
             const isSelected = activeTab === tab.id;
             return (
               <button

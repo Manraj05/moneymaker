@@ -23,6 +23,8 @@ export interface ServiceItem {
   shortDesc: string;
   icon: string;
   priceRange?: string;
+  systemTag?: string;
+  badge?: string;
   deliverables: string[];
 }
 
@@ -39,11 +41,31 @@ export interface ReviewItem {
   rating: number;
   date: string;
   text: string;
+  ownerReply?: string;
+  projectTag?: string;
+  verifiedBadges?: string[];
 }
 
 export interface FaqItem {
   question: string;
   answer: string;
+}
+
+export interface ProjectItem {
+  id: string;
+  title: string;
+  category: string;
+  categoryLabel: string;
+  city: string;
+  sqft: number;
+  duration: string;
+  system: string;
+  finishType: string;
+  tierId: string;
+  description: string;
+  imageSrc: string;
+  badge: string;
+  keyHighlights: string[];
 }
 
 export interface ClientProfile {
@@ -62,6 +84,7 @@ export interface ClientProfile {
   rating: number;
   reviewCount: number;
   tagline: string;
+  heroHeadline?: string;
   heroSubtitle: string;
   serviceAreas: string[];
   guarantees: string[];
@@ -72,6 +95,7 @@ export interface ClientProfile {
   processSteps: ProcessStep[];
   reviews: ReviewItem[];
   faqs: FaqItem[];
+  galleryProjects?: ProjectItem[];
 }
 
 const clients = clientsData as unknown as Record<string, ClientProfile>;
